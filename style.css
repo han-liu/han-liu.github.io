@@ -1,4 +1,4 @@
-body {width: 800px;
+body {width: 700px;
   		margin: auto;}
 
 nav{
@@ -56,7 +56,7 @@ p.content {
 	margin-top: 0px;
 	line-height: 22px;
 	font-family: georgia;
-	font-size: 16px;
+	font-size: 14px;
 	color: black;
 	text-align: left;
 }
@@ -68,7 +68,7 @@ ul.pub {
 	list-style-type: square;
 	line-height: 20px;
 	font-family: georgia;
-	font-size: 16px;
+	font-size: 14px;
 	font-style: bold;
 	color: black;
 }
