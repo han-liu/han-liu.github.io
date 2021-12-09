@@ -59,7 +59,7 @@ p.content {
 	margin-top: 0px;
 	line-height: 22px;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 17px;
+	font-size: 15px;
 	color: black;
 	text-align: left;
 }
@@ -71,7 +71,7 @@ ul.pub {
 	list-style-type: square;
 	line-height: 20px;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	font-style: bold;
 	color: black;
 }
