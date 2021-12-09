@@ -1,4 +1,4 @@
-body {width: 1000px;
+body {width: 960px;
       margin: auto;
       padding: 20px;
       background: #ffffff;
@@ -61,7 +61,7 @@ p.content {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 16px;
 	color: black;
-	text-align: justify;
+	text-align: left;
 }
 
 
