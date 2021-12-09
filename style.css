@@ -1,4 +1,4 @@
-body {width: 960px;
+body {width: 1000px;
       margin: auto;
       padding: 20px;
       background: #ffffff;
@@ -59,7 +59,7 @@ p.content {
 	margin-top: 0px;
 	line-height: 22px;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 16px;
+	font-size: 17px;
 	color: black;
 	text-align: left;
 }
