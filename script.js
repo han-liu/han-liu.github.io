@@ -2,8 +2,8 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
         
         if (targetElement) {
             const offsetTop = targetElement.offsetTop - 20;
@@ -21,7 +21,7 @@ window.addEventListener('scroll', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     
     let current = '';
-    const scrollPosition = window.pageYOffset + 100;
+    const scrollPosition = window.pageYOffset + 200;
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -35,33 +35,11 @@ window.addEventListener('scroll', () => {
     
     navLinks.forEach(link => {
         link.classList.remove('active');
-        const href = link.getAttribute('href');
-        if (href === `#${current}`) {
+        const href = link.getAttribute('href').substring(1);
+        if (href === current) {
             link.classList.add('active');
         }
     });
-});
-
-// Add active class styling
-const style = document.createElement('style');
-style.textContent = `
-    .nav-link.active {
-        background-color: var(--orange-light);
-        border-color: var(--siemens-orange);
-        color: var(--siemens-orange);
-    }
-`;
-document.head.appendChild(style);
-
-// Fade-in animation on page load
-window.addEventListener('load', () => {
-    const mainContent = document.querySelector('.main-content');
-    mainContent.style.opacity = '0';
-    mainContent.style.transition = 'opacity 0.5s ease';
-    
-    setTimeout(() => {
-        mainContent.style.opacity = '1';
-    }, 100);
 });
 
 // External links open in new tab
