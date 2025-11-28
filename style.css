@@ -9,6 +9,7 @@
     --primary: #3c5a99;
     --primary-dark: #2c4570;
     --primary-light: rgba(60, 90, 153, 0.08);
+    --primary-lighter: #88a3d4;
     --text-dark: #2c3e50;
     --text-gray: #666;
     --text-light: #999;
@@ -80,7 +81,7 @@ body {
     margin-bottom: 3px;
 }
 
-/* Elegant Smooth Buttons - No Boundaries */
+/* Elegant Smooth Buttons */
 .nav-menu {
     display: flex;
     flex-direction: column;
@@ -213,11 +214,11 @@ h2 {
     color: var(--primary);
 }
 
-/* News Section - Highlighted Recruitment */
+/* News Section - Tighter Spacing */
 .news-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
 }
 
 .recruitment-notice {
@@ -228,6 +229,7 @@ h2 {
     border-left: 4px solid var(--recruitment);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(255, 107, 107, 0.1);
+    margin-bottom: 7px;
 }
 
 .recruitment-icon {
@@ -336,22 +338,17 @@ h2 {
     flex: 1;
 }
 
-/* Lighter Date Badge - Border Only */
+/* Filled Light Blue Date Badge */
 .date-badge {
     display: inline-block;
-    background: transparent;
-    color: var(--primary);
+    background: var(--primary-lighter);
+    color: white;
     padding: 3px 10px;
     border-radius: 4px;
-    border: 1.5px solid var(--primary);
     font-size: 0.7rem;
     font-weight: 500;
     margin-bottom: 10px;
     letter-spacing: 0.3px;
-}
-
-.timeline-content {
-    flex: 1;
 }
 
 /* Larger School/Company Names */
@@ -368,11 +365,20 @@ h2 {
     font-size: 0.85rem;
     color: var(--text-dark);
     margin-bottom: 5px;
+    line-height: 1.7;
 }
 
 .underline {
     text-decoration: underline;
     font-weight: normal;
+}
+
+/* Inline Award Text - Dark Theme */
+.award-text {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    font-weight: 400;
+    font-style: normal;
 }
 
 .mentor-link {
@@ -416,20 +422,6 @@ h2 {
     color: var(--primary);
 }
 
-/* Inline Awards Under Education */
-.awards-inline {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px dashed var(--border-light);
-}
-
-.award-item {
-    font-size: 0.8rem;
-    color: var(--primary);
-    margin: 6px 0;
-    padding-left: 10px;
-}
-
 /* Timeline Logo */
 .timeline-logo {
     flex-shrink: 0;
@@ -446,7 +438,7 @@ h2 {
     object-fit: contain;
 }
 
-/* Challenges & Publications */
+/* Competitions & Publications */
 .note {
     font-size: 0.8rem;
     color: var(--text-gray);
@@ -598,7 +590,7 @@ h2 {
     font-size: 0.7rem;
 }
 
-/* Colorful Visitor Section */
+/* Visitor Section */
 footer {
     margin-top: 40px;
     padding: 0;
