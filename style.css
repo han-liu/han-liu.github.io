@@ -9,7 +9,6 @@
     --primary: #3c5a99;
     --primary-dark: #2c4570;
     --primary-light: rgba(60, 90, 153, 0.08);
-    --primary-lighter: #88a3d4;
     --text-dark: #2c3e50;
     --text-gray: #666;
     --text-light: #999;
@@ -18,7 +17,7 @@
     --bg-light: #fafafa;
     --border-light: #e0e0e0;
     --timeline-gray: #bbb;
-    --recruitment: #ff6b6b;
+    --hiring-red: #d63031;
 }
 
 html {
@@ -64,13 +63,14 @@ body {
     margin-bottom: 18px;
 }
 
+/* CS-Themed Name Font - Roboto Mono */
 .name {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2rem;
-    font-weight: 700;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: var(--text-dark);
     margin-bottom: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .title,
@@ -214,51 +214,11 @@ h2 {
     color: var(--primary);
 }
 
-/* News Section - Tighter Spacing */
+/* News Section - Tighter Spacing, Red Text Highlights */
 .news-list {
     display: flex;
     flex-direction: column;
     gap: 8px;
-}
-
-.recruitment-notice {
-    display: flex;
-    gap: 15px;
-    padding: 18px 20px;
-    background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
-    border-left: 4px solid var(--recruitment);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.1);
-    margin-bottom: 7px;
-}
-
-.recruitment-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
-}
-
-.recruitment-content {
-    flex: 1;
-}
-
-.recruitment-title {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--recruitment);
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.recruitment-content p {
-    font-size: 0.85rem;
-    color: var(--text-dark);
-    line-height: 1.6;
-    margin: 0;
-}
-
-.recruitment-content strong {
-    color: var(--recruitment);
 }
 
 .news-item {
@@ -283,6 +243,12 @@ h2 {
 
 .news-item strong {
     color: var(--text-dark);
+}
+
+/* Red Text Highlight for Hiring */
+.hiring-highlight {
+    color: var(--hiring-red);
+    font-weight: 600;
 }
 
 .trophy {
@@ -338,10 +304,10 @@ h2 {
     flex: 1;
 }
 
-/* Filled Light Blue Date Badge */
+/* Dark Blue Filled Date Badge */
 .date-badge {
     display: inline-block;
-    background: var(--primary-lighter);
+    background: var(--primary);
     color: white;
     padding: 3px 10px;
     border-radius: 4px;
@@ -677,11 +643,6 @@ footer {
     .pub-image {
         width: 100%;
         height: 120px;
-    }
-
-    .recruitment-notice {
-        flex-direction: column;
-        text-align: center;
     }
 }
 
