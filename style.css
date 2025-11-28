@@ -8,7 +8,7 @@
 :root {
     --primary: #3c5a99;
     --primary-dark: #2c4570;
-    --primary-light: rgba(60, 90, 153, 0.1);
+    --primary-light: rgba(60, 90, 153, 0.08);
     --text-dark: #2c3e50;
     --text-gray: #666;
     --text-light: #999;
@@ -17,6 +17,7 @@
     --bg-light: #fafafa;
     --border-light: #e0e0e0;
     --timeline-gray: #bbb;
+    --recruitment: #ff6b6b;
 }
 
 html {
@@ -62,7 +63,6 @@ body {
     margin-bottom: 18px;
 }
 
-/* Calligraphy Name */
 .name {
     font-family: 'Dancing Script', cursive;
     font-size: 2rem;
@@ -80,43 +80,40 @@ body {
     margin-bottom: 3px;
 }
 
-/* Smaller, More Beautiful Buttons */
+/* Elegant Smooth Buttons - No Boundaries */
 .nav-menu {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
     margin-bottom: 30px;
 }
 
 .nav-link {
     display: block;
-    padding: 8px 14px;
-    color: var(--text-dark);
+    padding: 10px 16px;
+    color: var(--text-gray);
     text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    border-radius: 8px;
     transition: all 0.3s ease;
-    border: 1px solid var(--border-light);
-    background: var(--bg-white);
+    background: transparent;
     text-align: center;
 }
 
 .nav-link:hover {
-    background-color: var(--primary);
-    color: white;
-    border-color: var(--primary);
-    transform: translateX(3px);
-    box-shadow: 0 2px 8px rgba(60, 90, 153, 0.2);
+    background-color: var(--primary-light);
+    color: var(--primary);
+    transform: translateX(5px);
 }
 
 .nav-link.active {
     background-color: var(--primary-light);
-    border-color: var(--primary);
     color: var(--primary);
+    font-weight: 500;
 }
 
-/* Elegant Social Icons */
+/* Social Icons */
 .social-links {
     display: flex;
     justify-content: center;
@@ -135,15 +132,13 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: var(--bg-white);
-    border: 1px solid var(--border-light);
+    background: transparent;
 }
 
 .social-links a:hover {
     color: var(--primary);
-    border-color: var(--primary);
+    background-color: var(--primary-light);
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(60, 90, 153, 0.15);
 }
 
 /* Main Content */
@@ -157,19 +152,19 @@ body {
     margin-bottom: 40px;
 }
 
-/* Section Headers with Gray Underline */
+/* Larger Section Headers */
 h2 {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--title-gray);
     margin-bottom: 15px;
     padding-bottom: 10px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     border-bottom: 2px solid var(--border-light);
 }
 
-/* Brief Bio - Top Aligned Address */
+/* Brief Bio */
 .bio-content-wrapper {
     display: flex;
     gap: 40px;
@@ -202,7 +197,6 @@ h2 {
     font-size: 0.8rem;
     color: var(--text-gray);
     line-height: 1.6;
-    padding-top: 0;
 }
 
 .bio-right p {
@@ -219,11 +213,50 @@ h2 {
     color: var(--primary);
 }
 
-/* News Section - Compact */
+/* News Section - Highlighted Recruitment */
 .news-list {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 15px;
+}
+
+.recruitment-notice {
+    display: flex;
+    gap: 15px;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+    border-left: 4px solid var(--recruitment);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.1);
+}
+
+.recruitment-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.recruitment-content {
+    flex: 1;
+}
+
+.recruitment-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--recruitment);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.recruitment-content p {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.recruitment-content strong {
+    color: var(--recruitment);
 }
 
 .news-item {
@@ -259,7 +292,7 @@ h2 {
     font-weight: 700;
 }
 
-/* Timeline - Formal Gray Theme */
+/* Timeline */
 .timeline {
     position: relative;
     padding-left: 30px;
@@ -303,20 +336,27 @@ h2 {
     flex: 1;
 }
 
+/* Lighter Date Badge - Border Only */
 .date-badge {
     display: inline-block;
-    background: var(--primary);
-    color: white;
+    background: transparent;
+    color: var(--primary);
     padding: 3px 10px;
-    border-radius: 3px;
+    border-radius: 4px;
+    border: 1.5px solid var(--primary);
     font-size: 0.7rem;
     font-weight: 500;
     margin-bottom: 10px;
     letter-spacing: 0.3px;
 }
 
+.timeline-content {
+    flex: 1;
+}
+
+/* Larger School/Company Names */
 .item-details h4 {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--text-dark);
     margin: 0 0 5px 0;
@@ -376,7 +416,21 @@ h2 {
     color: var(--primary);
 }
 
-/* Timeline Logo - Larger */
+/* Inline Awards Under Education */
+.awards-inline {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border-light);
+}
+
+.award-item {
+    font-size: 0.8rem;
+    color: var(--primary);
+    margin: 6px 0;
+    padding-left: 10px;
+}
+
+/* Timeline Logo */
 .timeline-logo {
     flex-shrink: 0;
     width: 100px;
@@ -392,7 +446,7 @@ h2 {
     object-fit: contain;
 }
 
-/* Publications - Correct 5:3 Ratio (Width:Height) */
+/* Challenges & Publications */
 .note {
     font-size: 0.8rem;
     color: var(--text-gray);
@@ -421,7 +475,6 @@ h2 {
     margin: 0;
 }
 
-/* 5:3 Ratio - Width:Height */
 .pub-image {
     flex-shrink: 0;
     width: 150px;
@@ -438,6 +491,10 @@ h2 {
 .placeholder-image {
     font-size: 3rem;
     opacity: 0.3;
+}
+
+.trophy-large {
+    font-size: 3.5rem;
 }
 
 .pub-image img {
@@ -505,27 +562,6 @@ h2 {
     fill: var(--primary);
 }
 
-/* Awards */
-.awards-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.award-column h4 {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 12px;
-}
-
-.award-column p {
-    font-size: 0.8rem;
-    color: var(--text-gray);
-    line-height: 1.6;
-    margin-bottom: 8px;
-}
-
 /* Activities */
 .activities-grid {
     display: grid;
@@ -562,30 +598,32 @@ h2 {
     font-size: 0.7rem;
 }
 
-/* Enhanced Visitor Section with Colorful Map */
+/* Colorful Visitor Section */
 footer {
     margin-top: 40px;
-    padding: 35px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    border-radius: 12px;
+    padding: 0;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.visitor-section {
+    padding: 35px;
+    background: transparent;
+    border-top: 2px solid var(--border-light);
 }
 
 .visitor-section h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-dark);
+    color: var(--text-dark);
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
 
 .visitor-intro {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-gray);
     margin-bottom: 25px;
-    font-style: italic;
 }
 
 .visitor-map {
@@ -595,12 +633,12 @@ footer {
     padding: 20px;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .footer-note {
     margin-top: 20px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-light);
 }
 
@@ -628,7 +666,6 @@ footer {
         width: 100%;
     }
 
-    .awards-grid,
     .activities-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -648,6 +685,11 @@ footer {
     .pub-image {
         width: 100%;
         height: 120px;
+    }
+
+    .recruitment-notice {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
