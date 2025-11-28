@@ -10,7 +10,7 @@
     --orange-light: rgba(245, 137, 77, 0.15);
     --text-dark: #2c3e50;
     --text-gray: #666;
-    --text-light: #888;
+    --text-light: #999;
     --title-gray: #999;
     --bg-white: #ffffff;
     --bg-light: #fafafa;
@@ -29,7 +29,7 @@ body {
     background-color: var(--bg-light);
 }
 
-/* Page Container - Centered Layout */
+/* Page Container */
 .page-container {
     display: flex;
     max-width: 1400px;
@@ -133,10 +133,27 @@ body {
     margin-bottom: 30px;
 }
 
+/* Brief Bio - No Background */
 .brief-bio {
-    background: var(--bg-white);
-    padding: 25px 30px;
-    border-radius: 4px;
+    padding: 0;
+}
+
+.bio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contact-info-right {
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.contact-info-right p {
+    margin: 2px 0;
 }
 
 .background-header {
@@ -149,7 +166,7 @@ body {
     border-radius: 4px;
 }
 
-/* Section Headers */
+/* Section Headers - Gray */
 h2 {
     font-size: 0.9rem;
     font-weight: 600;
@@ -159,10 +176,11 @@ h2 {
     letter-spacing: 1px;
 }
 
+/* Subsection Headers - Gray */
 h3 {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--orange);
+    color: var(--title-gray);
     margin: 0 0 20px 0;
     text-transform: uppercase;
     letter-spacing: 0.8px;
@@ -185,22 +203,6 @@ h3 {
     color: var(--orange);
 }
 
-.contact-info {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid var(--border-light);
-}
-
-.contact-info p {
-    font-size: 0.8rem;
-    margin-bottom: 5px;
-}
-
-.contact-info strong {
-    font-weight: 600;
-    color: var(--text-dark);
-}
-
 .cv-link {
     color: var(--text-dark);
     text-decoration: none;
@@ -211,7 +213,7 @@ h3 {
     text-decoration: underline;
 }
 
-/* Timeline with Gray Bar */
+/* Timeline */
 .timeline {
     position: relative;
     padding-left: 25px;
@@ -239,7 +241,6 @@ h3 {
     margin-bottom: 0;
 }
 
-/* Orange Dot on Gray Line */
 .timeline-marker {
     position: absolute;
     left: -21px;
@@ -276,6 +277,7 @@ h3 {
     line-height: 1.4;
 }
 
+/* Degree/Position with Underline */
 .degree,
 .position {
     font-size: 0.85rem;
@@ -283,15 +285,21 @@ h3 {
     margin-bottom: 5px;
 }
 
-.degree strong,
-.position strong {
-    font-weight: 600;
+.underline {
+    text-decoration: underline;
+    font-weight: normal;
 }
 
-.mentors {
-    font-size: 0.8rem;
+/* Mentor Links - Dashed Gray Underline */
+.mentor-link {
     color: var(--text-gray);
-    margin-bottom: 8px;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--text-light);
+}
+
+.mentor-link:hover {
+    color: var(--text-dark);
+    border-bottom-color: var(--text-dark);
 }
 
 .item-details ul {
@@ -324,7 +332,7 @@ h3 {
     color: var(--orange);
 }
 
-/* Timeline Logo - Right Side, Larger */
+/* Timeline Logo */
 .timeline-logo {
     flex-shrink: 0;
     width: 90px;
@@ -365,19 +373,13 @@ h3 {
 .publications-list {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 20px;
 }
 
+/* No Lines Between Papers */
 .pub-item {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--border-light);
-}
-
-.pub-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .pub-title {
@@ -395,47 +397,98 @@ h3 {
     line-height: 1.5;
 }
 
-.pub-authors strong {
-    color: var(--text-dark);
-    font-weight: 600;
+/* Author Name Underlined, Not Bold */
+.author-name {
+    text-decoration: underline;
+    font-weight: normal;
 }
 
+/* No Italic for Venue */
 .pub-venue {
     font-size: 0.8rem;
     color: var(--text-gray);
-    font-style: italic;
     margin-bottom: 6px;
+    font-style: normal;
 }
 
+/* PDF Link with Icon and Dashed Underline */
 .pub-links {
     font-size: 0.8rem;
 }
 
-.pub-links a {
-    color: var(--text-dark);
+.pdf-link {
+    color: var(--text-gray);
     text-decoration: none;
-    margin-right: 10px;
+    border-bottom: 1px dashed var(--text-light);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
-.pub-links a:hover {
-    text-decoration: underline;
-    color: var(--orange);
+.pdf-link:hover {
+    color: var(--text-dark);
+    border-bottom-color: var(--text-dark);
 }
 
-/* Awards and Activities */
-#awards,
+.pdf-link svg {
+    fill: var(--text-gray);
+}
+
+.pdf-link:hover svg {
+    fill: var(--text-dark);
+}
+
+/* Awards - 3 Column Grid */
+#awards {
+    background: var(--bg-white);
+    padding: 25px 30px;
+    border-radius: 4px;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.award-column h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.award-column p {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* Activities - 3 Column Grid */
 #activities {
     background: var(--bg-white);
     padding: 25px 30px;
     border-radius: 4px;
 }
 
-#awards p,
-.activity-text {
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.activity-column h4 {
     font-size: 0.85rem;
-    line-height: 1.7;
-    color: var(--text-gray);
+    font-weight: 600;
+    color: var(--text-dark);
     margin-bottom: 12px;
+}
+
+.activity-text {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--text-gray);
 }
 
 /* Footer */
@@ -466,13 +519,19 @@ footer {
         padding: 30px 40px;
     }
 
-    .timeline-logo {
-        width: 70px;
+    .awards-grid,
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .timeline-logo img {
-        width: 70px;
-        height: 70px;
+    .bio-header {
+        flex-direction: column;
+    }
+
+    .contact-info-right {
+        text-align: left;
+        margin-top: 15px;
     }
 }
 
@@ -492,24 +551,11 @@ footer {
     .timeline-logo {
         width: 100%;
         justify-content: flex-start;
-        padding-top: 0;
     }
 
     .timeline-logo img {
         width: 60px;
         height: 60px;
-    }
-
-    .timeline {
-        padding-left: 20px;
-    }
-
-    .timeline::before {
-        left: 5px;
-    }
-
-    .timeline-marker {
-        left: -18px;
     }
 }
 
