@@ -2,13 +2,13 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const navHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = target.offsetTop - navHeight - 20;
-            
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            const offsetTop = targetElement.offsetTop - 20;
             window.scrollTo({
-                top: targetPosition,
+                top: offsetTop,
                 behavior: 'smooth'
             });
         }
@@ -17,11 +17,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Active navigation link on scroll
 window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.section, .hero-section');
+    const sections = document.querySelectorAll('.section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
     
     let current = '';
-    const scrollPosition = window.pageYOffset + 150;
+    const scrollPosition = window.pageYOffset + 100;
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -42,79 +42,26 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Navbar shadow on scroll
-let lastScroll = 0;
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 50) {
-        navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
+// Add active class styling
+const style = document.createElement('style');
+style.textContent = `
+    .nav-link.active {
+        background-color: var(--orange-light);
+        border-color: var(--siemens-orange);
+        color: var(--siemens-orange);
     }
+`;
+document.head.appendChild(style);
+
+// Fade-in animation on page load
+window.addEventListener('load', () => {
+    const mainContent = document.querySelector('.main-content');
+    mainContent.style.opacity = '0';
+    mainContent.style.transition = 'opacity 0.5s ease';
     
-    lastScroll = currentScroll;
-});
-
-// Fade-in animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -80px 0px'
-};
-
-const fadeInObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Apply fade-in animation to elements
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll(
-        '.news-item, .publication-item, .experience-item, .award-item, .activity-card, .content-card'
-    );
-    
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        fadeInObserver.observe(el);
-    });
-});
-
-// Mobile menu toggle (for future enhancement)
-const createMobileMenuToggle = () => {
-    if (window.innerWidth <= 768) {
-        const navbar = document.querySelector('.nav-container');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        if (!document.querySelector('.mobile-menu-toggle')) {
-            const toggle = document.createElement('button');
-            toggle.className = 'mobile-menu-toggle';
-            toggle.innerHTML = '☰';
-            toggle.setAttribute('aria-label', 'Toggle navigation menu');
-            
-            toggle.addEventListener('click', () => {
-                navMenu.classList.toggle('show');
-                toggle.classList.toggle('active');
-            });
-            
-            navbar.insertBefore(toggle, navMenu);
-        }
-    }
-};
-
-// Handle window resize
-let resizeTimer;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-        // Add any resize-specific functionality here
-    }, 250);
+    setTimeout(() => {
+        mainContent.style.opacity = '1';
+    }, 100);
 });
 
 // External links open in new tab
@@ -126,13 +73,4 @@ document.addEventListener('DOMContentLoaded', () => {
             link.setAttribute('rel', 'noopener noreferrer');
         }
     });
-});
-
-// Smooth page load
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.3s ease';
-        document.body.style.opacity = '1';
-    }, 100);
 });

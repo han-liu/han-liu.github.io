@@ -3,407 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Han Liu - Research Scientist</title>
+    <title>Han Liu - Siemens Healthineers</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://github.com/han-liu/han-liu.github.io/blob/master/HanLiu.jpeg?raw=true">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">Han Liu</div>
-            <ul class="nav-menu">
-                <li><a href="#Biography" class="nav-link">Biography</a></li>
-                <li><a href="#News" class="nav-link">News</a></li>
-                <li><a href="#Publications" class="nav-link">Publications</a></li>
-                <li><a href="#Experience" class="nav-link">Experience</a></li>
-                <li><a href="#Awards" class="nav-link">Awards</a></li>
-            </ul>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile-section">
+            <img src="https://github.com/han-liu/han-liu.github.io/blob/master/HanLiu.jpeg?raw=true" alt="Han Liu" class="profile-img">
+            <h1 class="name">Han Liu</h1>
+            <p class="title">PhD Candidate @ Rutgers</p>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <img src="https://github.com/han-liu/han-liu.github.io/blob/master/HanLiu.jpeg?raw=true" alt="Han Liu">
+        <nav class="nav-menu">
+            <a href="#background" class="nav-link">Background</a>
+            <a href="#publications" class="nav-link">Publications</a>
+        </nav>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/han-liu-9765366a/" target="_blank" title="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/han-liu" target="_blank" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+            <a href="https://scholar.google.com/citations?user=38YPqAkAAAAJ&hl=en" target="_blank" title="Google Scholar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+                </svg>
+            </a>
+            <a href="mailto:han.liu@siemens-healthineers.com" title="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                </svg>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Brief Bio -->
+        <section class="brief-bio">
+            <h2>Brief Bio</h2>
+            <div class="bio-content">
+                <p>I am a PhD candidate in the Computer Science Department of Rutgers University, advised by Distinguished Professor Dimitris N. Metaxas.</p>
+                <p>My current research interests lie primarily in (1) medical imaging foundation models (e.g., universal medical image understanding, multimodal models), (2) Knowledge-driven models and explainable AI (e.g., injecting human prior knowledge into models, making the AI decision-making process human-understandable); and (3) Model adaptability (e.g., domain adaptation, generalization, in-context learning).</p>
+            </div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <span class="label">Address:</span>
+                    <span>617 Bowser Rd, Piscataway, NJ 08854, Rutgers University</span>
                 </div>
-                <div class="hero-text">
-                    <h1>Han Liu</h1>
-                    <p class="title">Research Scientist</p>
-                    <p class="affiliation">Siemens Healthineers</p>
-                    <p class="location">Princeton, NJ, USA</p>
-                    
-                    <div class="contact-info">
-                        <p><strong>Email:</strong> han.liu@siemens-healthineers.com</p>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://scholar.google.com/citations?user=38YPqAkAAAAJ&hl=en" target="_blank" title="Google Scholar">
-                            <img src="https://user-images.githubusercontent.com/4565568/29706177-1b3f8d24-8981-11e7-94dd-f561724011ab.png" alt="Google Scholar">
-                        </a>
-                        <a href="https://github.com/han-liu" target="_blank" title="GitHub">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="GitHub">
-                        </a>
-                        <a href="https://www.linkedin.com/in/han-liu-9765366a/" target="_blank" title="LinkedIn">
-                            <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="LinkedIn">
-                        </a>
-                        <a href="https://www.researchgate.net/profile/Han_Liu87" target="_blank" title="ResearchGate">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/ResearchGate_icon_SVG.svg/2048px-ResearchGate_icon_SVG.svg.png" alt="ResearchGate">
-                        </a>
-                    </div>
+                <div class="info-item">
+                    <span class="label">Email:</span>
+                    <span>yunhe [dot] gao [at] rutgers [dot] com</span>
+                </div>
+                <div class="info-item">
+                    <a href="#" class="cv-link">[Curriculum Vitae]</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Biography Section -->
-    <section id="Biography" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Biography</h2>
-                <a href="https://github.com/han-liu/han-liu.github.io/blob/master/CV_Han_Liu.pdf" class="cv-link" target="_blank">View CV →</a>
-            </div>
+        <!-- Background Section -->
+        <section id="background" class="section">
+            <h2>BACKGROUND</h2>
             
-            <div class="content-card">
-                <p>I am a Research Scientist at Siemens Healthineers. Previously, I received my Ph.D. degree from the department of Computer Science at <a href="https://www.vanderbilt.edu/" target="_blank">Vanderbilt University</a>, supervised by <a href="https://engineering.vanderbilt.edu/bio/ipek-oguz" target="_blank">Prof. Ipek Oguz</a> and <a href="https://engineering.vanderbilt.edu/bio/benoit-dawant" target="_blank">Prof. Benoit Dawant</a>.</p>
+            <!-- Education -->
+            <div class="subsection">
+                <h3>EDUCATION</h3>
                 
-                <p>In 2016, I received the B.S degree from Department of Biomedical Engineering and Electrical Engineering in <a href="https://www.rpi.edu/" target="_blank">Rensselaer Polytechnic Institute</a>, mentored by <a href="https://biotech.rpi.edu/centers/bic/people/faculty/ge-wang" target="_blank">Prof. Ge Wang</a>. In 2017, I received the M.S degree from the Department of Biomedical Engineering in <a href="https://www.yale.edu/" target="_blank">Yale University</a>, advised by <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan" target="_blank">Prof. James Duncan</a>.</p>
-                
-                <p>Before joining Vanderbilt, I worked as a research associate in the <a href="https://www.radiology.pitt.edu/imaging-research-lab.html" target="_blank">Imaging Research Lab</a> in the Department of Radiology in <a href="https://www.pitt.edu/" target="_blank">University of Pittsburgh</a>, advised by <a href="http://www.pitt.edu/~jip13/" target="_blank">Prof. Jiantao Pu</a>.</p>
-                
-                <div class="research-interests">
-                    <h3>Research Interests</h3>
-                    <p>My research interests lie in the fields of <strong>machine learning</strong> and <strong>medical image analysis</strong>. During my Ph.D. study, my research focused on developing robust and flexible deep learning techniques for incomplete medical image datasets, including:</p>
-                    <ul>
-                        <li>Generative models for domain adaptation</li>
-                        <li>Self-adaptive models for missing modality problem</li>
-                        <li>Universal models by leveraging partially labeled datasets</li>
-                    </ul>
+                <div class="timeline-item">
+                    <span class="date-badge">SEPT.2019 - PRESENT</span>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/71/Rutgers_University_seal.svg/150px-Rutgers_University_seal.svg.png" alt="Rutgers" class="logo">
+                            <div>
+                                <h4>Rutgers, The State University of New Jersey. Piscataway, NJ</h4>
+                                <p class="degree">Ph.D. in Computer Science</p>
+                                <ul class="details">
+                                    <li>Supervised by <a href="http://www.cs.rutgers.edu/~dnm/" target="_blank">Distinguished Prof. Dimitris N. Metaxas</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- News Section -->
-    <section id="News" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">News</h2>
-            
-            <div class="news-timeline">
-                <div class="news-item">
-                    <span class="news-date">02/2025</span>
-                    <p>Our team <strong>DTI</strong> ranked <span class="highlight">1st</span> in the PANORAMA challenge!</p>
+                <div class="timeline-item">
+                    <span class="date-badge">SEPT.2017 - NOV.2018</span>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Chinese_University_of_Hong_Kong_Logo.svg/150px-Chinese_University_of_Hong_Kong_Logo.svg.png" alt="CUHK" class="logo">
+                            <div>
+                                <h4>The Chinese University of Hong Kong. Central Ave, Hong Kong</h4>
+                                <p class="degree">M.S. in Electronic Engineering</p>
+                                <ul class="details">
+                                    <li>Supervised by <a href="https://www.ee.cuhk.edu.hk/~hsli/" target="_blank">Prof. Hongsheng Li</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="news-item">
-                    <span class="news-date">06/2024</span>
-                    <p>I joined Siemens Healthineers as a Research Scientist.</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">05/2024</span>
-                    <p>I successfully defended my PhD thesis.</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">01/2024</span>
-                    <p>Our paper <strong>COSST</strong> was accepted by IEEE Transactions on Medical Imaging.</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">10/2023</span>
-                    <p>Our team <strong>Vandy365</strong> ranked <span class="highlight">1st</span> in the MICCAI challenge crossMoDA 2023!</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">06/2023</span>
-                    <p>Our paper <strong>COLosSAL</strong> was accepted by MICCAI 2023.</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">06/2022</span>
-                    <p>Research intern at Siemens Healthineers, Princeton.</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">06/2022</span>
-                    <p>Our paper <strong>ModDrop++</strong> was early accepted by MICCAI 2022 (top 13%).</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">01/2022</span>
-                    <p>Our MICCAI challenge paper was accepted by the MICCAI workshop BrainLes 2021 post-proceeding.</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">10/2021</span>
-                    <p>Two papers were accepted by SPIE Medical Imaging 2022.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Publications Section -->
-    <section id="Publications" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Selected Publications</h2>
-                <a href="https://scholar.google.com/citations?user=38YPqAkAAAAJ&hl=en" class="scholar-link" target="_blank">Google Scholar →</a>
+                <div class="timeline-item">
+                    <span class="date-badge">SEPT.2013 - JUL.2017</span>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/University_of_Science_and_Technology_of_China_logo.svg/150px-University_of_Science_and_Technology_of_China_logo.svg.png" alt="USTC" class="logo">
+                            <div>
+                                <h4>University of Science and Technology of China, Hefei, China</h4>
+                                <p class="degree">B.Eng. in Automation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Experience -->
+            <div class="subsection">
+                <h3>EXPERIENCE</h3>
+                
+                <div class="timeline-item">
+                    <span class="date-badge">FEB.2024 - PRESENT</span>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Microsoft_logo.svg/150px-Microsoft_logo.svg.png" alt="Microsoft" class="logo">
+                            <div>
+                                <h4>Could + AI, Microsoft. Remote</h4>
+                                <p class="position">Part-time Research Scientist Intern</p>
+                                <ul class="details">
+                                    <li>Medical imaging foundation models</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="date-badge">JUN.2023 - SEP.2023</span>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png" alt="AWS" class="logo">
+                            <div>
+                                <h4>Deep Engine Science, AWS. Santa Clara, CA, USA</h4>
+                                <p class="position">Applied Scientist Intern</p>
+                                <p class="mentors">Host: <a href="https://boranhan.github.io/" target="_blank">Dr. Boran Han</a> and <a href="https://zhiqiangdon.github.io/" target="_blank">Dr. Zhiqiang Tang</a></p>
+                                <ul class="details">
+                                    <li>Large-scale dataset distillation via purified pretraining model</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="date-badge">JUNE.2022 - SEPT.2022</span>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png" alt="AWS" class="logo">
+                            <div>
+                                <h4>Deep Engine Science, AWS. Santa Clara, CA, USA</h4>
+                                <p class="position">Applied Scientist Intern</p>
+                                <p class="mentors">Host: <a href="https://sxjscience.github.io/" target="_blank">Dr. Xingjian Shi</a> and <a href="https://bryanyzhu.github.io/" target="_blank">Dr. Yi Zhu</a></p>
+                                <ul class="details">
+                                    <li>Data-efficient test-time domain adaptation via visual prompt tuning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="date-badge">AUG.2019 - PRESENT</span>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/71/Rutgers_University_seal.svg/150px-Rutgers_University_seal.svg.png" alt="Rutgers" class="logo">
+                            <div>
+                                <h4>Computer Science Department, Rutgers University. Piscataway, NJ, USA</h4>
+                                <p class="position">Research Assistant</p>
+                                <p class="mentors">Advisor: <a href="http://www.cs.rutgers.edu/~dnm/" target="_blank">Prof. Dimitris N. Metaxas</a></p>
+                                <ul class="details">
+                                    <li>Knowledge-driven models for explainable diagnosis</li>
+                                    <li>Foundation medical image segmentation models</li>
+                                    <li>Improving model robustness against distribution shift</li>
+                                    <li>Medical image segmentation via vision transformer</li>
+                                    <li>Data-efficient learning via automatic data augmentation for natural and medical images</li>
+                                    <li>Shape regularization in medical image segmentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+            <h2>SELECTED PUBLICATIONS 
+                <a href="https://scholar.google.com/citations?user=38YPqAkAAAAJ&hl=en" class="scholar-link" target="_blank">[Google Scholar]</a>
+            </h2>
             
             <div class="publications-list">
-                <div class="publication-item">
-                    <div class="pub-marker"></div>
-                    <div class="pub-content">
-                        <p class="pub-authors"><strong>Han Liu</strong>, Yubo Fan, Zhoubing Xu, Benoit M. Dawant, and Ipek Oguz</p>
-                        <p class="pub-title"><a href="https://arxiv.org/pdf/2311.12437.pdf" target="_blank">Learning Site-specific Styles for Multi-institutional Unsupervised Cross-modality Domain Adaptation</a></p>
-                        <p class="pub-venue">MICCAI Workshop BrainLes 2023</p>
-                    </div>
-                </div>
+                <p class="pub-item">
+                    <strong>Han Liu</strong>, Yubo Fan, Zhoubing Xu, Benoit M. Dawant, and Ipek Oguz, 
+                    <a href="https://arxiv.org/pdf/2311.12437.pdf" target="_blank">"Learning Site-specific Styles for Multi-institutional Unsupervised Cross-modality Domain Adaptation"</a>, 
+                    <span class="venue">MICCAI Workshop BrainLes 2023</span>
+                </p>
 
-                <div class="publication-item">
-                    <div class="pub-marker"></div>
-                    <div class="pub-content">
-                        <p class="pub-authors"><strong>Han Liu</strong>, Zhoubing Xu, Riqiang Gao, Hao Li, Jianing Wang, Guillaume Chabin, Ipek Oguz, and Sasa Grbic</p>
-                        <p class="pub-title"><a href="https://arxiv.org/abs/2304.14030" target="_blank">COSST: Multi-organ Segmentation with Partially Labeled Datasets Using Comprehensive Supervisions and Self-training</a></p>
-                        <p class="pub-venue">IEEE Transactions on Medical Imaging</p>
-                    </div>
-                </div>
+                <p class="pub-item">
+                    <strong>Han Liu</strong>, Zhoubing Xu, Riqiang Gao, Hao Li, Jianing Wang, Guillaume Chabin, Ipek Oguz, and Sasa Grbic, 
+                    <a href="https://arxiv.org/abs/2304.14030" target="_blank">"COSST: Multi-organ Segmentation with Partially Labeled Datasets Using Comprehensive Supervisions and Self-training"</a>, 
+                    <span class="venue">IEEE Transactions on Medical Imaging</span>
+                </p>
 
-                <div class="publication-item">
-                    <div class="pub-marker"></div>
-                    <div class="pub-content">
-                        <p class="pub-authors"><strong>Han Liu</strong>, Hao Li, Xing Yao, Yubo Fan, Dewei Hu, Benoit M. Dawant, Vishwesh Nath, Zhoubing Xu, and Ipek Oguz</p>
-                        <p class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-43895-0_3" target="_blank">COLosSAL: A Benchmark for Cold-start Active Learning for 3D Medical Image Segmentation</a></p>
-                        <p class="pub-venue">MICCAI 2023</p>
-                    </div>
-                </div>
+                <p class="pub-item">
+                    <strong>Han Liu</strong>, Hao Li, Xing Yao, Yubo Fan, Dewei Hu, Benoit M. Dawant, Vishwesh Nath, Zhoubing Xu, and Ipek Oguz, 
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-43895-0_3" target="_blank">"COLosSAL: A Benchmark for Cold-start Active Learning for 3D Medical Image Segmentation"</a>, 
+                    <span class="venue">MICCAI 2023</span>
+                </p>
 
-                <div class="publication-item">
-                    <div class="pub-marker"></div>
-                    <div class="pub-content">
-                        <p class="pub-authors"><strong>Han Liu</strong>, Michelle K. Sigona, Thomas J. Manuel, Li Min Chen, Charles F. Caskey, and Benoit M. Dawant</p>
-                        <p class="pub-title"><a href="https://arxiv.org/abs/2210.14775" target="_blank">Evaluation of synthetically generated computed tomography for use in transcranial focused ultrasound procedures</a></p>
-                        <p class="pub-venue">Journal of Medical Imaging 2023</p>
-                    </div>
-                </div>
+                <p class="pub-item">
+                    <strong>Han Liu</strong>, Michelle K. Sigona, Thomas J. Manuel, Li Min Chen, Charles F. Caskey, and Benoit M. Dawant, 
+                    <a href="https://arxiv.org/abs/2210.14775" target="_blank">"Evaluation of synthetically generated computed tomography for use in transcranial focused ultrasound procedures"</a>, 
+                    <span class="venue">Journal of Medical Imaging 2023</span>
+                </p>
 
-                <div class="publication-item">
-                    <div class="pub-marker"></div>
-                    <div class="pub-content">
-                        <p class="pub-authors"><strong>Han Liu</strong>, Yubo Fan, Ipek Oguz, and Benoit M. Dawant</p>
-                        <p class="pub-title"><a href="https://arxiv.org/abs/2209.11879" target="_blank">Enhancing Data Diversity for Self-training Based Unsupervised Cross-modality Vestibular Schwannoma and Cochlea Segmentation</a></p>
-                        <p class="pub-venue">MICCAI Workshop BrainLes 2022</p>
-                    </div>
-                </div>
+                <p class="pub-item">
+                    <strong>Han Liu</strong>, Yubo Fan, Ipek Oguz, and Benoit M. Dawant, 
+                    <a href="https://arxiv.org/abs/2209.11879" target="_blank">"Enhancing Data Diversity for Self-training Based Unsupervised Cross-modality Vestibular Schwannoma and Cochlea Segmentation"</a>, 
+                    <span class="venue">MICCAI Workshop BrainLes 2022</span>
+                </p>
 
-                <div class="publication-item">
-                    <div class="pub-marker"></div>
-                    <div class="pub-content">
-                        <p class="pub-authors"><strong>Han Liu</strong>, Yubo Fan, Hao Li, Jiacheng Wang, Dewei Hu, Can Cui, Ho Hin Lee, Huahong Zhang, and Ipek Oguz</p>
-                        <p class="pub-title"><a href="https://arxiv.org/pdf/2203.04959.pdf" target="_blank">ModDrop++: A Dynamic Filter Network with Intra-subject Co-training for Multiple Sclerosis Lesion Segmentation with Missing Modalities</a></p>
-                        <p class="pub-venue">MICCAI 2022</p>
-                    </div>
-                </div>
+                <p class="pub-item">
+                    <strong>Han Liu</strong>, Yubo Fan, Hao Li, Jiacheng Wang, Dewei Hu, Can Cui, Ho Hin Lee, Huahong Zhang, and Ipek Oguz, 
+                    <a href="https://arxiv.org/pdf/2203.04959.pdf" target="_blank">"ModDrop++: A Dynamic Filter Network with Intra-subject Co-training for Multiple Sclerosis Lesion Segmentation with Missing Modalities"</a>, 
+                    <span class="venue">MICCAI 2022</span>
+                </p>
 
-                <div class="publication-item">
-                    <div class="pub-marker"></div>
-                    <div class="pub-content">
-                        <p class="pub-authors"><strong>Han Liu</strong>, Yubo Fan, Can Cui, Dingjie Su, Andrew McNeil, and Benoit M. Dawant</p>
-                        <p class="pub-title"><a href="https://arxiv.org/pdf/2201.10647.pdf" target="_blank">Unsupervised Domain Adaptation for Vestibular Schwannoma and Cochlea Segmentation via Semi-supervised Learning and Label Fusion</a></p>
-                        <p class="pub-venue">MICCAI Workshop BrainLes 2021</p>
-                    </div>
-                </div>
+                <p class="pub-item">
+                    <strong>Han Liu</strong>, Yubo Fan, Can Cui, Dingjie Su, Andrew McNeil, and Benoit M. Dawant, 
+                    <a href="https://arxiv.org/pdf/2201.10647.pdf" target="_blank">"Unsupervised Domain Adaptation for Vestibular Schwannoma and Cochlea Segmentation via Semi-supervised Learning and Label Fusion"</a>, 
+                    <span class="venue">MICCAI Workshop BrainLes 2021</span>
+                </p>
 
-                <div class="publication-item">
-                    <div class="pub-marker"></div>
-                    <div class="pub-content">
-                        <p class="pub-authors"><strong>Han Liu</strong>, Michelle K. Sigona, Thomas J. Manuel, Li Min Chen, Charles F. Caskey, and Benoit M. Dawant</p>
-                        <p class="pub-title"><a href="https://arxiv.org/pdf/2202.10136.pdf" target="_blank">Synthetic CT Skull Generation for Transcranial MR Imaging–Guided Focused Ultrasound Interventions with Conditional Adversarial Networks</a></p>
-                        <p class="pub-venue">SPIE Medical Imaging 2022</p>
-                    </div>
-                </div>
+                <p class="pub-item">
+                    <strong>Han Liu</strong>, Michelle K. Sigona, Thomas J. Manuel, Li Min Chen, Charles F. Caskey, and Benoit M. Dawant, 
+                    <a href="https://arxiv.org/pdf/2202.10136.pdf" target="_blank">"Synthetic CT Skull Generation for Transcranial MR Imaging–Guided Focused Ultrasound Interventions with Conditional Adversarial Networks"</a>, 
+                    <span class="venue">SPIE Medical Imaging 2022</span>
+                </p>
 
-                <div class="publication-item">
-                    <div class="pub-marker"></div>
-                    <div class="pub-content">
-                        <p class="pub-authors"><strong>Han Liu</strong>, Kathryn L. Holloway, Dario J. Englot, and Benoit M. Dawant</p>
-                        <p class="pub-title"><a href="https://arxiv.org/pdf/2201.11002.pdf" target="_blank">A Multi-rater Comparative Study of Automatic Target Localization Methods for Epilepsy Deep Brain Stimulation Procedures</a></p>
-                        <p class="pub-venue">SPIE Medical Imaging 2022</p>
-                    </div>
-                </div>
+                <p class="pub-item">
+                    <strong>Han Liu</strong>, Kathryn L. Holloway, Dario J. Englot, and Benoit M. Dawant, 
+                    <a href="https://arxiv.org/pdf/2201.11002.pdf" target="_blank">"A Multi-rater Comparative Study of Automatic Target Localization Methods for Epilepsy Deep Brain Stimulation Procedures"</a>, 
+                    <span class="venue">SPIE Medical Imaging 2022</span>
+                </p>
 
-                <div class="publication-item">
-                    <div class="pub-marker"></div>
-                    <div class="pub-content">
-                        <p class="pub-authors"><strong>Han Liu</strong>, Can Cui, Dario J Englot, Benoit M. Dawant</p>
-                        <p class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-030-61166-8_14" target="_blank">Uncertainty Estimation for Medical Image Localization with Noisy Labels: ANT Targeting in MRI scans for Deep Brain Stimulation</a></p>
-                        <p class="pub-venue">Interpretable and Annotation-Efficient Learning for Medical Image Computing, 2020</p>
-                    </div>
-                </div>
+                <p class="pub-item">
+                    <strong>Han Liu</strong>, Can Cui, Dario J Englot, Benoit M. Dawant, 
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-030-61166-8_14" target="_blank">"Uncertainty Estimation for Medical Image Localization with Noisy Labels: ANT Targeting in MRI scans for Deep Brain Stimulation"</a>, 
+                    <span class="venue">Interpretable and Annotation-Efficient Learning for Medical Image Computing, 2020</span>
+                </p>
 
-                <div class="publication-item">
-                    <div class="pub-marker"></div>
-                    <div class="pub-content">
-                        <p class="pub-authors"><strong>Han Liu</strong>, Lei Wang, Yandong Nan, Faguang Jin, Jiantao Pu</p>
-                        <p class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0895611118306177" target="_blank">SDFN: Segmentation-based Deep Fusion Network for Thoracic Disease Classification in Chest X-ray Images</a></p>
-                        <p class="pub-venue">Computerized Medical Imaging and Graphics, 2019</p>
-                    </div>
+                <p class="pub-item">
+                    <strong>Han Liu</strong>, Lei Wang, Yandong Nan, Faguang Jin, Jiantao Pu, 
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0895611118306177" target="_blank">"SDFN: Segmentation-based Deep Fusion Network for Thoracic Disease Classification in Chest X-ray Images"</a>, 
+                    <span class="venue">Computerized Medical Imaging and Graphics, 2019</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Professional Activities -->
+        <section class="section compact">
+            <h2>HONORS & AWARDS</h2>
+            <p class="simple-content">CrossMoDA 2023 challenge Championship<br>
+            IBM fellowship, 2019-2023<br>
+            Dean's list, Rensselaer Polytechnic Institute, 2012-2015</p>
+        </section>
+
+        <section class="section compact">
+            <h2>PROFESSIONAL ACTIVITIES</h2>
+            <div class="two-column">
+                <div>
+                    <h4>Journal Reviewer</h4>
+                    <p class="small-text">Medical Image Analysis (MedIA), IEEE Transactions on Image Processing (TIP), IEEE Journal of Biomedical and Health Informatics (JBHI), IEEE Transactions on Neural Networks and Learning Systems (TNNLS), The Journal of Machine Learning for Biomedical Imaging (MELBA), Computers in Biology and Medicine (CIBM), Computerized Medical Imaging and Graphics (CMIG), Biomedical Signal Processing and Control, Neurocomputing, Multidimensional Systems & Signal Process (MULT), Heliyon - Cell Press, BioMed Research International</p>
+                </div>
+                <div>
+                    <h4>Conference Reviewer</h4>
+                    <p class="small-text">Medical Image Computing and Computer Assisted Interventions (MICCAI), Medical Imaging with Deep Learning (MIDL), International Symposium on Biomedical Imaging (ISBI), Simulation and Synthesis in Medical Imaging, Medical Imaging Meets NeurIPS, Knowledge Discovery and Data Mining (KDD)</p>
+                    
+                    <h4>Guest Lecture</h4>
+                    <p class="small-text">CS-8395 (2022 Fall): Open Source Programming for Medical Image Processing<br>
+                    CS-6357 (2023 Fall): Open Source Programming for Medical Image Analysis</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="Experience" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="exp-date">May 2022 - Dec 2022</div>
-                    <div class="exp-content">
-                        <h3>Research Intern</h3>
-                        <p class="exp-org">Siemens Healthineers, Princeton, NJ</p>
-                        <p class="exp-mentor">Mentor: Zhoubing Xu</p>
-                        <p class="exp-topic">Topic: Learning a universal CT segmentation model from partially labeled datasets <a href="https://ieeexplore.ieee.org/document/10400525" target="_blank">[paper]</a></p>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-date">Aug 2019 - May 2024</div>
-                    <div class="exp-content">
-                        <h3>Research Assistant</h3>
-                        <p class="exp-org">Vanderbilt University</p>
-                        <p class="exp-mentor">Mentors: Ipek Oguz & Benoit Dawant</p>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-date">Sep 2017 - May 2019</div>
-                    <div class="exp-content">
-                        <h3>Research Associate</h3>
-                        <p class="exp-org">University of Pittsburgh, Imaging Research Lab, Pittsburgh, PA</p>
-                        <p class="exp-mentor">Mentor: Jiantao Pu</p>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-date">Sep 2016 - Aug 2017</div>
-                    <div class="exp-content">
-                        <h3>Research Assistant</h3>
-                        <p class="exp-org">Yale University, Image Processing and Analysis Group, New Haven, CT</p>
-                        <p class="exp-mentor">Mentor: James Duncan</p>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-date">May 2014 - Aug 2014</div>
-                    <div class="exp-content">
-                        <h3>Undergraduate Research Internship</h3>
-                        <p class="exp-org">Wake Forest University, CT Lab, Winston-Salem, NC</p>
-                        <p class="exp-mentor">Mentor: Hengyong Yu</p>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-date">Feb 2014 - May 2014</div>
-                    <div class="exp-content">
-                        <h3>Undergraduate Research Assistant</h3>
-                        <p class="exp-org">Rensselaer Polytechnic Institute, Biomedical Imaging Center, Troy, NY</p>
-                        <p class="exp-mentor">Mentor: Ge Wang</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section id="Awards" class="section">
-        <div class="container">
-            <h2 class="section-title">Honors & Awards</h2>
-            
-            <div class="awards-list">
-                <div class="award-item">
-                    <div class="award-icon">🏆</div>
-                    <div class="award-content">
-                        <h3>CrossMoDA 2023 Challenge Championship</h3>
-                        <p>1st place in MICCAI CrossMoDA 2023 Challenge</p>
-                    </div>
-                </div>
-                <div class="award-item">
-                    <div class="award-icon">🎓</div>
-                    <div class="award-content">
-                        <h3>IBM Fellowship</h3>
-                        <p>2019 - 2023</p>
-                    </div>
-                </div>
-                <div class="award-item">
-                    <div class="award-icon">⭐</div>
-                    <div class="award-content">
-                        <h3>Dean's List</h3>
-                        <p>Rensselaer Polytechnic Institute, 2012 - 2015</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Activities Section -->
-    <section id="Activities" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Professional Activities</h2>
-            
-            <div class="activities-grid">
-                <div class="activity-card">
-                    <h3>Journal Reviewer</h3>
-                    <ul>
-                        <li>Medical Image Analysis (MedIA)</li>
-                        <li>IEEE Transactions on Image Processing (TIP)</li>
-                        <li>IEEE Journal of Biomedical and Health Informatics (JBHI)</li>
-                        <li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
-                        <li>The Journal of Machine Learning for Biomedical Imaging (MELBA)</li>
-                        <li>Computers in Biology and Medicine (CIBM)</li>
-                        <li>Computerized Medical Imaging and Graphics (CMIG)</li>
-                        <li>Biomedical Signal Processing and Control</li>
-                        <li>Neurocomputing</li>
-                        <li>Multidimensional Systems & Signal Process (MULT)</li>
-                        <li>Heliyon - Cell Press</li>
-                        <li>BioMed Research International</li>
-                    </ul>
-                </div>
-
-                <div class="activity-card">
-                    <h3>Conference Reviewer</h3>
-                    <ul>
-                        <li>Medical Image Computing and Computer Assisted Interventions (MICCAI)</li>
-                        <li>Medical Imaging with Deep Learning (MIDL)</li>
-                        <li>International Symposium on Biomedical Imaging (ISBI)</li>
-                        <li>Simulation and Synthesis in Medical Imaging</li>
-                        <li>Medical Imaging Meets NeurIPS</li>
-                        <li>Knowledge Discovery and Data Mining (KDD)</li>
-                    </ul>
-                </div>
-
-                <div class="activity-card">
-                    <h3>Guest Lectures</h3>
-                    <ul>
-                        <li>CS-8395 (2022 Fall): Open Source Programming for Medical Image Processing</li>
-                        <li>CS-6357 (2023 Fall): Open Source Programming for Medical Image Analysis</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Han Liu. All rights reserved.</p>
-                <p>Last updated: November 2024</p>
-            </div>
+        <!-- Footer -->
+        <footer>
             <div class="visitor-map">
                 <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=350&t=tt&d=cSR3wlVGpX9c6_e5RrNSC-s7QPU_ilbCNUQYtUnPWRg&co=2d78ad&cmo=53ff64&cmn=f03535&ct=94e034"></script>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
