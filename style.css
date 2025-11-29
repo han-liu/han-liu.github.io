@@ -6,9 +6,9 @@
 }
 
 :root {
-    --primary: #718096;
-    --primary-dark: #4a5568;
-    --primary-light: rgba(113, 128, 150, 0.08);
+    --primary: #8b96a5;
+    --primary-dark: #6b7684;
+    --primary-light: rgba(139, 150, 165, 0.08);
     --text-dark: #2c3e50;
     --text-black: #000000;
     --text-gray: #666;
@@ -142,7 +142,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* Main Content - Proper Margins Both Sides */
+/* Main Content */
 .main-content {
     flex: 1;
     padding: 40px 50px;
@@ -153,7 +153,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* Section Headers with Margins on Both Sides */
+/* Section Headers */
 h2 {
     font-size: 1.1rem;
     font-weight: 600;
@@ -214,62 +214,17 @@ h2 {
     color: var(--primary);
 }
 
-/* News Section - All Black Text */
-.news-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.hiring-text {
-    font-size: 0.85rem;
-    color: var(--hiring-red);
-    font-weight: 500;
-    line-height: 1.6;
-    margin: 0 0 10px 0;
-}
-
-.news-item {
-    display: flex;
-    gap: 5px;
-    font-size: 0.85rem;
-    align-items: flex-start;
-    line-height: 1.4;
-    margin-bottom: 0;
-}
-
-.news-date {
-    flex-shrink: 0;
-    color: var(--text-black);
-    font-weight: 600;
-    min-width: 70px;
-}
-
-.news-content {
-    color: var(--text-black);
-    line-height: 1.4;
-    flex: 1;
-}
-
-.trophy {
-    font-size: 1rem;
-}
-
-.news-item .highlight {
-    color: var(--text-black);
-    font-weight: 700;
-}
-
-/* Timeline - Horizontally Centered Dots */
+/* Timeline - Single Bar with Dots On Top */
 .timeline {
     position: relative;
     padding-left: 30px;
 }
 
+/* Single Timeline Bar */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 6.5px;
+    left: 8px;
     top: 10px;
     bottom: 10px;
     width: 3px;
@@ -288,17 +243,17 @@ h2 {
     margin-bottom: 0;
 }
 
-/* Perfectly Centered Horizontally on Timeline Bar */
+/* Perfectly Centered Dot ON TOP of Bar */
 .timeline-marker {
     position: absolute;
-    left: -25px;
+    left: -22px;
     top: 8px;
     width: 16px;
     height: 16px;
     background: var(--primary);
     border-radius: 50%;
     border: 3px solid var(--bg-white);
-    z-index: 1;
+    z-index: 2;
 }
 
 .timeline-content {
@@ -318,7 +273,7 @@ h2 {
     letter-spacing: 0.3px;
 }
 
-/* All Black Text for Institutions */
+/* Institution Names */
 .item-details h4 {
     font-size: 0.95rem;
     font-weight: 600;
@@ -335,21 +290,34 @@ h2 {
     line-height: 1.6;
 }
 
-/* Sub-positions for Merged Experience */
-.sub-position {
-    margin-bottom: 8px;
-}
-
-.sub-position:last-of-type {
-    margin-bottom: 0;
-}
-
-.sub-position .position {
-    margin-bottom: 4px;
-}
-
-.sub-position ul {
+/* Aligned Positions for Siemens */
+.positions-container {
     margin-top: 4px;
+}
+
+.position-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    color: var(--text-black);
+}
+
+.position-title {
+    flex-shrink: 0;
+}
+
+.position-dates {
+    flex-shrink: 0;
+    margin-left: 15px;
+    color: var(--text-gray);
+}
+
+.position-advisor {
+    font-size: 0.85rem;
+    color: var(--text-black);
+    margin: 6px 0 4px 0;
 }
 
 .underline {
@@ -566,7 +534,7 @@ h2 {
     font-size: 0.7rem;
 }
 
-/* Visitor Section - Fixed Within Bounds */
+/* Visitor Section */
 footer {
     margin-top: 40px;
     padding: 0;
@@ -659,6 +627,16 @@ footer {
 
     .visitor-section {
         padding: 25px 20px;
+    }
+
+    .position-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .position-dates {
+        margin-left: 0;
+        margin-top: 2px;
     }
 }
 
