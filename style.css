@@ -63,7 +63,7 @@ body {
     margin-bottom: 18px;
 }
 
-/* CS-Themed Name Font - Roboto Mono */
+/* CS-Themed Name Font */
 .name {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.8rem;
@@ -214,11 +214,24 @@ h2 {
     color: var(--primary);
 }
 
-/* News Section - Tighter Spacing, Red Text Highlights */
+/* News Section - Minimal Spacing */
 .news-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0;
+}
+
+/* Red Hiring Text Only */
+.hiring-item {
+    margin-bottom: 12px;
+}
+
+.hiring-text {
+    font-size: 0.85rem;
+    color: var(--hiring-red);
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .news-item {
@@ -226,6 +239,8 @@ h2 {
     gap: 15px;
     font-size: 0.85rem;
     align-items: flex-start;
+    line-height: 1.4;
+    margin-bottom: 0;
 }
 
 .news-date {
@@ -238,17 +253,11 @@ h2 {
 .news-item p {
     color: var(--text-gray);
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 .news-item strong {
     color: var(--text-dark);
-}
-
-/* Red Text Highlight for Hiring */
-.hiring-highlight {
-    color: var(--hiring-red);
-    font-weight: 600;
 }
 
 .trophy {
@@ -260,7 +269,7 @@ h2 {
     font-weight: 700;
 }
 
-/* Timeline */
+/* Timeline - More Compact */
 .timeline {
     position: relative;
     padding-left: 30px;
@@ -278,7 +287,7 @@ h2 {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -313,25 +322,25 @@ h2 {
     border-radius: 4px;
     font-size: 0.7rem;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     letter-spacing: 0.3px;
 }
 
-/* Larger School/Company Names */
+/* Smaller Institution/Company Names */
 .item-details h4 {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-dark);
-    margin: 0 0 5px 0;
-    line-height: 1.4;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
 }
 
 .degree,
 .position {
     font-size: 0.85rem;
     color: var(--text-dark);
-    margin-bottom: 5px;
-    line-height: 1.7;
+    margin-bottom: 4px;
+    line-height: 1.6;
 }
 
 .underline {
@@ -339,7 +348,7 @@ h2 {
     font-weight: normal;
 }
 
-/* Inline Award Text - Dark Theme */
+/* Inline Award Text with Emoji */
 .award-text {
     font-size: 0.8rem;
     color: var(--text-gray);
@@ -361,15 +370,15 @@ h2 {
 .item-details ul {
     list-style: none;
     padding-left: 0;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .item-details ul li {
     font-size: 0.8rem;
     color: var(--text-gray);
-    padding: 3px 0 3px 15px;
+    padding: 2px 0 2px 15px;
     position: relative;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .item-details ul li::before {
