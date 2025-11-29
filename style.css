@@ -6,9 +6,9 @@
 }
 
 :root {
-    --primary: #8b96a5;
-    --primary-dark: #6b7684;
-    --primary-light: rgba(139, 150, 165, 0.08);
+    --primary: #7a8a99;
+    --primary-dark: #5a6a79;
+    --primary-light: rgba(122, 138, 153, 0.08);
     --text-dark: #2c3e50;
     --text-black: #000000;
     --text-gray: #666;
@@ -214,18 +214,18 @@ h2 {
     color: var(--primary);
 }
 
-/* Timeline - Single Bar with Dots On Top */
+/* Timeline - Line Goes THROUGH Center of Dots */
 .timeline {
     position: relative;
     padding-left: 30px;
 }
 
-/* Single Timeline Bar */
+/* Timeline Bar - Centered to go THROUGH dots */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 8px;
-    top: 10px;
+    left: 0;
+    top: 16px;
     bottom: 10px;
     width: 3px;
     background: var(--timeline-gray);
@@ -243,10 +243,10 @@ h2 {
     margin-bottom: 0;
 }
 
-/* Perfectly Centered Dot ON TOP of Bar */
+/* Dot CENTERED on Line - Line Goes Through Middle */
 .timeline-marker {
     position: absolute;
-    left: -22px;
+    left: -30px;
     top: 8px;
     width: 16px;
     height: 16px;
@@ -260,7 +260,7 @@ h2 {
     flex: 1;
 }
 
-/* Lighter Gray Date Badge */
+/* Steel Gray Date Badge */
 .date-badge {
     display: inline-block;
     background: var(--primary);
@@ -290,34 +290,12 @@ h2 {
     line-height: 1.6;
 }
 
-/* Aligned Positions for Siemens */
-.positions-container {
-    margin-top: 4px;
-}
-
-.position-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 4px;
-    font-size: 0.85rem;
-    color: var(--text-black);
-}
-
-.position-title {
-    flex-shrink: 0;
-}
-
-.position-dates {
-    flex-shrink: 0;
-    margin-left: 15px;
-    color: var(--text-gray);
-}
-
-.position-advisor {
+/* Siemens Intern Line - All Info on One Line */
+.intern-line {
     font-size: 0.85rem;
     color: var(--text-black);
     margin: 6px 0 4px 0;
+    line-height: 1.6;
 }
 
 .underline {
@@ -627,16 +605,6 @@ footer {
 
     .visitor-section {
         padding: 25px 20px;
-    }
-
-    .position-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .position-dates {
-        margin-left: 0;
-        margin-top: 2px;
     }
 }
 
