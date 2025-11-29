@@ -63,7 +63,6 @@ body {
     margin-bottom: 18px;
 }
 
-/* CS-Themed Name Font */
 .name {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.8rem;
@@ -142,26 +141,28 @@ body {
     transform: translateY(-3px);
 }
 
-/* Main Content - Full Width */
+/* Main Content - True Full Width */
 .main-content {
     flex: 1;
-    padding: 40px 60px 40px 60px;
+    padding: 40px 0 40px 60px;
     max-width: none;
 }
 
 .section {
     margin-bottom: 40px;
+    padding-right: 60px;
 }
 
-/* Full-Width Section Headers */
+/* Full-Width Section Headers - Span Entire White Space */
 h2 {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--title-gray);
     margin-bottom: 15px;
     margin-left: 0;
-    margin-right: 0;
+    margin-right: -60px;
     padding-bottom: 10px;
+    padding-right: 60px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     border-bottom: 2px solid var(--border-light);
@@ -216,25 +217,24 @@ h2 {
     color: var(--primary);
 }
 
-/* News Section - Compact Layout */
+/* News Section - Minimal Spacing */
 .news-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
-/* Formal Red Hiring Text */
 .hiring-text {
     font-size: 0.85rem;
     color: var(--hiring-red);
     font-weight: 500;
     line-height: 1.6;
-    margin: 0 0 12px 0;
+    margin: 0 0 10px 0;
 }
 
 .news-item {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     font-size: 0.85rem;
     align-items: flex-start;
     line-height: 1.4;
@@ -245,7 +245,7 @@ h2 {
     flex-shrink: 0;
     color: var(--primary);
     font-weight: 600;
-    min-width: 75px;
+    min-width: 70px;
 }
 
 .news-content {
@@ -267,7 +267,7 @@ h2 {
     font-weight: 700;
 }
 
-/* Timeline - Centered Larger Dots */
+/* Timeline - Perfectly Centered Dots */
 .timeline {
     position: relative;
     padding-left: 30px;
@@ -276,7 +276,7 @@ h2 {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 11px;
+    left: 10px;
     top: 10px;
     bottom: 10px;
     width: 3px;
@@ -295,9 +295,10 @@ h2 {
     margin-bottom: 0;
 }
 
+/* Vertically Centered on Timeline Bar */
 .timeline-marker {
     position: absolute;
-    left: -23px;
+    left: -21.5px;
     top: 8px;
     width: 16px;
     height: 16px;
@@ -324,7 +325,7 @@ h2 {
     letter-spacing: 0.3px;
 }
 
-/* Smaller Institution/Company Names */
+/* Institution Names */
 .item-details h4 {
     font-size: 0.95rem;
     font-weight: 600;
@@ -555,15 +556,16 @@ h2 {
     font-size: 0.7rem;
 }
 
-/* Colorful Visitor Section with Gray Theme */
+/* Colorful Visitor Section */
 footer {
     margin-top: 40px;
     padding: 0;
     text-align: center;
+    margin-right: -60px;
 }
 
 .visitor-section {
-    padding: 40px 35px;
+    padding: 40px 95px;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 12px;
     border: 1px solid var(--border-light);
@@ -610,6 +612,15 @@ footer {
         padding: 30px 40px;
     }
 
+    .section {
+        padding-right: 0;
+    }
+
+    h2 {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
     .bio-content-wrapper {
         flex-direction: column;
     }
@@ -621,6 +632,14 @@ footer {
     .activities-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    footer {
+        margin-right: 0;
+    }
+
+    .visitor-section {
+        padding: 40px 35px;
     }
 }
 
