@@ -6,9 +6,9 @@
 }
 
 :root {
-    --primary: #3c5a99;
-    --primary-dark: #2c4570;
-    --primary-light: rgba(60, 90, 153, 0.08);
+    --primary: #4a5568;
+    --primary-dark: #2d3748;
+    --primary-light: rgba(74, 85, 104, 0.08);
     --text-dark: #2c3e50;
     --text-gray: #666;
     --text-light: #999;
@@ -16,8 +16,8 @@
     --bg-white: #ffffff;
     --bg-light: #fafafa;
     --border-light: #e0e0e0;
-    --timeline-gray: #bbb;
-    --hiring-red: #d63031;
+    --timeline-gray: #cbd5e0;
+    --hiring-red: #c0392b;
 }
 
 html {
@@ -142,23 +142,25 @@ body {
     transform: translateY(-3px);
 }
 
-/* Main Content */
+/* Main Content - Full Width */
 .main-content {
     flex: 1;
-    padding: 40px 60px;
-    max-width: 900px;
+    padding: 40px 60px 40px 60px;
+    max-width: none;
 }
 
 .section {
     margin-bottom: 40px;
 }
 
-/* Larger Section Headers */
+/* Full-Width Section Headers */
 h2 {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--title-gray);
     margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
     padding-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -214,29 +216,25 @@ h2 {
     color: var(--primary);
 }
 
-/* News Section - Minimal Spacing */
+/* News Section - Compact Layout */
 .news-list {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 8px;
 }
 
-/* Red Hiring Text Only */
-.hiring-item {
-    margin-bottom: 12px;
-}
-
+/* Formal Red Hiring Text */
 .hiring-text {
     font-size: 0.85rem;
     color: var(--hiring-red);
     font-weight: 500;
     line-height: 1.6;
-    margin: 0;
+    margin: 0 0 12px 0;
 }
 
 .news-item {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     font-size: 0.85rem;
     align-items: flex-start;
     line-height: 1.4;
@@ -247,16 +245,16 @@ h2 {
     flex-shrink: 0;
     color: var(--primary);
     font-weight: 600;
-    min-width: 80px;
+    min-width: 75px;
 }
 
-.news-item p {
+.news-content {
     color: var(--text-gray);
-    margin: 0;
     line-height: 1.4;
+    flex: 1;
 }
 
-.news-item strong {
+.news-content strong {
     color: var(--text-dark);
 }
 
@@ -269,7 +267,7 @@ h2 {
     font-weight: 700;
 }
 
-/* Timeline - More Compact */
+/* Timeline - Centered Larger Dots */
 .timeline {
     position: relative;
     padding-left: 30px;
@@ -278,7 +276,7 @@ h2 {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 9px;
+    left: 11px;
     top: 10px;
     bottom: 10px;
     width: 3px;
@@ -299,10 +297,10 @@ h2 {
 
 .timeline-marker {
     position: absolute;
-    left: -24px;
+    left: -23px;
     top: 8px;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     background: var(--primary);
     border-radius: 50%;
     border: 3px solid var(--bg-white);
@@ -313,7 +311,7 @@ h2 {
     flex: 1;
 }
 
-/* Dark Blue Filled Date Badge */
+/* Dark Gray Date Badge */
 .date-badge {
     display: inline-block;
     background: var(--primary);
@@ -346,14 +344,6 @@ h2 {
 .underline {
     text-decoration: underline;
     font-weight: normal;
-}
-
-/* Inline Award Text with Emoji */
-.award-text {
-    font-size: 0.8rem;
-    color: var(--text-gray);
-    font-weight: 400;
-    font-style: normal;
 }
 
 .mentor-link {
@@ -565,7 +555,7 @@ h2 {
     font-size: 0.7rem;
 }
 
-/* Visitor Section */
+/* Colorful Visitor Section with Gray Theme */
 footer {
     margin-top: 40px;
     padding: 0;
@@ -573,34 +563,29 @@ footer {
 }
 
 .visitor-section {
-    padding: 35px;
-    background: transparent;
-    border-top: 2px solid var(--border-light);
+    padding: 40px 35px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
 }
 
 .visitor-section h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 10px;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.visitor-intro {
-    font-size: 0.85rem;
-    color: var(--text-gray);
-    margin-bottom: 25px;
+    letter-spacing: 2px;
 }
 
 .visitor-map {
     display: flex;
     justify-content: center;
     margin: 25px 0;
-    padding: 20px;
+    padding: 25px;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .footer-note {
