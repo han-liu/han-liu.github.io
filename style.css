@@ -10,6 +10,7 @@
     --primary-dark: #2d3748;
     --primary-light: rgba(74, 85, 104, 0.08);
     --text-dark: #2c3e50;
+    --text-black: #000000;
     --text-gray: #666;
     --text-light: #999;
     --title-gray: #999;
@@ -33,7 +34,7 @@ body {
 
 .page-container {
     display: flex;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: var(--bg-white);
 }
@@ -141,28 +142,24 @@ body {
     transform: translateY(-3px);
 }
 
-/* Main Content - True Full Width */
+/* Main Content - Proper Margins Both Sides */
 .main-content {
     flex: 1;
-    padding: 40px 0 40px 60px;
+    padding: 40px 50px;
     max-width: none;
 }
 
 .section {
     margin-bottom: 40px;
-    padding-right: 60px;
 }
 
-/* Full-Width Section Headers - Span Entire White Space */
+/* Section Headers with Margins on Both Sides */
 h2 {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--title-gray);
     margin-bottom: 15px;
-    margin-left: 0;
-    margin-right: -60px;
     padding-bottom: 10px;
-    padding-right: 60px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     border-bottom: 2px solid var(--border-light);
@@ -187,7 +184,7 @@ h2 {
 }
 
 .bio-left a {
-    color: var(--text-dark);
+    color: var(--text-black);
     text-decoration: underline;
 }
 
@@ -208,7 +205,7 @@ h2 {
 }
 
 .cv-link {
-    color: var(--text-dark);
+    color: var(--text-black);
     text-decoration: none;
 }
 
@@ -217,7 +214,7 @@ h2 {
     color: var(--primary);
 }
 
-/* News Section - Minimal Spacing */
+/* News Section - All Black Text */
 .news-list {
     display: flex;
     flex-direction: column;
@@ -243,19 +240,19 @@ h2 {
 
 .news-date {
     flex-shrink: 0;
-    color: var(--primary);
+    color: var(--text-black);
     font-weight: 600;
     min-width: 70px;
 }
 
 .news-content {
-    color: var(--text-gray);
+    color: var(--text-black);
     line-height: 1.4;
     flex: 1;
 }
 
 .news-content strong {
-    color: var(--text-dark);
+    color: var(--text-black);
 }
 
 .trophy {
@@ -263,11 +260,11 @@ h2 {
 }
 
 .news-item .highlight {
-    color: var(--primary);
+    color: var(--text-black);
     font-weight: 700;
 }
 
-/* Timeline - Perfectly Centered Dots */
+/* Timeline - Horizontally Centered Dots */
 .timeline {
     position: relative;
     padding-left: 30px;
@@ -276,7 +273,7 @@ h2 {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 10px;
+    left: 6.5px;
     top: 10px;
     bottom: 10px;
     width: 3px;
@@ -295,10 +292,10 @@ h2 {
     margin-bottom: 0;
 }
 
-/* Vertically Centered on Timeline Bar */
+/* Perfectly Centered Horizontally on Timeline Bar */
 .timeline-marker {
     position: absolute;
-    left: -21.5px;
+    left: -25px;
     top: 8px;
     width: 16px;
     height: 16px;
@@ -325,11 +322,11 @@ h2 {
     letter-spacing: 0.3px;
 }
 
-/* Institution Names */
+/* All Black Text for Institutions */
 .item-details h4 {
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-black);
     margin: 0 0 4px 0;
     line-height: 1.3;
 }
@@ -337,7 +334,7 @@ h2 {
 .degree,
 .position {
     font-size: 0.85rem;
-    color: var(--text-dark);
+    color: var(--text-black);
     margin-bottom: 4px;
     line-height: 1.6;
 }
@@ -354,8 +351,8 @@ h2 {
 }
 
 .mentor-link:hover {
-    color: var(--text-dark);
-    border-bottom-color: var(--text-dark);
+    color: var(--text-black);
+    border-bottom-color: var(--text-black);
 }
 
 .item-details ul {
@@ -380,7 +377,7 @@ h2 {
 }
 
 .item-details a {
-    color: var(--text-dark);
+    color: var(--text-black);
     text-decoration: underline;
 }
 
@@ -412,7 +409,7 @@ h2 {
 }
 
 .note a {
-    color: var(--text-dark);
+    color: var(--text-black);
     text-decoration: underline;
 }
 
@@ -468,7 +465,7 @@ h2 {
 .pub-title {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-black);
     margin-bottom: 6px;
     line-height: 1.4;
 }
@@ -530,7 +527,7 @@ h2 {
 .activity-column h4 {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-black);
     margin-bottom: 12px;
 }
 
@@ -556,23 +553,22 @@ h2 {
     font-size: 0.7rem;
 }
 
-/* Colorful Visitor Section */
+/* Visitor Section - Fixed Within Bounds */
 footer {
     margin-top: 40px;
     padding: 0;
     text-align: center;
-    margin-right: -60px;
 }
 
 .visitor-section {
-    padding: 40px 95px;
+    padding: 35px 30px;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 12px;
     border: 1px solid var(--border-light);
 }
 
 .visitor-section h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--primary-dark);
     margin-bottom: 20px;
@@ -583,15 +579,22 @@ footer {
 .visitor-map {
     display: flex;
     justify-content: center;
-    margin: 25px 0;
-    padding: 25px;
+    margin: 20px 0;
+    padding: 20px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.visitor-map script,
+.visitor-map > * {
+    max-width: 100%;
 }
 
 .footer-note {
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 0.75rem;
     color: var(--text-light);
 }
@@ -612,15 +615,6 @@ footer {
         padding: 30px 40px;
     }
 
-    .section {
-        padding-right: 0;
-    }
-
-    h2 {
-        margin-right: 0;
-        padding-right: 0;
-    }
-
     .bio-content-wrapper {
         flex-direction: column;
     }
@@ -632,14 +626,6 @@ footer {
     .activities-grid {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-
-    footer {
-        margin-right: 0;
-    }
-
-    .visitor-section {
-        padding: 40px 35px;
     }
 }
 
@@ -656,6 +642,10 @@ footer {
     .pub-image {
         width: 100%;
         height: 120px;
+    }
+
+    .visitor-section {
+        padding: 25px 20px;
     }
 }
 
