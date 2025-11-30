@@ -176,11 +176,13 @@ h2 {
 .bio-content-wrapper {
     display: flex;
     gap: 40px;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .bio-left {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .bio-left p {
@@ -201,7 +203,7 @@ h2 {
     color: var(--primary);
 }
 
-/* Slightly smaller right panel fonts */
+/* Bio right box - matches left height */
 .bio-right {
     flex-shrink: 0;
     width: 310px;
@@ -212,6 +214,9 @@ h2 {
     background: linear-gradient(135deg, var(--primary-light) 0%, rgba(44, 95, 125, 0.05) 100%);
     border-radius: 8px;
     border-left: 3px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .bio-right p {
@@ -259,10 +264,23 @@ h2 {
     margin-bottom: 0;
 }
 
-/* Dot centered on the line */
+/* Dot centered on the line - using timeline-marker */
+.timeline-marker {
+    position: absolute;
+    left: -7px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    background: var(--bg-white);
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    z-index: 2;
+}
+
+/* For backward compatibility with timeline-dot */
 .timeline-dot {
     position: absolute;
-    left: -7px;            /* center of dot crosses the line at x=0 */
+    left: -7px;
     top: 18px;
     width: 10px;
     height: 10px;
@@ -275,7 +293,16 @@ h2 {
 /* Main column: date box + all info under it */
 .timeline-main {
     flex: 1;
-    margin-left: 20px;     /* space between dot and filled box */
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* For backward compatibility with timeline-content */
+.timeline-content {
+    flex: 1;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -545,12 +572,11 @@ footer {
     text-align: center;
 }
 
-/* No background color for VISITOR ANALYTICS */
 .visitor-section {
     padding: 35px 30px;
-    background: transparent;
-    border-radius: 0;
-    border: none;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
 }
 
 .visitor-section h3 {
