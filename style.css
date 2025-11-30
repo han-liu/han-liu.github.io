@@ -6,9 +6,11 @@
 }
 
 :root {
-    --primary: #7a8a99;
-    --primary-dark: #5a6a79;
-    --primary-light: rgba(122, 138, 153, 0.08);
+    --primary: #5d7a8c;
+    --primary-dark: #4a5f6f;
+    --primary-light: rgba(93, 122, 140, 0.1);
+    --accent-blue: #3498db;
+    --accent-green: #2ecc71;
     --text-dark: #2c3e50;
     --text-black: #000000;
     --text-gray: #666;
@@ -42,13 +44,14 @@ body {
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background: var(--bg-light);
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
     padding: 35px 25px;
     position: sticky;
     top: 0;
     height: 100vh;
     overflow-y: auto;
     flex-shrink: 0;
+    border-right: 1px solid var(--border-light);
 }
 
 .profile-section {
@@ -62,13 +65,14 @@ body {
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 18px;
+    border: 2px solid var(--primary-light);
 }
 
 .name {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--primary-dark);
     margin-bottom: 10px;
     letter-spacing: 2px;
 }
@@ -81,7 +85,7 @@ body {
     margin-bottom: 3px;
 }
 
-/* Elegant Smooth Buttons */
+/* Elegant Smooth Buttons with Color */
 .nav-menu {
     display: flex;
     flex-direction: column;
@@ -114,7 +118,7 @@ body {
     font-weight: 500;
 }
 
-/* Social Icons */
+/* Social Icons with Color */
 .social-links {
     display: flex;
     justify-content: center;
@@ -137,7 +141,7 @@ body {
 }
 
 .social-links a:hover {
-    color: var(--primary);
+    color: var(--accent-blue);
     background-color: var(--primary-light);
     transform: translateY(-3px);
 }
@@ -153,16 +157,16 @@ body {
     margin-bottom: 40px;
 }
 
-/* Section Headers */
+/* Section Headers with Color Accent */
 h2 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--title-gray);
+    color: var(--primary);
     margin-bottom: 15px;
     padding-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    border-bottom: 2px solid var(--border-light);
+    border-bottom: 2px solid var(--primary-light);
 }
 
 /* Brief Bio */
@@ -184,7 +188,7 @@ h2 {
 }
 
 .bio-left a {
-    color: var(--text-black);
+    color: var(--accent-blue);
     text-decoration: underline;
 }
 
@@ -198,6 +202,10 @@ h2 {
     font-size: 0.8rem;
     color: var(--text-gray);
     line-height: 1.6;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--primary-light) 0%, rgba(93, 122, 140, 0.05) 100%);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
 }
 
 .bio-right p {
@@ -205,8 +213,9 @@ h2 {
 }
 
 .cv-link {
-    color: var(--text-black);
+    color: var(--accent-blue);
     text-decoration: none;
+    font-weight: 500;
 }
 
 .cv-link:hover {
@@ -214,17 +223,17 @@ h2 {
     color: var(--primary);
 }
 
-/* Timeline - Line Goes THROUGH Center of Dots */
+/* CRITICAL: Timeline - Line Goes THROUGH Center of Dots */
 .timeline {
     position: relative;
     padding-left: 30px;
 }
 
-/* Timeline Bar - Centered to go THROUGH dots */
+/* Timeline Bar - Positioned to go THROUGH dot centers */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 0;
+    left: 7.5px;
     top: 16px;
     bottom: 10px;
     width: 3px;
@@ -243,10 +252,15 @@ h2 {
     margin-bottom: 0;
 }
 
-/* Dot CENTERED on Line - Line Goes Through Middle */
+/* CRITICAL: Dot CENTERED with Line Going THROUGH Middle */
+/* Dot: 16px wide, 3px border = 22px total
+   Center of dot: 22px / 2 = 11px from left edge of dot
+   Dot left position: 7.5 - 11 = -3.5px
+   Line center: 7.5 + 1.5 = 9px
+   Dot center: -3.5 + 11 = 7.5px + 1.5 (border) = 9px ✓ PERFECT MATCH */
 .timeline-marker {
     position: absolute;
-    left: -30px;
+    left: -3.5px;
     top: 8px;
     width: 16px;
     height: 16px;
@@ -254,16 +268,17 @@ h2 {
     border-radius: 50%;
     border: 3px solid var(--bg-white);
     z-index: 2;
+    box-shadow: 0 2px 6px rgba(93, 122, 140, 0.3);
 }
 
 .timeline-content {
     flex: 1;
 }
 
-/* Steel Gray Date Badge */
+/* Date Badge with Color */
 .date-badge {
     display: inline-block;
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: white;
     padding: 3px 10px;
     border-radius: 4px;
@@ -271,6 +286,7 @@ h2 {
     font-weight: 500;
     margin-bottom: 8px;
     letter-spacing: 0.3px;
+    box-shadow: 0 2px 4px rgba(93, 122, 140, 0.2);
 }
 
 /* Institution Names */
@@ -290,28 +306,20 @@ h2 {
     line-height: 1.6;
 }
 
-/* Siemens Intern Line - All Info on One Line */
-.intern-line {
-    font-size: 0.85rem;
-    color: var(--text-black);
-    margin: 6px 0 4px 0;
-    line-height: 1.6;
-}
-
 .underline {
     text-decoration: underline;
     font-weight: normal;
 }
 
 .mentor-link {
-    color: var(--text-gray);
+    color: var(--accent-blue);
     text-decoration: none;
     border-bottom: 1px dashed var(--text-light);
 }
 
 .mentor-link:hover {
-    color: var(--text-black);
-    border-bottom-color: var(--text-black);
+    color: var(--primary);
+    border-bottom-color: var(--primary);
 }
 
 .item-details ul {
@@ -332,11 +340,11 @@ h2 {
     content: "•";
     position: absolute;
     left: 0;
-    color: var(--text-gray);
+    color: var(--primary);
 }
 
 .item-details a {
-    color: var(--text-black);
+    color: var(--accent-blue);
     text-decoration: underline;
 }
 
@@ -358,6 +366,12 @@ h2 {
     width: 95px;
     height: 95px;
     object-fit: contain;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.timeline-item:hover .timeline-logo img {
+    filter: grayscale(0%);
 }
 
 /* Competitions & Publications */
@@ -368,7 +382,7 @@ h2 {
 }
 
 .note a {
-    color: var(--text-black);
+    color: var(--accent-blue);
     text-decoration: underline;
 }
 
@@ -387,6 +401,11 @@ h2 {
     gap: 20px;
     padding: 0;
     margin: 0;
+    transition: transform 0.2s ease;
+}
+
+.pub-item:hover {
+    transform: translateX(5px);
 }
 
 .pub-image {
@@ -395,7 +414,7 @@ h2 {
     height: 90px;
     overflow: hidden;
     border-radius: 4px;
-    background: var(--bg-light);
+    background: linear-gradient(135deg, var(--bg-light) 0%, #f5f5f5 100%);
     border: 1px solid var(--border-light);
     display: flex;
     align-items: center;
@@ -405,6 +424,7 @@ h2 {
 .placeholder-image {
     font-size: 3rem;
     opacity: 0.3;
+    color: var(--primary);
 }
 
 .trophy-large {
@@ -439,6 +459,7 @@ h2 {
 .author-name {
     text-decoration: underline;
     font-weight: normal;
+    color: var(--primary-dark);
 }
 
 .pub-venue {
@@ -455,12 +476,13 @@ h2 {
 }
 
 .icon-link {
-    color: var(--text-gray);
+    color: var(--accent-blue);
     text-decoration: none;
     border-bottom: 1px dashed var(--text-light);
     display: inline-flex;
     align-items: center;
     gap: 4px;
+    transition: all 0.3s ease;
 }
 
 .icon-link:hover {
@@ -469,7 +491,7 @@ h2 {
 }
 
 .icon-link svg {
-    fill: var(--text-gray);
+    fill: var(--accent-blue);
 }
 
 .icon-link:hover svg {
@@ -486,8 +508,10 @@ h2 {
 .activity-column h4 {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-black);
+    color: var(--primary-dark);
     margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-light);
 }
 
 .activity-list {
@@ -508,11 +532,11 @@ h2 {
     content: "▸";
     position: absolute;
     left: 0;
-    color: var(--primary);
+    color: var(--accent-green);
     font-size: 0.7rem;
 }
 
-/* Visitor Section */
+/* Visitor Section with Color */
 footer {
     margin-top: 40px;
     padding: 0;
@@ -524,12 +548,13 @@ footer {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 12px;
     border: 1px solid var(--border-light);
+    box-shadow: 0 4px 15px rgba(93, 122, 140, 0.1);
 }
 
 .visitor-section h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-dark);
+    color: var(--primary);
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
