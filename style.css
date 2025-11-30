@@ -39,7 +39,7 @@ body {
     background-color: var(--bg-white);
 }
 
-/* Clean Simple Sidebar - No Effects */
+/* Sidebar */
 .sidebar {
     width: 250px;
     background: var(--bg-light);
@@ -57,7 +57,6 @@ body {
     margin-bottom: 35px;
 }
 
-/* No Effects on Profile Image */
 .profile-img {
     width: 170px;
     height: 215px;
@@ -68,7 +67,7 @@ body {
 
 .name {
     font-family: 'Roboto Mono', monospace;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 12px;
@@ -80,14 +79,14 @@ body {
 }
 
 .title {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--text-gray);
     margin-bottom: 5px;
 }
 
 .affiliation {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--text-gray);
 }
 
@@ -104,7 +103,7 @@ body {
     padding: 12px 18px;
     color: var(--text-gray);
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -161,16 +160,16 @@ body {
     margin-bottom: 45px;
 }
 
-/* Gray Section Headers with Full Gray Underline */
+/* Thin Gray Underline, No Bold */
 h2 {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 400;
     color: var(--title-gray);
     margin-bottom: 15px;
     padding-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    border-bottom: 2px solid var(--title-gray);
+    border-bottom: 1px solid var(--title-gray);
 }
 
 /* Brief Bio */
@@ -185,7 +184,7 @@ h2 {
 }
 
 .bio-left p {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     line-height: 1.7;
     color: var(--text-gray);
     margin-bottom: 12px;
@@ -202,13 +201,17 @@ h2 {
     color: var(--primary-dark);
 }
 
-/* Wider Bio Right for Single-line Address */
+/* Address Box with Gradient Background */
 .bio-right {
     flex-shrink: 0;
     width: 310px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--text-gray);
-    line-height: 1.6;
+    line-height: 1.7;
+    padding: 22px;
+    background: linear-gradient(135deg, rgba(153, 153, 153, 0.08) 0%, rgba(153, 153, 153, 0.04) 100%);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
 }
 
 .bio-right p {
@@ -226,28 +229,17 @@ h2 {
     color: var(--primary-dark);
 }
 
-/* PROFESSIONAL Timeline - Red Dots, Gray Vertical Line */
+/* Timeline Matching Reference Image Layout */
 .timeline {
     position: relative;
-    padding-left: 40px;
-}
-
-/* Gray Vertical Line */
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 8px;
-    top: 18px;
-    bottom: 15px;
-    width: 2px;
-    background: var(--timeline-gray);
+    padding-left: 0;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     display: flex;
-    gap: 20px;
+    gap: 0;
     align-items: flex-start;
 }
 
@@ -255,40 +247,60 @@ h2 {
     margin-bottom: 0;
 }
 
-/* Red/Salmon Dot on Timeline - Professional Design */
-.timeline-dot {
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 18px;
-    height: 18px;
-    background: var(--accent-red);
-    border-radius: 50%;
-    border: 3px solid var(--bg-white);
-    box-shadow: 0 0 0 1px var(--border-light);
-    z-index: 2;
-}
-
-.timeline-content {
-    flex: 1;
-}
-
-/* Date Badge */
+/* Small Date Box on Left (like reference) */
 .date-badge {
     display: inline-block;
     background: var(--primary);
     color: white;
-    padding: 3px 10px;
+    padding: 4px 12px;
     border-radius: 4px;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 500;
-    margin-bottom: 8px;
     letter-spacing: 0.3px;
+    width: 160px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+/* Red Dot After Date Box */
+.timeline-dot {
+    position: absolute;
+    left: 175px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-red);
+    border-radius: 50%;
+    border: 2px solid var(--bg-white);
+    box-shadow: 0 0 0 1px var(--border-light);
+    z-index: 2;
+}
+
+/* Vertical Line from Dot */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 180px;
+    top: 20px;
+    bottom: -30px;
+    width: 2px;
+    background: var(--timeline-gray);
+    z-index: 1;
+}
+
+.timeline-item:last-child::after {
+    display: none;
+}
+
+.timeline-content {
+    flex: 1;
+    padding-left: 20px;
 }
 
 /* Institution Names */
 .item-details h4 {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--text-black);
     margin: 0 0 8px 0;
@@ -297,7 +309,7 @@ h2 {
 
 .degree,
 .position {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--text-black);
     margin-bottom: 4px;
     line-height: 1.6;
@@ -326,7 +338,7 @@ h2 {
 }
 
 .item-details ul li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--text-gray);
     padding: 2px 0 2px 15px;
     position: relative;
@@ -349,7 +361,7 @@ h2 {
     color: var(--primary-dark);
 }
 
-/* Timeline Logo - No Hover Effects */
+/* Timeline Logo */
 .timeline-logo {
     flex-shrink: 0;
     width: 100px;
@@ -357,6 +369,7 @@ h2 {
     align-items: flex-start;
     justify-content: center;
     padding-top: 5px;
+    margin-left: auto;
 }
 
 .timeline-logo img {
@@ -367,7 +380,7 @@ h2 {
 
 /* Competitions & Publications */
 .note {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--text-gray);
     margin-bottom: 25px;
 }
@@ -381,14 +394,13 @@ h2 {
     color: var(--primary-dark);
 }
 
-/* Compact Spacing - 12px Gap */
+/* Compact Spacing */
 .publications-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* Hover Background Highlight */
 .pub-item {
     display: flex;
     gap: 20px;
@@ -436,7 +448,7 @@ h2 {
 }
 
 .pub-title {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-black);
     margin-bottom: 6px;
@@ -444,7 +456,7 @@ h2 {
 }
 
 .pub-authors {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--text-gray);
     margin-bottom: 4px;
     line-height: 1.5;
@@ -457,14 +469,14 @@ h2 {
 }
 
 .pub-venue {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--text-gray);
     margin-bottom: 6px;
     font-style: normal;
 }
 
 .pub-links {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     display: flex;
     gap: 15px;
 }
@@ -500,7 +512,7 @@ h2 {
 }
 
 .activity-column h4 {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-black);
     margin-bottom: 12px;
@@ -512,7 +524,7 @@ h2 {
 }
 
 .activity-list li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--text-gray);
     line-height: 1.6;
     margin-bottom: 8px;
@@ -543,7 +555,7 @@ footer {
 }
 
 .visitor-section h3 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: var(--text-gray);
     margin-bottom: 20px;
@@ -570,7 +582,7 @@ footer {
 
 .footer-note {
     margin-top: 15px;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: var(--text-light);
 }
 
@@ -602,6 +614,23 @@ footer {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .date-badge {
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    .timeline-dot {
+        left: 10px;
+    }
+
+    .timeline-item::after {
+        left: 15px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -609,7 +638,6 @@ footer {
         padding: 20px;
     }
 
-    .timeline-item,
     .pub-item {
         flex-direction: column;
     }
