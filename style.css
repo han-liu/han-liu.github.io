@@ -6,11 +6,10 @@
 }
 
 :root {
-    --primary: #5d7a8c;
-    --primary-dark: #4a5f6f;
-    --primary-light: rgba(93, 122, 140, 0.1);
-    --accent-blue: #3498db;
-    --accent-green: #2ecc71;
+    --primary: #6b8e9f;
+    --primary-dark: #4f6b7a;
+    --primary-light: rgba(107, 142, 159, 0.1);
+    --accent: #3d5a6b;
     --text-dark: #2c3e50;
     --text-black: #000000;
     --text-gray: #666;
@@ -39,19 +38,20 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     background-color: var(--bg-white);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
 }
 
-/* Sidebar */
+/* Beautiful Enhanced Sidebar */
 .sidebar {
     width: 250px;
-    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
-    padding: 35px 25px;
+    background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+    padding: 40px 25px;
     position: sticky;
     top: 0;
     height: 100vh;
     overflow-y: auto;
     flex-shrink: 0;
-    border-right: 1px solid var(--border-light);
+    border-right: 1px solid #e8e8e8;
 }
 
 .profile-section {
@@ -59,73 +59,112 @@ body {
     margin-bottom: 35px;
 }
 
+.profile-image-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.profile-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    border-radius: 6px;
+    z-index: 0;
+    opacity: 0.3;
+}
+
 .profile-img {
     width: 170px;
     height: 215px;
     object-fit: cover;
     border-radius: 4px;
-    margin-bottom: 18px;
-    border: 2px solid var(--primary-light);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px 20px rgba(107, 142, 159, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: translateY(-3px);
 }
 
 .name {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--primary-dark);
-    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 12px;
     letter-spacing: 2px;
 }
 
-.title,
-.affiliation {
-    font-size: 0.9rem;
-    color: var(--text-gray);
-    line-height: 1.5;
-    margin-bottom: 3px;
+.title-section {
+    padding: 15px 20px;
+    background: linear-gradient(135deg, var(--primary-light) 0%, rgba(107, 142, 159, 0.05) 100%);
+    border-radius: 8px;
+    margin-top: 15px;
 }
 
-/* Elegant Smooth Buttons with Color */
+.title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+}
+
+.affiliation {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+
+/* Elegant Navigation Menu */
 .nav-menu {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
     margin-bottom: 30px;
 }
 
 .nav-link {
     display: block;
-    padding: 10px 16px;
+    padding: 12px 18px;
     color: var(--text-gray);
     text-decoration: none;
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 500;
     border-radius: 8px;
     transition: all 0.3s ease;
     background: transparent;
-    text-align: center;
+    text-align: left;
+    border-left: 3px solid transparent;
 }
 
 .nav-link:hover {
     background-color: var(--primary-light);
     color: var(--primary);
-    transform: translateX(5px);
+    border-left-color: var(--primary);
+    padding-left: 22px;
 }
 
 .nav-link.active {
     background-color: var(--primary-light);
     color: var(--primary);
-    font-weight: 500;
+    font-weight: 600;
+    border-left-color: var(--primary);
 }
 
-/* Social Icons with Color */
+/* Social Icons */
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-top: 25px;
-    padding: 15px 0;
-    border-top: 1px solid var(--border-light);
+    gap: 14px;
+    margin-top: 30px;
+    padding: 20px 0 0 0;
+    border-top: 2px solid var(--border-light);
 }
 
 .social-links a {
@@ -134,15 +173,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: transparent;
+    border: 2px solid transparent;
 }
 
 .social-links a:hover {
-    color: var(--accent-blue);
+    color: var(--primary);
     background-color: var(--primary-light);
+    border-color: var(--primary);
     transform: translateY(-3px);
 }
 
@@ -154,10 +195,10 @@ body {
 }
 
 .section {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
-/* Section Headers with Color Accent */
+/* Section Headers */
 h2 {
     font-size: 1.1rem;
     font-weight: 600;
@@ -167,6 +208,17 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     border-bottom: 2px solid var(--primary-light);
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--primary);
 }
 
 /* Brief Bio */
@@ -187,23 +239,26 @@ h2 {
     margin-bottom: 12px;
 }
 
-.bio-left a {
-    color: var(--accent-blue);
+.bio-left a,
+.bio-right a {
+    color: var(--text-black);
     text-decoration: underline;
 }
 
-.bio-left a:hover {
+.bio-left a:hover,
+.bio-right a:hover {
     color: var(--primary);
 }
 
+/* Wider Bio Right for Single-line Email */
 .bio-right {
     flex-shrink: 0;
-    width: 250px;
+    width: 280px;
     font-size: 0.8rem;
     color: var(--text-gray);
     line-height: 1.6;
     padding: 20px;
-    background: linear-gradient(135deg, var(--primary-light) 0%, rgba(93, 122, 140, 0.05) 100%);
+    background: linear-gradient(135deg, var(--primary-light) 0%, rgba(107, 142, 159, 0.05) 100%);
     border-radius: 8px;
     border-left: 3px solid var(--primary);
 }
@@ -213,7 +268,7 @@ h2 {
 }
 
 .cv-link {
-    color: var(--accent-blue);
+    color: var(--text-black);
     text-decoration: none;
     font-weight: 500;
 }
@@ -223,17 +278,17 @@ h2 {
     color: var(--primary);
 }
 
-/* CRITICAL: Timeline - Line Goes THROUGH Center of Dots */
+/* CRITICAL FIX: Timeline - Dot Moved LEFT - Line Goes THROUGH Center */
 .timeline {
     position: relative;
     padding-left: 30px;
 }
 
-/* Timeline Bar - Positioned to go THROUGH dot centers */
+/* Timeline Bar */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 7.5px;
+    left: 1.5px;
     top: 16px;
     bottom: 10px;
     width: 3px;
@@ -252,15 +307,14 @@ h2 {
     margin-bottom: 0;
 }
 
-/* CRITICAL: Dot CENTERED with Line Going THROUGH Middle */
-/* Dot: 16px wide, 3px border = 22px total
-   Center of dot: 22px / 2 = 11px from left edge of dot
-   Dot left position: 7.5 - 11 = -3.5px
-   Line center: 7.5 + 1.5 = 9px
-   Dot center: -3.5 + 11 = 7.5px + 1.5 (border) = 9px ✓ PERFECT MATCH */
+/* CRITICAL: Dot Moved LEFT so Line Goes THROUGH Center
+   Bar: left 1.5px, width 3px → center at 3px
+   Dot: width 16px + border 6px = 22px total
+   Dot center needs to be at 3px
+   Left position: 3px - 11px (radius) = -8px */
 .timeline-marker {
     position: absolute;
-    left: -3.5px;
+    left: -8px;
     top: 8px;
     width: 16px;
     height: 16px;
@@ -268,17 +322,17 @@ h2 {
     border-radius: 50%;
     border: 3px solid var(--bg-white);
     z-index: 2;
-    box-shadow: 0 2px 6px rgba(93, 122, 140, 0.3);
+    box-shadow: 0 2px 8px rgba(107, 142, 159, 0.3);
 }
 
 .timeline-content {
     flex: 1;
 }
 
-/* Date Badge with Color */
+/* Date Badge */
 .date-badge {
     display: inline-block;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
     color: white;
     padding: 3px 10px;
     border-radius: 4px;
@@ -286,7 +340,7 @@ h2 {
     font-weight: 500;
     margin-bottom: 8px;
     letter-spacing: 0.3px;
-    box-shadow: 0 2px 4px rgba(93, 122, 140, 0.2);
+    box-shadow: 0 2px 4px rgba(107, 142, 159, 0.25);
 }
 
 /* Institution Names */
@@ -312,7 +366,7 @@ h2 {
 }
 
 .mentor-link {
-    color: var(--accent-blue);
+    color: var(--text-black);
     text-decoration: none;
     border-bottom: 1px dashed var(--text-light);
 }
@@ -344,7 +398,7 @@ h2 {
 }
 
 .item-details a {
-    color: var(--accent-blue);
+    color: var(--text-black);
     text-decoration: underline;
 }
 
@@ -366,7 +420,7 @@ h2 {
     width: 95px;
     height: 95px;
     object-fit: contain;
-    filter: grayscale(20%);
+    filter: grayscale(30%);
     transition: filter 0.3s ease;
 }
 
@@ -382,7 +436,7 @@ h2 {
 }
 
 .note a {
-    color: var(--accent-blue);
+    color: var(--text-black);
     text-decoration: underline;
 }
 
@@ -396,16 +450,18 @@ h2 {
     gap: 25px;
 }
 
+/* Hover Background Highlight Instead of Transform */
 .pub-item {
     display: flex;
     gap: 20px;
-    padding: 0;
-    margin: 0;
-    transition: transform 0.2s ease;
+    padding: 15px;
+    margin: 0 -15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
 .pub-item:hover {
-    transform: translateX(5px);
+    background-color: var(--primary-light);
 }
 
 .pub-image {
@@ -476,7 +532,7 @@ h2 {
 }
 
 .icon-link {
-    color: var(--accent-blue);
+    color: var(--text-black);
     text-decoration: none;
     border-bottom: 1px dashed var(--text-light);
     display: inline-flex;
@@ -491,14 +547,14 @@ h2 {
 }
 
 .icon-link svg {
-    fill: var(--accent-blue);
+    fill: var(--text-gray);
 }
 
 .icon-link:hover svg {
     fill: var(--primary);
 }
 
-/* Activities */
+/* Activities - No Subsection Borders */
 .activities-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -510,8 +566,6 @@ h2 {
     font-weight: 600;
     color: var(--primary-dark);
     margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--primary-light);
 }
 
 .activity-list {
@@ -532,11 +586,11 @@ h2 {
     content: "▸";
     position: absolute;
     left: 0;
-    color: var(--accent-green);
+    color: var(--primary);
     font-size: 0.7rem;
 }
 
-/* Visitor Section with Color */
+/* Visitor Section */
 footer {
     margin-top: 40px;
     padding: 0;
@@ -548,7 +602,7 @@ footer {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 12px;
     border: 1px solid var(--border-light);
-    box-shadow: 0 4px 15px rgba(93, 122, 140, 0.1);
+    box-shadow: 0 4px 15px rgba(107, 142, 159, 0.1);
 }
 
 .visitor-section h3 {
