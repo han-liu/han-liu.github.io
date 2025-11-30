@@ -241,13 +241,14 @@ h2 {
     padding-left: 35px;
 }
 
+/* Gray vertical timeline bar */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 0;
+    left: 0;              /* ← TIMELINE BAR POSITION: Change this to move the gray bar left/right */
     top: 4px;
     bottom: 0;
-    width: 2px;
+    width: 2px;           /* ← TIMELINE BAR WIDTH */
     background: var(--timeline-gray);
 }
 
@@ -264,14 +265,16 @@ h2 {
     margin-bottom: 0;
 }
 
-/* Filled dot overlapping the timeline bar - vertically centered with date box */
+/* FILLED DOT - overlapping the timeline bar */
 .timeline-marker {
     position: absolute;
-    left: -4px;
-    top: 11px;
-    width: 10px;
+    left: -5px;           /* ← DOT HORIZONTAL POSITION: Negative = left, Positive = right */
+                          /*   To overlap gray bar at left:0, dot center should be at 0 */
+                          /*   Dot is 10px wide, so left edge at -5px puts center at 0 */
+    top: 11px;            /* ← DOT VERTICAL POSITION: Adjust this to align with date box */
+    width: 10px;          /* ← DOT SIZE */
     height: 10px;
-    background: var(--primary);
+    background: var(--primary);  /* ← DOT COLOR (filled, same as date box) */
     border-radius: 50%;
     border: none;
     z-index: 2;
@@ -280,7 +283,7 @@ h2 {
 /* For backward compatibility with timeline-dot */
 .timeline-dot {
     position: absolute;
-    left: -4px;
+    left: -5px;           /* ← Same as timeline-marker */
     top: 11px;
     width: 10px;
     height: 10px;
@@ -293,7 +296,7 @@ h2 {
 /* Main column: date box + all info under it */
 .timeline-main {
     flex: 1;
-    margin-left: 10px;
+    margin-left: 10px;    /* ← CONTENT LEFT MARGIN: Space between bar and content */
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -308,7 +311,7 @@ h2 {
     gap: 6px;
 }
 
-/* Date badge - tightly bounded filled box */
+/* Date badge - FIXED WIDTH to match text length */
 .date-badge {
     display: inline-block;
     align-self: flex-start;
@@ -320,6 +323,8 @@ h2 {
     font-weight: 500;
     letter-spacing: 0.3px;
     text-align: center;
+    width: auto;          /* ← WIDTH: auto = tight fit around text */
+    white-space: nowrap;  /* ← Prevents text wrapping */
 }
 
 /* Entry content */
@@ -575,9 +580,9 @@ footer {
 
 .visitor-section {
     padding: 35px 30px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 12px;
-    border: 1px solid var(--border-light);
+    background: transparent;
+    border-radius: 0;
+    border: none;
 }
 
 .visitor-section h3 {
