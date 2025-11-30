@@ -6,10 +6,10 @@
 }
 
 :root {
-    --primary: #6b8e9f;
-    --primary-dark: #4f6b7a;
-    --primary-light: rgba(107, 142, 159, 0.1);
-    --accent: #3d5a6b;
+    --primary: #999;
+    --primary-dark: #666;
+    --primary-light: rgba(153, 153, 153, 0.1);
+    --accent-red: #d9534f;
     --text-dark: #2c3e50;
     --text-black: #000000;
     --text-gray: #666;
@@ -18,8 +18,7 @@
     --bg-white: #ffffff;
     --bg-light: #fafafa;
     --border-light: #e0e0e0;
-    --timeline-gray: #cbd5e0;
-    --hiring-red: #c0392b;
+    --timeline-gray: #ccc;
 }
 
 html {
@@ -38,20 +37,19 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     background-color: var(--bg-white);
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
 }
 
-/* Beautiful Enhanced Sidebar */
+/* Clean Simple Sidebar - No Effects */
 .sidebar {
     width: 250px;
-    background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+    background: var(--bg-light);
     padding: 40px 25px;
     position: sticky;
     top: 0;
     height: 100vh;
     overflow-y: auto;
     flex-shrink: 0;
-    border-right: 1px solid #e8e8e8;
+    border-right: 1px solid var(--border-light);
 }
 
 .profile-section {
@@ -59,60 +57,32 @@ body {
     margin-bottom: 35px;
 }
 
-.profile-image-wrapper {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.profile-image-wrapper::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    border-radius: 6px;
-    z-index: 0;
-    opacity: 0.3;
-}
-
+/* No Effects on Profile Image */
 .profile-img {
     width: 170px;
     height: 215px;
     object-fit: cover;
     border-radius: 4px;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 8px 20px rgba(107, 142, 159, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.profile-img:hover {
-    transform: translateY(-3px);
+    margin-bottom: 20px;
 }
 
 .name {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--accent);
+    color: var(--text-dark);
     margin-bottom: 12px;
     letter-spacing: 2px;
 }
 
 .title-section {
-    padding: 15px 20px;
-    background: linear-gradient(135deg, var(--primary-light) 0%, rgba(107, 142, 159, 0.05) 100%);
-    border-radius: 8px;
     margin-top: 15px;
 }
 
 .title {
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--primary-dark);
+    color: var(--text-gray);
     margin-bottom: 5px;
 }
 
@@ -121,7 +91,7 @@ body {
     color: var(--text-gray);
 }
 
-/* Elegant Navigation Menu */
+/* Navigation Menu */
 .nav-menu {
     display: flex;
     flex-direction: column;
@@ -140,21 +110,17 @@ body {
     transition: all 0.3s ease;
     background: transparent;
     text-align: left;
-    border-left: 3px solid transparent;
 }
 
 .nav-link:hover {
     background-color: var(--primary-light);
-    color: var(--primary);
-    border-left-color: var(--primary);
-    padding-left: 22px;
+    color: var(--primary-dark);
 }
 
 .nav-link.active {
     background-color: var(--primary-light);
-    color: var(--primary);
+    color: var(--primary-dark);
     font-weight: 600;
-    border-left-color: var(--primary);
 }
 
 /* Social Icons */
@@ -164,7 +130,7 @@ body {
     gap: 14px;
     margin-top: 30px;
     padding: 20px 0 0 0;
-    border-top: 2px solid var(--border-light);
+    border-top: 1px solid var(--border-light);
 }
 
 .social-links a {
@@ -177,14 +143,11 @@ body {
     height: 40px;
     border-radius: 50%;
     background: transparent;
-    border: 2px solid transparent;
 }
 
 .social-links a:hover {
-    color: var(--primary);
+    color: var(--primary-dark);
     background-color: var(--primary-light);
-    border-color: var(--primary);
-    transform: translateY(-3px);
 }
 
 /* Main Content */
@@ -198,27 +161,16 @@ body {
     margin-bottom: 45px;
 }
 
-/* Section Headers */
+/* Gray Section Headers with Full Gray Underline */
 h2 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--title-gray);
     margin-bottom: 15px;
     padding-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    border-bottom: 2px solid var(--primary-light);
-    position: relative;
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 60px;
-    height: 2px;
-    background: var(--primary);
+    border-bottom: 2px solid var(--title-gray);
 }
 
 /* Brief Bio */
@@ -247,20 +199,16 @@ h2::after {
 
 .bio-left a:hover,
 .bio-right a:hover {
-    color: var(--primary);
+    color: var(--primary-dark);
 }
 
-/* Wider Bio Right for Single-line Email */
+/* Wider Bio Right for Single-line Address */
 .bio-right {
     flex-shrink: 0;
-    width: 280px;
+    width: 310px;
     font-size: 0.8rem;
     color: var(--text-gray);
     line-height: 1.6;
-    padding: 20px;
-    background: linear-gradient(135deg, var(--primary-light) 0%, rgba(107, 142, 159, 0.05) 100%);
-    border-radius: 8px;
-    border-left: 3px solid var(--primary);
 }
 
 .bio-right p {
@@ -275,29 +223,29 @@ h2::after {
 
 .cv-link:hover {
     text-decoration: underline;
-    color: var(--primary);
+    color: var(--primary-dark);
 }
 
-/* CRITICAL FIX: Timeline - Dot Moved LEFT - Line Goes THROUGH Center */
+/* PROFESSIONAL Timeline - Red Dots, Gray Vertical Line */
 .timeline {
     position: relative;
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
-/* Timeline Bar */
+/* Gray Vertical Line */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 1.5px;
-    top: 16px;
-    bottom: 10px;
-    width: 3px;
+    left: 8px;
+    top: 18px;
+    bottom: 15px;
+    width: 2px;
     background: var(--timeline-gray);
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -307,22 +255,18 @@ h2::after {
     margin-bottom: 0;
 }
 
-/* CRITICAL: Dot Moved LEFT so Line Goes THROUGH Center
-   Bar: left 1.5px, width 3px → center at 3px
-   Dot: width 16px + border 6px = 22px total
-   Dot center needs to be at 3px
-   Left position: 3px - 11px (radius) = -8px */
-.timeline-marker {
+/* Red/Salmon Dot on Timeline - Professional Design */
+.timeline-dot {
     position: absolute;
-    left: -8px;
-    top: 8px;
-    width: 16px;
-    height: 16px;
-    background: var(--primary);
+    left: 0;
+    top: 10px;
+    width: 18px;
+    height: 18px;
+    background: var(--accent-red);
     border-radius: 50%;
     border: 3px solid var(--bg-white);
+    box-shadow: 0 0 0 1px var(--border-light);
     z-index: 2;
-    box-shadow: 0 2px 8px rgba(107, 142, 159, 0.3);
 }
 
 .timeline-content {
@@ -332,7 +276,7 @@ h2::after {
 /* Date Badge */
 .date-badge {
     display: inline-block;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    background: var(--primary);
     color: white;
     padding: 3px 10px;
     border-radius: 4px;
@@ -340,7 +284,6 @@ h2::after {
     font-weight: 500;
     margin-bottom: 8px;
     letter-spacing: 0.3px;
-    box-shadow: 0 2px 4px rgba(107, 142, 159, 0.25);
 }
 
 /* Institution Names */
@@ -372,8 +315,8 @@ h2::after {
 }
 
 .mentor-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary-dark);
 }
 
 .item-details ul {
@@ -394,7 +337,7 @@ h2::after {
     content: "•";
     position: absolute;
     left: 0;
-    color: var(--primary);
+    color: var(--text-gray);
 }
 
 .item-details a {
@@ -403,10 +346,10 @@ h2::after {
 }
 
 .item-details a:hover {
-    color: var(--primary);
+    color: var(--primary-dark);
 }
 
-/* Timeline Logo */
+/* Timeline Logo - No Hover Effects */
 .timeline-logo {
     flex-shrink: 0;
     width: 100px;
@@ -420,12 +363,6 @@ h2::after {
     width: 95px;
     height: 95px;
     object-fit: contain;
-    filter: grayscale(30%);
-    transition: filter 0.3s ease;
-}
-
-.timeline-item:hover .timeline-logo img {
-    filter: grayscale(0%);
 }
 
 /* Competitions & Publications */
@@ -441,21 +378,22 @@ h2::after {
 }
 
 .note a:hover {
-    color: var(--primary);
+    color: var(--primary-dark);
 }
 
+/* Compact Spacing - 12px Gap */
 .publications-list {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 12px;
 }
 
-/* Hover Background Highlight Instead of Transform */
+/* Hover Background Highlight */
 .pub-item {
     display: flex;
     gap: 20px;
-    padding: 15px;
-    margin: 0 -15px;
+    padding: 12px;
+    margin: 0 -12px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
@@ -470,7 +408,7 @@ h2::after {
     height: 90px;
     overflow: hidden;
     border-radius: 4px;
-    background: linear-gradient(135deg, var(--bg-light) 0%, #f5f5f5 100%);
+    background: var(--bg-light);
     border: 1px solid var(--border-light);
     display: flex;
     align-items: center;
@@ -480,7 +418,7 @@ h2::after {
 .placeholder-image {
     font-size: 3rem;
     opacity: 0.3;
-    color: var(--primary);
+    color: var(--text-gray);
 }
 
 .trophy-large {
@@ -515,7 +453,7 @@ h2::after {
 .author-name {
     text-decoration: underline;
     font-weight: normal;
-    color: var(--primary-dark);
+    color: var(--text-gray);
 }
 
 .pub-venue {
@@ -542,8 +480,8 @@ h2::after {
 }
 
 .icon-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary-dark);
 }
 
 .icon-link svg {
@@ -551,10 +489,10 @@ h2::after {
 }
 
 .icon-link:hover svg {
-    fill: var(--primary);
+    fill: var(--primary-dark);
 }
 
-/* Activities - No Subsection Borders */
+/* Activities */
 .activities-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -564,7 +502,7 @@ h2::after {
 .activity-column h4 {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--primary-dark);
+    color: var(--text-black);
     margin-bottom: 12px;
 }
 
@@ -586,7 +524,7 @@ h2::after {
     content: "▸";
     position: absolute;
     left: 0;
-    color: var(--primary);
+    color: var(--text-gray);
     font-size: 0.7rem;
 }
 
@@ -602,13 +540,12 @@ footer {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 12px;
     border: 1px solid var(--border-light);
-    box-shadow: 0 4px 15px rgba(107, 142, 159, 0.1);
 }
 
 .visitor-section h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--text-gray);
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
