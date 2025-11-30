@@ -205,7 +205,7 @@ h2 {
 .bio-right {
     flex-shrink: 0;
     width: 310px;
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* slightly smaller */
     color: var(--text-gray);
     line-height: 1.7;
     padding: 22px;
@@ -229,31 +229,54 @@ h2 {
     color: var(--primary);
 }
 
-/* FIXED Timeline - Date + Dot on Left */
+/* Timeline - vertical bar on the left */
 .timeline {
     position: relative;
+    margin-left: 15px;      /* space from section edge */
+    padding-left: 25px;     /* space between bar and content */
 }
 
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 0;
+    width: 2px;
+    background: var(--timeline-gray);
+}
+
+/* Individual timeline entry */
 .timeline-item {
     position: relative;
-    margin-bottom: 30px;
     display: flex;
-    gap: 25px;
+    gap: 20px;
     align-items: flex-start;
+    margin-bottom: 30px;
 }
 
 .timeline-item:last-child {
     margin-bottom: 0;
 }
 
-/* Left Container: Date Badge + Dot */
+/* Red dot sitting on the bar */
+.timeline-dot {
+    position: absolute;
+    left: -7px; /* centered on the bar (which is at 0) */
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-red);
+    border-radius: 50%;
+    border: 2px solid var(--bg-white);
+    box-shadow: 0 0 0 1px var(--border-light);
+    z-index: 2;
+}
+
+/* Left column: date badge */
 .timeline-left {
-    position: relative;
     flex-shrink: 0;
-    width: 160px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    min-width: 160px;
 }
 
 .date-badge {
@@ -265,41 +288,10 @@ h2 {
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.3px;
-    text-align: center;
-    margin-bottom: 8px;
+    text-align: left;
 }
 
-/* Dot Positioned After Date Badge */
-.timeline-dot {
-    position: absolute;
-    right: -17px;
-    top: 8px;
-    width: 12px;
-    height: 12px;
-    background: var(--accent-red);
-    border-radius: 50%;
-    border: 2px solid var(--bg-white);
-    box-shadow: 0 0 0 1px var(--border-light);
-    z-index: 2;
-}
-
-/* Vertical Line Connecting Dots */
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    left: 154px;
-    top: 20px;
-    bottom: -30px;
-    width: 2px;
-    background: var(--timeline-gray);
-    z-index: 1;
-}
-
-.timeline-item:last-child::after {
-    display: none;
-}
-
-/* Timeline Content */
+/* Main content */
 .timeline-content {
     flex: 1;
 }
@@ -554,11 +546,12 @@ footer {
     text-align: center;
 }
 
+/* No background color for VISITOR ANALYTICS box */
 .visitor-section {
     padding: 35px 30px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 12px;
-    border: 1px solid var(--border-light);
+    background: transparent;
+    border-radius: 0;
+    border: none;
 }
 
 .visitor-section h3 {
@@ -622,22 +615,25 @@ footer {
         gap: 20px;
     }
 
+    .timeline {
+        margin-left: 10px;
+        padding-left: 25px;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
     .timeline-item {
         flex-direction: column;
     }
 
     .timeline-left {
-        width: auto;
-        align-items: flex-start;
+        min-width: 0;
     }
 
-    .timeline-dot {
-        left: 10px;
-        right: auto;
-    }
-
-    .timeline-item::after {
-        left: 15px;
+    .timeline-logo {
+        width: 80px;
     }
 }
 
