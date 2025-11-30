@@ -162,7 +162,7 @@ body {
 
 /* Headers - Thin Gray Underline */
 h2 {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--title-gray);
     margin-bottom: 15px;
@@ -184,7 +184,7 @@ h2 {
 }
 
 .bio-left p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     line-height: 1.7;
     color: var(--text-gray);
     margin-bottom: 12px;
@@ -296,7 +296,7 @@ h2 {
 
 /* Entry content */
 .item-details h4 {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-black);
     margin: 6px 0 8px 0;
@@ -305,7 +305,7 @@ h2 {
 
 .degree,
 .position {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--text-black);
     margin-bottom: 4px;
     line-height: 1.6;
@@ -334,7 +334,7 @@ h2 {
 }
 
 .item-details ul li {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-gray);
     padding: 2px 0 2px 15px;
     position: relative;
@@ -375,7 +375,7 @@ h2 {
 
 /* Publications & Competitions */
 .note {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-gray);
     margin-bottom: 25px;
 }
@@ -446,7 +446,7 @@ h2 {
 }
 
 .pub-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-black);
     margin-bottom: 6px;
@@ -454,7 +454,7 @@ h2 {
 }
 
 .pub-authors {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-gray);
     margin-bottom: 4px;
     line-height: 1.5;
@@ -467,14 +467,14 @@ h2 {
 }
 
 .pub-venue {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-gray);
     margin-bottom: 6px;
     font-style: normal;
 }
 
 .pub-links {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     display: flex;
     gap: 15px;
 }
@@ -510,7 +510,7 @@ h2 {
 }
 
 .activity-column h4 {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-black);
     margin-bottom: 12px;
@@ -522,7 +522,7 @@ h2 {
 }
 
 .activity-list li {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-gray);
     line-height: 1.6;
     margin-bottom: 8px;
@@ -554,7 +554,7 @@ footer {
 }
 
 .visitor-section h3 {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--primary);
     margin-bottom: 20px;
