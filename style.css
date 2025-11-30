@@ -238,7 +238,7 @@ h2 {
 .timeline {
     position: relative;
     margin-left: 15px;
-    padding-left: 25px;
+    padding-left: 35px;
 }
 
 .timeline::before {
@@ -264,36 +264,36 @@ h2 {
     margin-bottom: 0;
 }
 
-/* Dot centered on the line - using timeline-marker */
+/* Filled dot overlapping the timeline bar - vertically centered with date box */
 .timeline-marker {
     position: absolute;
-    left: -7px;
-    top: 18px;
+    left: -4px;
+    top: 11px;
     width: 10px;
     height: 10px;
-    background: var(--bg-white);
+    background: var(--primary);
     border-radius: 50%;
-    border: 2px solid var(--primary);
+    border: none;
     z-index: 2;
 }
 
 /* For backward compatibility with timeline-dot */
 .timeline-dot {
     position: absolute;
-    left: -7px;
-    top: 18px;
+    left: -4px;
+    top: 11px;
     width: 10px;
     height: 10px;
-    background: var(--bg-white);
+    background: var(--primary);
     border-radius: 50%;
-    border: 2px solid var(--primary);
+    border: none;
     z-index: 2;
 }
 
 /* Main column: date box + all info under it */
 .timeline-main {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -302,23 +302,24 @@ h2 {
 /* For backward compatibility with timeline-content */
 .timeline-content {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-/* Date badge */
+/* Date badge - tightly bounded filled box */
 .date-badge {
     display: inline-block;
+    align-self: flex-start;
     background: var(--primary);
     color: white;
-    padding: 4px 12px;
+    padding: 4px 10px;
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.3px;
-    text-align: left;
+    text-align: center;
 }
 
 /* Entry content */
