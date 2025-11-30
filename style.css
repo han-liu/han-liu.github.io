@@ -268,10 +268,10 @@ h2 {
 /* FILLED DOT - overlapping the timeline bar */
 .timeline-marker {
     position: absolute;
-    left: -10px;           /* ← DOT HORIZONTAL POSITION: Negative = left, Positive = right */
+    left: -40px;           /* ← DOT HORIZONTAL POSITION: Negative = left, Positive = right */
                           /*   To overlap gray bar at left:0, dot center should be at 0 */
                           /*   Dot is 10px wide, so left edge at -5px puts center at 0 */
-    top: 9px;            /* ← DOT VERTICAL POSITION: Adjust this to align with date box */
+    top: 7px;            /* ← DOT VERTICAL POSITION: Adjust this to align with date box */
     width: 10px;          /* ← DOT SIZE */
     height: 10px;
     background: var(--primary);  /* ← DOT COLOR (filled, same as date box) */
@@ -283,8 +283,8 @@ h2 {
 /* For backward compatibility with timeline-dot */
 .timeline-dot {
     position: absolute;
-    left: -10px;           /* ← Same as timeline-marker */
-    top: 9px;
+    left: -40px;           /* ← Same as timeline-marker */
+    top: 7px;
     width: 10px;
     height: 10px;
     background: var(--primary);
