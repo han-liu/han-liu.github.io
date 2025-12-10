@@ -234,6 +234,119 @@ h2 {
     color: var(--primary);
 }
 
+/* Highlight for research philosophy */
+.highlight {
+    font-weight: 600;
+    color: var(--primary);
+    font-style: italic;
+}
+
+/* Compact List Layout (replaces timeline) */
+.compact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.compact-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.compact-item:last-child {
+    border-bottom: none;
+}
+
+.compact-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.compact-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.compact-content {
+    flex: 1;
+}
+
+.compact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+    gap: 15px;
+}
+
+.compact-header h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-black);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.compact-date {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-gray);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.degree {
+    font-size: 0.85rem;
+    color: var(--text-black);
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+.position {
+    font-size: 0.85rem;
+    color: var(--text-black);
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+.advisor {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+.project-desc {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+.advisor a,
+.project-desc a {
+    color: var(--text-black);
+    text-decoration: underline;
+}
+
+.advisor a:hover,
+.project-desc a:hover {
+    color: var(--primary);
+}
+
+.underline {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
 /* Timeline - vertical bar on the left */
 .timeline {
     position: relative;
