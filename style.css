@@ -6,19 +6,19 @@
 }
 
 :root {
-    --primary: #2c5f7d;
-    --primary-dark: #1a4d6e;
-    --primary-light: rgba(44, 95, 125, 0.1);
+    --primary: #4A5568;
+    --primary-dark: #2D3748;
+    --primary-light: rgba(74, 85, 104, 0.1);
     --accent-red: #d9534f;
-    --text-dark: #2c3e50;
+    --text-dark: #2D3748;
     --text-black: #000000;
-    --text-gray: #666;
-    --text-light: #999;
-    --title-gray: #999;
+    --text-gray: #718096;
+    --text-light: #A0AEC0;
+    --title-gray: #718096;
     --bg-white: #ffffff;
-    --bg-light: #fafafa;
-    --border-light: #e0e0e0;
-    --timeline-gray: #ccc;
+    --bg-light: #F7FAFC;
+    --border-light: #E2E8F0;
+    --timeline-gray: #CBD5E0;
 }
 
 html {
@@ -41,9 +41,9 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 250px;
+    width: 230px;
     background: var(--bg-light);
-    padding: 40px 25px;
+    padding: 35px 20px;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -54,39 +54,39 @@ body {
 
 .profile-section {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
 }
 
 .profile-img {
-    width: 170px;
-    height: 215px;
+    width: 150px;
+    height: 190px;
     object-fit: cover;
     border-radius: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .name {
     font-family: 'Roboto Mono', monospace;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 12px;
-    letter-spacing: 2px;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
 }
 
 .title-section {
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
 .title {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-gray);
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .affiliation {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--text-gray);
 }
 
@@ -94,18 +94,18 @@ body {
 .nav-menu {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    margin-bottom: 30px;
+    gap: 4px;
+    margin-bottom: 25px;
 }
 
 .nav-link {
     display: block;
-    padding: 12px 18px;
+    padding: 10px 14px;
     color: var(--text-gray);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
-    border-radius: 8px;
+    border-radius: 6px;
     transition: all 0.3s ease;
     background: transparent;
     text-align: left;
@@ -175,7 +175,7 @@ h2 {
 /* Brief Bio */
 .bio-content-wrapper {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     align-items: stretch;
 }
 
@@ -187,9 +187,9 @@ h2 {
 
 .bio-left p {
     font-size: 0.85rem;
-    line-height: 1.7;
+    line-height: 1.6;
     color: var(--text-gray);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .bio-left a,
@@ -206,11 +206,11 @@ h2 {
 /* Bio right box - matches left height */
 .bio-right {
     flex-shrink: 0;
-    width: 310px;
-    font-size: 0.75rem;
+    width: 290px;
+    font-size: 0.72rem;
     color: var(--text-gray);
-    line-height: 1.7;
-    padding: 22px;
+    line-height: 1.6;
+    padding: 18px;
     background: linear-gradient(135deg, var(--primary-light) 0%, rgba(44, 95, 125, 0.05) 100%);
     border-radius: 8px;
     border-left: 3px solid var(--primary);
@@ -252,7 +252,14 @@ h2 {
     display: flex;
     gap: 15px;
     align-items: flex-start;
-    padding: 8px 0;
+    padding: 8px;
+    margin: 0 -8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.compact-item:hover {
+    background-color: var(--primary-light);
 }
 
 .compact-icon {
@@ -619,6 +626,13 @@ h2 {
     color: var(--text-gray);
     margin-bottom: 6px;
     font-style: normal;
+}
+
+/* Highlight challenge info in publication venue */
+.challenge-highlight {
+    font-weight: 700;
+    color: var(--primary);
+    font-style: italic;
 }
 
 .pub-links {
