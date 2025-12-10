@@ -250,16 +250,6 @@ h2 {
     font-style: italic;
 }
 
-/* Stronger highlight for main research philosophy */
-.highlight-strong {
-    font-weight: 700;
-    color: #FFFFFF;
-    background-color: var(--primary);
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-style: italic;
-}
-
 /* Compact List Layout (replaces timeline) */
 .compact-list {
     display: flex;
@@ -635,7 +625,7 @@ h2 {
 }
 
 /* Highlight Han Liu's name in publications/competitions */
-.author-highlight {
+.author-bold {
     font-weight: 700;
     color: var(--text-black);
     text-decoration: none;
@@ -650,9 +640,8 @@ h2 {
 
 /* Highlight challenge info in publication venue */
 .challenge-highlight {
-    font-weight: 700;
-    color: var(--primary);
-    font-style: italic;
+    text-decoration: underline;
+    color: var(--text-gray);
 }
 
 .pub-links {
