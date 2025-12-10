@@ -6,17 +6,17 @@
 }
 
 :root {
-    --primary: #4A5568;
-    --primary-dark: #2D3748;
-    --primary-light: rgba(74, 85, 104, 0.1);
+    --primary: #009999;
+    --primary-dark: #007777;
+    --primary-light: rgba(0, 153, 153, 0.1);
     --accent-red: #d9534f;
-    --text-dark: #2D3748;
+    --text-dark: #1A365D;
     --text-black: #000000;
-    --text-gray: #718096;
-    --text-light: #A0AEC0;
-    --title-gray: #718096;
+    --text-gray: #64748B;
+    --text-light: #94A3B8;
+    --title-gray: #64748B;
     --bg-white: #ffffff;
-    --bg-light: #F7FAFC;
+    --bg-light: #F8FAFC;
     --border-light: #E2E8F0;
     --timeline-gray: #CBD5E0;
 }
@@ -41,9 +41,9 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 230px;
+    width: 215px;
     background: var(--bg-light);
-    padding: 35px 20px;
+    padding: 30px 18px;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -54,39 +54,46 @@ body {
 
 .profile-section {
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 22px;
 }
 
 .profile-img {
-    width: 150px;
-    height: 190px;
+    width: 135px;
+    height: 170px;
     object-fit: cover;
     border-radius: 4px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .name {
     font-family: 'Roboto Mono', monospace;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-dark);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+
+.email {
+    font-size: 0.7rem;
+    color: var(--text-gray);
     margin-bottom: 10px;
-    letter-spacing: 1.5px;
+    word-break: break-word;
 }
 
 .title-section {
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
 .title {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-gray);
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .affiliation {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-gray);
 }
 
@@ -94,16 +101,16 @@ body {
 .nav-menu {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    margin-bottom: 25px;
+    gap: 3px;
+    margin-bottom: 22px;
 }
 
 .nav-link {
     display: block;
-    padding: 10px 14px;
+    padding: 9px 12px;
     color: var(--text-gray);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 500;
     border-radius: 6px;
     transition: all 0.3s ease;
@@ -252,10 +259,11 @@ h2 {
     display: flex;
     gap: 15px;
     align-items: flex-start;
-    padding: 8px;
+    padding: 12px 8px;
     margin: 0 -8px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .compact-item:hover {
@@ -662,6 +670,12 @@ h2 {
 
 .icon-link:hover svg {
     fill: var(--primary);
+}
+
+.link-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
 }
 
 /* Activities */
