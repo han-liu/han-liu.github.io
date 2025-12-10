@@ -245,19 +245,14 @@ h2 {
 .compact-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .compact-item {
     display: flex;
     gap: 15px;
     align-items: flex-start;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border-light);
-}
-
-.compact-item:last-child {
-    border-bottom: none;
+    padding: 8px 0;
 }
 
 .compact-icon {
@@ -283,7 +278,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     gap: 15px;
 }
 
@@ -306,28 +301,28 @@ h2 {
 .degree {
     font-size: 0.85rem;
     color: var(--text-black);
-    margin: 4px 0;
+    margin: 2px 0;
     line-height: 1.5;
 }
 
 .position {
     font-size: 0.85rem;
     color: var(--text-black);
-    margin: 4px 0;
+    margin: 2px 0;
     line-height: 1.5;
 }
 
 .advisor {
     font-size: 0.8rem;
     color: var(--text-gray);
-    margin: 4px 0;
+    margin: 2px 0;
     line-height: 1.4;
 }
 
 .project-desc {
     font-size: 0.8rem;
     color: var(--text-gray);
-    margin: 4px 0;
+    margin: 2px 0;
     line-height: 1.4;
 }
 
@@ -610,6 +605,13 @@ h2 {
     text-decoration: underline;
     font-weight: normal;
     color: var(--text-gray);
+}
+
+/* Highlight Han Liu's name in publications/competitions */
+.author-highlight {
+    font-weight: 700;
+    color: var(--text-black);
+    text-decoration: none;
 }
 
 .pub-venue {
