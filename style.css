@@ -75,10 +75,12 @@ body {
 }
 
 .email {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: var(--text-gray);
     margin-bottom: 10px;
-    word-break: break-word;
+    word-break: keep-all;
+    white-space: nowrap;
+    font-family: 'Courier New', monospace;
 }
 
 .title-section {
@@ -662,7 +664,6 @@ h2 {
 .icon-link {
     color: var(--text-black);
     text-decoration: none;
-    border-bottom: 1px dashed var(--text-light);
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -671,7 +672,14 @@ h2 {
 
 .icon-link:hover {
     color: var(--primary);
-    border-bottom-color: var(--primary);
+}
+
+.icon-link:hover .link-text {
+    border-bottom: 1px dashed var(--primary);
+}
+
+.link-text {
+    border-bottom: 1px dashed var(--text-light);
 }
 
 .icon-link svg {
@@ -685,7 +693,7 @@ h2 {
 .link-icon {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 2px;
+    flex-shrink: 0;
 }
 
 /* Activities */
