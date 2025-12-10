@@ -6,17 +6,17 @@
 }
 
 :root {
-    --primary: #009999;
-    --primary-dark: #007777;
-    --primary-light: rgba(0, 153, 153, 0.1);
+    --primary: #4A5568;
+    --primary-dark: #2D3748;
+    --primary-light: rgba(74, 85, 104, 0.1);
     --accent-red: #d9534f;
-    --text-dark: #1A365D;
+    --text-dark: #2D3748;
     --text-black: #000000;
-    --text-gray: #64748B;
-    --text-light: #94A3B8;
-    --title-gray: #64748B;
+    --text-gray: #718096;
+    --text-light: #A0AEC0;
+    --title-gray: #718096;
     --bg-white: #ffffff;
-    --bg-light: #F8FAFC;
+    --bg-light: #F7FAFC;
     --border-light: #E2E8F0;
     --timeline-gray: #CBD5E0;
 }
@@ -245,6 +245,16 @@ h2 {
 .highlight {
     font-weight: 600;
     color: var(--primary);
+    font-style: italic;
+}
+
+/* Stronger highlight for main research philosophy */
+.highlight-strong {
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: var(--primary);
+    padding: 2px 6px;
+    border-radius: 3px;
     font-style: italic;
 }
 
