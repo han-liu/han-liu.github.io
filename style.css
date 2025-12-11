@@ -245,9 +245,8 @@ h2 {
 
 /* Highlight for research philosophy */
 .highlight {
-    font-weight: 600;
+    font-weight: 800;
     color: var(--primary);
-    font-style: italic;
 }
 
 /* Compact List Layout (replaces timeline) */
