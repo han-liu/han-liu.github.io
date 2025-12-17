@@ -797,9 +797,9 @@ h2 {
     object-fit: cover;
 }
 
-/* Competitions section - show full images without cropping */
+/* Competitions section - resize images to fill container without preserving ratio */
 #competitions .pub-image img {
-    object-fit: contain;
+    object-fit: fill;
 }
 
 /* Custom image heights for publications section to match total text + links height */
@@ -818,9 +818,9 @@ h2 {
     height: 110px;
 }
 
-/* Fourth item: IntraStyler - 2 line title + authors + venue + 2 links */
+/* Fourth item: IntraStyler - 2 line title + authors + venue + 4 links (same as PanDx structure) */
 #publications .publications-list .pub-item:nth-child(2) .pub-image {
-    height: 90px;
+    height: 110px;
 }
 
 /* Fifth item: COLosSAL - 2 line title + authors + venue + 2 links */
