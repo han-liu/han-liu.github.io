@@ -350,12 +350,13 @@ h2 {
 }
 
 .mentee-project {
-    font-size: 0.8rem;
-    color: var(--text-gray);
+    font-size: 0.82rem;
+    color: var(--text-black);
     margin-bottom: 2px;
     line-height: 1.4;
-    font-weight: normal;
+    font-weight: 600;
     display: inline;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .mentee-paper {
@@ -395,7 +396,7 @@ h2 {
 
 .compact-item {
     display: flex;
-    gap: 15px;
+    gap: 18px;
     align-items: flex-start;
     padding: 12px 8px;
     margin: 0 -8px;
@@ -410,8 +411,8 @@ h2 {
 
 .compact-icon {
     flex-shrink: 0;
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -728,7 +729,7 @@ h2 {
     margin: 0 -12px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
-    align-items: stretch;
+    align-items: flex-start;
 }
 
 .pub-item:hover {
@@ -768,7 +769,8 @@ h2 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    min-height: 0;
 }
 
 .pub-title {
@@ -816,6 +818,7 @@ h2 {
     font-size: 0.8rem;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .icon-link {
