@@ -797,52 +797,59 @@ h2 {
     object-fit: cover;
 }
 
+/* Competitions section - show full images without cropping */
+#competitions .pub-image img {
+    object-fit: contain;
+}
+
 /* Custom image heights for publications section to match total text + links height */
+/* First item: Revisiting 2D - 2 line title + authors + venue + 2 links */
 #publications .pub-item:nth-child(2) .pub-image {
-    height: 110px;
+    height: 105px;
 }
 
+/* Second item: PanDx - 2 line title + authors + venue + 3 links */
 #publications .pub-item:nth-child(3) .pub-image {
-    height: 115px;
-}
-
-#publications .publications-list .pub-item:nth-child(1) .pub-image {
-    height: 115px;
-}
-
-#publications .publications-list .pub-item:nth-child(2) .pub-image {
     height: 110px;
 }
 
+/* Third item: COSST - 2 line title + authors + venue + 2 links */
+#publications .publications-list .pub-item:nth-child(1) .pub-image {
+    height: 110px;
+}
+
+/* Fourth item: IntraStyler - 2 line title + authors + venue + 2 links */
+#publications .publications-list .pub-item:nth-child(2) .pub-image {
+    height: 90px;
+}
+
+/* Fifth item: COLosSAL - 2 line title + authors + venue + 2 links */
 #publications .publications-list .pub-item:nth-child(3) .pub-image {
     height: 105px;
 }
 
+/* Sixth item: Learning Site - 2 line title + authors + venue + 1 link */
 #publications .publications-list .pub-item:nth-child(4) .pub-image {
+    height: 100px;
+}
+
+/* Seventh item: Evaluation - 2 line title + authors + venue + 2 links */
+#publications .publications-list .pub-item:nth-child(5) .pub-image {
     height: 105px;
 }
 
-#publications .publications-list .pub-item:nth-child(5) .pub-image {
-    height: 100px;
-}
-
+/* Eighth item: SynCT - 2 line title + authors + venue + 2 links */
 #publications .publications-list .pub-item:nth-child(6) .pub-image {
-    height: 100px;
+    height: 105px;
 }
 
+/* Ninth item: ModDrop++ - 2 line title + authors + venue + 4 links */
 #publications .publications-list .pub-item:nth-child(7) .pub-image {
-    height: 100px;
+    height: 115px;
 }
 
+/* Tenth item: SDFN - 2 line title + authors + venue + 1 link */
 #publications .publications-list .pub-item:nth-child(8) .pub-image {
-    height: 100px;
-}
-
-#publications .publications-list .pub-item:nth-child(9) .pub-image {
-    height: 100px;
-}
-
-#publications .publications-list .pub-item:nth-child(10) .pub-image {
     height: 100px;
 }
 
