@@ -109,7 +109,7 @@ body {
 
 .nav-link {
     display: block;
-    padding: 9px 10px;
+    padding: 9px 10px 9px 18px;
     color: var(--text-gray);
     text-decoration: none;
     font-size: 0.8rem;
@@ -247,13 +247,13 @@ h2 {
 /* Highlight for research philosophy */
 .highlight {
     font-weight: 700;
-    color: #d9534f;
+    color: #00A9CE;
 }
 
 /* Task type underlines */
 .task-underline {
     text-decoration: underline;
-    text-decoration-color: #d9534f;
+    text-decoration-color: #00A9CE;
     text-underline-offset: 2px;
 }
 
@@ -356,10 +356,13 @@ h2 {
     margin-bottom: 2px;
     line-height: 1.4;
     font-weight: 500;
+    display: inline;
 }
 
 .mentee-paper {
     font-size: 0.8rem;
+    display: inline;
+    margin-left: 8px;
 }
 
 .mentee-paper a {
@@ -477,6 +480,32 @@ h2 {
     color: var(--text-gray);
     margin: 2px 0;
     line-height: 1.4;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 6px;
+}
+
+.experience-list li {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    padding: 2px 0 2px 15px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.experience-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+.experience-list li a {
+    color: var(--text-black);
+    text-decoration: none;
 }
 
 .advisor a,
