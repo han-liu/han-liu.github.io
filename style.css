@@ -311,11 +311,11 @@ h2 {
 .mentorship-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 }
 
 .mentee-item {
-    padding: 10px 12px;
+    padding: 8px 12px;
     margin: 0 -12px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
@@ -328,14 +328,21 @@ h2 {
 .mentee-header {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    gap: 8px;
     margin-bottom: 4px;
+    flex-wrap: wrap;
 }
 
 .mentee-name {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 600;
     color: var(--text-black);
+}
+
+.mentee-position {
+    color: var(--text-gray);
+    font-style: italic;
+    font-size: 0.78rem;
 }
 
 .mentee-time {
@@ -353,14 +360,14 @@ h2 {
     line-height: 1.5;
 }
 
-.mentee-position {
-    color: var(--text-gray);
-    font-style: italic;
-}
-
 .mentee-separator {
     color: var(--text-light);
     font-weight: 300;
+}
+
+.project-label {
+    color: var(--text-gray);
+    font-size: 0.78rem;
 }
 
 .mentee-project {
@@ -750,7 +757,7 @@ h2 {
 .pub-image {
     flex-shrink: 0;
     width: 150px;
-    height: 105px;
+    height: 112.5px;
     overflow: hidden;
     border-radius: 4px;
     background: var(--bg-light);
@@ -773,7 +780,17 @@ h2 {
 .pub-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+}
+
+/* Book chapter specific image size */
+.chapter-list .pub-image {
+    width: 90px;
+    height: 150px;
+}
+
+.chapter-list .pub-image img {
+    object-fit: cover;
 }
 
 .pub-content {
