@@ -58,8 +58,8 @@ body {
 }
 
 .profile-img {
-    width: 185px;
-    height: 235px;
+    width: 150px;
+    height: 190px;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 14px;
@@ -109,7 +109,7 @@ body {
 
 .nav-link {
     display: block;
-    padding: 9px 12px;
+    padding: 9px 10px;
     color: var(--text-gray);
     text-decoration: none;
     font-size: 0.8rem;
@@ -118,6 +118,7 @@ body {
     transition: all 0.3s ease;
     background: transparent;
     text-align: left;
+    max-width: 180px;
 }
 
 .nav-link:hover {
@@ -246,7 +247,14 @@ h2 {
 /* Highlight for research philosophy */
 .highlight {
     font-weight: 700;
-    color: #2c5f7d;
+    color: #d9534f;
+}
+
+/* Task type underlines */
+.task-underline {
+    text-decoration: underline;
+    text-decoration-color: #d9534f;
+    text-underline-offset: 2px;
 }
 
 /* News Section */
@@ -344,9 +352,10 @@ h2 {
 
 .mentee-project {
     font-size: 0.8rem;
-    color: var(--text-gray);
+    color: var(--text-black);
     margin-bottom: 2px;
     line-height: 1.4;
+    font-weight: 500;
 }
 
 .mentee-paper {
