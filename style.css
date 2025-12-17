@@ -762,7 +762,6 @@ h2 {
     border-radius: 8px;
     transition: background-color 0.3s ease;
     align-items: flex-start;
-    min-height: 114px;
 }
 
 .pub-item:hover {
@@ -796,6 +795,55 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Custom image heights for publications section to match text content */
+#publications .pub-item:nth-child(2) .pub-image {
+    height: 95px;
+}
+
+#publications .pub-item:nth-child(3) .pub-image {
+    height: 95px;
+}
+
+#publications .publications-list .pub-item:nth-child(1) .pub-image {
+    height: 100px;
+}
+
+#publications .publications-list .pub-item:nth-child(2) .pub-image {
+    height: 95px;
+}
+
+#publications .publications-list .pub-item:nth-child(3) .pub-image {
+    height: 90px;
+}
+
+#publications .publications-list .pub-item:nth-child(4) .pub-image {
+    height: 90px;
+}
+
+#publications .publications-list .pub-item:nth-child(5) .pub-image {
+    height: 85px;
+}
+
+#publications .publications-list .pub-item:nth-child(6) .pub-image {
+    height: 85px;
+}
+
+#publications .publications-list .pub-item:nth-child(7) .pub-image {
+    height: 85px;
+}
+
+#publications .publications-list .pub-item:nth-child(8) .pub-image {
+    height: 85px;
+}
+
+#publications .publications-list .pub-item:nth-child(9) .pub-image {
+    height: 85px;
+}
+
+#publications .publications-list .pub-item:nth-child(10) .pub-image {
+    height: 85px;
 }
 
 /* Book chapter specific image size */
