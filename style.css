@@ -748,6 +748,7 @@ h2 {
     border-radius: 8px;
     transition: background-color 0.3s ease;
     align-items: flex-start;
+    min-height: 136.5px;
 }
 
 .pub-item:hover {
@@ -785,8 +786,8 @@ h2 {
 
 /* Book chapter specific image size */
 .chapter-list .pub-image {
-    width: 90px;
-    height: 150px;
+    width: 75px;
+    height: 125px;
 }
 
 .chapter-list .pub-image img {
