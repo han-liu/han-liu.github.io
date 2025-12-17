@@ -247,13 +247,13 @@ h2 {
 /* Highlight for research philosophy */
 .highlight {
     font-weight: 700;
-    color: #00A9CE;
+    color: #008B8B;
 }
 
 /* Task type underlines */
 .task-underline {
     text-decoration: underline;
-    text-decoration-color: #00A9CE;
+    text-decoration-color: #008B8B;
     text-underline-offset: 2px;
 }
 
@@ -328,12 +328,12 @@ h2 {
 .mentee-header {
     display: flex;
     align-items: baseline;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 3px;
 }
 
 .mentee-name {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-black);
 }
@@ -341,7 +341,6 @@ h2 {
 .mentee-position {
     font-size: 0.75rem;
     color: var(--text-gray);
-    font-style: italic;
 }
 
 .mentee-time {
@@ -352,10 +351,10 @@ h2 {
 
 .mentee-project {
     font-size: 0.8rem;
-    color: var(--text-black);
+    color: var(--text-gray);
     margin-bottom: 2px;
     line-height: 1.4;
-    font-weight: 500;
+    font-weight: normal;
     display: inline;
 }
 
@@ -393,7 +392,7 @@ h2 {
 .compact-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .compact-item {
@@ -736,6 +735,7 @@ h2 {
 .pub-image {
     flex-shrink: 0;
     width: 150px;
+    height: 150px;
     overflow: hidden;
     border-radius: 4px;
     background: var(--bg-light);
