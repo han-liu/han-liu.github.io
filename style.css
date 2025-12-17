@@ -339,16 +339,28 @@ h2 {
     color: var(--text-black);
 }
 
+.mentee-name a {
+    color: var(--text-black);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.mentee-name a:hover {
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+}
+
 .mentee-position {
     color: var(--text-gray);
     font-style: italic;
     font-size: 0.78rem;
+    font-weight: normal;
 }
 
 .mentee-time {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     color: var(--text-gray);
-    font-weight: 500;
+    font-weight: normal;
 }
 
 .mentee-details {
@@ -372,7 +384,9 @@ h2 {
 
 .mentee-project {
     color: var(--text-black);
-    font-weight: 500;
+    font-weight: normal;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 0.82rem;
 }
 
 .mentee-paper {
@@ -786,8 +800,8 @@ h2 {
 
 /* Book chapter specific image size */
 .chapter-list .pub-image {
-    width: 75px;
-    height: 125px;
+    width: 80px;
+    height: 100px;
 }
 
 .chapter-list .pub-image img {
