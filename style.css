@@ -797,53 +797,53 @@ h2 {
     object-fit: cover;
 }
 
-/* Custom image heights for publications section to match text content */
+/* Custom image heights for publications section to match total text + links height */
 #publications .pub-item:nth-child(2) .pub-image {
-    height: 95px;
+    height: 110px;
 }
 
 #publications .pub-item:nth-child(3) .pub-image {
-    height: 95px;
+    height: 115px;
 }
 
 #publications .publications-list .pub-item:nth-child(1) .pub-image {
-    height: 100px;
+    height: 115px;
 }
 
 #publications .publications-list .pub-item:nth-child(2) .pub-image {
-    height: 95px;
+    height: 110px;
 }
 
 #publications .publications-list .pub-item:nth-child(3) .pub-image {
-    height: 90px;
+    height: 105px;
 }
 
 #publications .publications-list .pub-item:nth-child(4) .pub-image {
-    height: 90px;
+    height: 105px;
 }
 
 #publications .publications-list .pub-item:nth-child(5) .pub-image {
-    height: 85px;
+    height: 100px;
 }
 
 #publications .publications-list .pub-item:nth-child(6) .pub-image {
-    height: 85px;
+    height: 100px;
 }
 
 #publications .publications-list .pub-item:nth-child(7) .pub-image {
-    height: 85px;
+    height: 100px;
 }
 
 #publications .publications-list .pub-item:nth-child(8) .pub-image {
-    height: 85px;
+    height: 100px;
 }
 
 #publications .publications-list .pub-item:nth-child(9) .pub-image {
-    height: 85px;
+    height: 100px;
 }
 
 #publications .publications-list .pub-item:nth-child(10) .pub-image {
-    height: 85px;
+    height: 100px;
 }
 
 /* Book chapter specific image size */
