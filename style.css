@@ -58,8 +58,8 @@ body {
 }
 
 .profile-img {
-    width: 165px;
-    height: 210px;
+    width: 185px;
+    height: 235px;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 14px;
@@ -246,23 +246,20 @@ h2 {
 /* Highlight for research philosophy */
 .highlight {
     font-weight: 700;
-    color: #1a4d6e;
-    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-    padding: 2px 6px;
-    border-radius: 3px;
+    color: #2c5f7d;
 }
 
 /* News Section */
 .news-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 6px;
 }
 
 .news-item {
     display: flex;
     gap: 15px;
-    padding: 12px;
+    padding: 8px 12px;
     margin: 0 -12px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
@@ -285,7 +282,7 @@ h2 {
     flex: 1;
     font-size: 0.85rem;
     color: var(--text-black);
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .news-highlight {
@@ -306,11 +303,11 @@ h2 {
 .mentorship-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 6px;
 }
 
 .mentee-item {
-    padding: 12px;
+    padding: 8px 12px;
     margin: 0 -12px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
@@ -320,18 +317,36 @@ h2 {
     background-color: var(--primary-light);
 }
 
+.mentee-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 3px;
+}
+
 .mentee-name {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-black);
-    margin-bottom: 4px;
+}
+
+.mentee-position {
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+.mentee-time {
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    margin-left: auto;
 }
 
 .mentee-project {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-gray);
-    margin-bottom: 4px;
-    line-height: 1.5;
+    margin-bottom: 2px;
+    line-height: 1.4;
 }
 
 .mentee-paper {
@@ -340,11 +355,19 @@ h2 {
 
 .mentee-paper a {
     color: var(--text-black);
-    text-decoration: underline;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
 }
 
 .mentee-paper a:hover {
     color: var(--primary);
+}
+
+.mentee-paper a:hover .link-text {
+    border-bottom: 1px dashed var(--primary);
 }
 
 /* Book Chapters Section */
