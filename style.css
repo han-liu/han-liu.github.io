@@ -311,11 +311,11 @@ h2 {
 .mentorship-list {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 12px;
 }
 
 .mentee-item {
-    padding: 8px 12px;
+    padding: 10px 12px;
     margin: 0 -12px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
@@ -328,41 +328,48 @@ h2 {
 .mentee-header {
     display: flex;
     align-items: baseline;
-    gap: 10px;
-    margin-bottom: 3px;
+    justify-content: space-between;
+    margin-bottom: 4px;
 }
 
 .mentee-name {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-black);
-}
-
-.mentee-position {
-    font-size: 0.75rem;
-    color: var(--text-gray);
 }
 
 .mentee-time {
     font-size: 0.75rem;
     color: var(--text-gray);
-    margin-left: auto;
+    font-weight: 500;
+}
+
+.mentee-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.mentee-position {
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+.mentee-separator {
+    color: var(--text-light);
+    font-weight: 300;
 }
 
 .mentee-project {
-    font-size: 0.82rem;
     color: var(--text-black);
-    margin-bottom: 2px;
-    line-height: 1.4;
-    font-weight: 600;
-    display: inline;
-    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
 }
 
 .mentee-paper {
-    font-size: 0.8rem;
-    display: inline;
-    margin-left: 8px;
+    display: inline-flex;
 }
 
 .mentee-paper a {
@@ -779,6 +786,7 @@ h2 {
     color: var(--text-black);
     margin-bottom: 6px;
     line-height: 1.4;
+    min-height: 2.8rem;
 }
 
 .pub-authors {
