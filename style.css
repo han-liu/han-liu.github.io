@@ -216,7 +216,7 @@ h2 {
 /* Bio right box - matches left height */
 .bio-right {
     flex-shrink: 0;
-    width: 280px;
+    width: 270px;
     font-size: 0.72rem;
     color: var(--text-gray);
     line-height: 1.6;
