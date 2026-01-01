@@ -26,7 +26,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-light);
@@ -42,7 +42,7 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 260px;
+    width: 280px;
     background: var(--bg-light);
     padding: 30px 18px;
     position: sticky;
@@ -67,7 +67,7 @@ body {
 }
 
 .name {
-    font-family: 'Roboto Mono', monospace;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 1.75rem;
     font-weight: 700;
     color: var(--text-dark);
@@ -255,6 +255,19 @@ h2 {
 .task-bold {
     font-weight: 700;
     color: var(--text-black);
+}
+
+/* General text bold */
+.text-bold {
+    font-weight: 700;
+    color: var(--text-black);
+}
+
+/* Award underline - dashed */
+.award-underline {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 2px;
 }
 
 /* Siemens brand colors */
