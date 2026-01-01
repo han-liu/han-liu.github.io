@@ -35,7 +35,7 @@ body {
 
 .page-container {
     display: flex;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: var(--bg-white);
     position: relative;
@@ -1065,7 +1065,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 850px) {
+@media (max-width: 1024px) {
     .page-container {
         display: flex;
         flex-direction: row;
