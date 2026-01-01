@@ -46,9 +46,6 @@ body {
     width: 250px;
     background: var(--bg-light);
     padding: 30px 18px;
-    position: fixed;
-    top: 0;
-    left: 0;
     height: 100vh;
     overflow-y: hidden;
     flex-shrink: 0;
@@ -56,6 +53,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
 }
 
 .profile-section {
@@ -168,9 +167,9 @@ body {
 /* Main Content */
 .main-content {
     flex: 1;
-    padding: 40px 60px 40px 60px;
-    max-width: none;
-    margin-left: 250px;
+    padding: 40px 80px 40px 80px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .section {
