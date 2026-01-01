@@ -30,7 +30,7 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-light);
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .page-container {
@@ -68,7 +68,7 @@ body {
 
 .name {
     font-family: 'Roboto Mono', monospace;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 6px;
@@ -251,11 +251,10 @@ h2 {
     color: #008B8B;
 }
 
-/* Task type underlines */
-.task-underline {
-    text-decoration: underline;
-    text-decoration-color: #008B8B;
-    text-underline-offset: 2px;
+/* Task type bold */
+.task-bold {
+    font-weight: 700;
+    color: var(--text-black);
 }
 
 /* Siemens brand colors */
