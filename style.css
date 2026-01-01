@@ -35,9 +35,10 @@ body {
 
 .page-container {
     display: flex;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     background-color: var(--bg-white);
+    position: relative;
 }
 
 /* Sidebar */
@@ -167,7 +168,7 @@ body {
 /* Main Content */
 .main-content {
     flex: 1;
-    padding: 40px 50px;
+    padding: 40px 60px 40px 60px;
     max-width: none;
     margin-left: 250px;
 }
