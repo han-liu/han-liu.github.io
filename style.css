@@ -30,6 +30,7 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-light);
+    font-size: 16px;
 }
 
 .page-container {
@@ -41,7 +42,7 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 215px;
+    width: 260px;
     background: var(--bg-light);
     padding: 30px 18px;
     position: sticky;
@@ -112,7 +113,7 @@ body {
     padding: 9px 10px 9px 18px;
     color: var(--text-gray);
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.88rem;
     font-weight: 500;
     border-radius: 6px;
     transition: all 0.3s ease;
@@ -172,7 +173,7 @@ body {
 
 /* Headers - Thin Gray Underline */
 h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
     color: var(--title-gray);
     margin-bottom: 15px;
@@ -196,7 +197,7 @@ h2 {
 }
 
 .bio-left p {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     line-height: 1.6;
     color: var(--text-black);
     margin-bottom: 10px;
@@ -255,6 +256,17 @@ h2 {
     text-decoration: underline;
     text-decoration-color: #008B8B;
     text-underline-offset: 2px;
+}
+
+/* Siemens brand colors */
+.siemens-orange {
+    color: #FF7A00;
+    font-weight: 700;
+}
+
+.siemens-petrol {
+    color: #008A9C;
+    font-weight: 700;
 }
 
 /* News Section */
@@ -469,7 +481,7 @@ h2 {
 }
 
 .compact-header h4 {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-black);
     margin: 0;
@@ -477,7 +489,7 @@ h2 {
 }
 
 .compact-date {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: var(--text-gray);
     white-space: nowrap;
@@ -485,28 +497,28 @@ h2 {
 }
 
 .degree {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-black);
     margin: 2px 0;
     line-height: 1.5;
 }
 
 .position {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-black);
     margin: 2px 0;
     line-height: 1.5;
 }
 
 .advisor {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text-gray);
     margin: 2px 0;
     line-height: 1.4;
 }
 
 .project-desc {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text-gray);
     margin: 2px 0;
     line-height: 1.4;
@@ -872,7 +884,7 @@ h2 {
 }
 
 .pub-title {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-black);
     margin: 0 0 6px 0;
@@ -880,7 +892,7 @@ h2 {
 }
 
 .pub-authors {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text-gray);
     margin: 0 0 4px 0;
     line-height: 1.5;
