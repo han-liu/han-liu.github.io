@@ -52,7 +52,7 @@ body {
     border-right: 1px solid var(--border-light);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     position: sticky;
     top: 0;
 }
@@ -167,7 +167,7 @@ body {
 /* Main Content */
 .main-content {
     flex: 1;
-    padding: 40px 80px 40px 80px;
+    padding: 40px 40px 40px 40px;
     max-width: 900px;
     margin: 0 auto;
 }
