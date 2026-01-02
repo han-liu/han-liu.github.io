@@ -1128,9 +1128,9 @@ footer {
     }
     
     .sidebar {
-        position: sticky;
-        width: 215px;
-        height: 100vh;
+        position: relative;
+        width: 250px;
+        height: auto;
         flex-shrink: 0;
     }
 
