@@ -2,61 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1250, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Han Liu - Siemens Healthineers</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://raw.githubusercontent.com/han-liu/han-liu.github.io/master/HanLiu.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Roboto+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics 4 (GA4) -->
+    <!-- Active Measurement ID: G-Z0WSK7S5PM
+         The GA4 dashboard (https://analytics.google.com) shows a world map of
+         visitors, their locations, visit times, referrers, and real-time activity. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0WSK7S5PM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Z0WSK7S5PM');
+    </script>
 </head>
 <body>
     <div class="page-container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="profile-section">
+        <!-- Header / Hero -->
+        <header class="site-header">
+            <div class="hero">
                 <img src="https://raw.githubusercontent.com/han-liu/han-liu.github.io/master/HanLiu.png" alt="Han Liu" class="profile-img">
-                <h1 class="name">Han Liu</h1>
-                <div class="title-section">
-                    <p class="title">AI/ML Scientist</p>
+                <div class="hero-text">
+                    <h1 class="name">Han Liu</h1>
+                    <p class="title">Research Scientist</p>
                     <p class="affiliation">Siemens Healthineers</p>
+                    <p class="contact">Contact: <a href="mailto:han.liu@siemens-healthineers.com">han.liu@siemens-healthineers.com</a></p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/han-liu-9765366a/" target="_blank" title="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/han-liu" target="_blank" title="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=38YPqAkAAAAJ&hl=en" target="_blank" title="Google Scholar">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Han-Liu-24?ev=hdr_xprf" target="_blank" title="ResearchGate">
+                            <svg width="20" height="20" viewBox="0 0 448 512" fill="currentColor">
+                                <path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
+        </header>
 
-            <nav class="nav-menu">
-                <a href="#about-me" class="nav-link">About Me</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#competitions" class="nav-link">Competitions</a>
-                <a href="#publications" class="nav-link">Publications</a>
-                <a href="#mentorship" class="nav-link">Mentorship</a>
-                <a href="#book-chapters" class="nav-link">Book Chapters</a>
-                <a href="#activities" class="nav-link">Service</a>
-            </nav>
-
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/han-liu-9765366a/" target="_blank" title="LinkedIn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                </a>
-                <a href="https://github.com/han-liu" target="_blank" title="GitHub">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
-                <a href="https://scholar.google.com/citations?user=38YPqAkAAAAJ&hl=en" target="_blank" title="Google Scholar">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
-                    </svg>
-                </a>
-                <a href="https://www.researchgate.net/profile/Han-Liu-24?ev=hdr_xprf" target="_blank" title="ResearchGate">
-                    <svg width="20" height="20" viewBox="0 0 448 512" fill="currentColor">
-                        <path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/>
-                    </svg>
-                </a>
-            </div>
-        </aside>
+        <!-- Sticky Navigation -->
+        <nav class="topnav">
+            <a href="#about-me" class="nav-link">About Me</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#competitions" class="nav-link">Competitions</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#mentorship" class="nav-link">Mentorship</a>
+            <a href="#book-chapters" class="nav-link">Book Chapters</a>
+            <a href="#activities" class="nav-link">Service</a>
+        </nav>
 
         <!-- Main Content -->
         <main class="main-content">
@@ -65,7 +78,7 @@
                 <h2>About Me</h2>
                 <div class="bio-content-wrapper">
                     <div class="bio-left">
-                        <p>I'm an AI/ML Scientist at Siemens Healthineers, developing scalable AI solutions for whole-body oncology applications. Currently, I'm building the next-generation CT scanner that automatically generates reports at a resident level.</p>
+                        <p>I'm a Research Scientist at Siemens Healthineers, developing scalable AI solutions for whole-body oncology applications. Currently, I'm working on CT foundation models and report generation system.</p>
                         <p>I envision a world where healthcare AI can benefit everyone's life and cancers can be detected much earlier. I am committed to translating <span class="underline">AI innovations</span> into <span class="underline">practical clinical solutions</span> with real-world impact, not just papers.</p>
                         <p>As a practitioner, I have technical expertise in core medical imaging tasks including localization, detection, classification, segmentation, and synthesis. I have participated in many international AI competitions in medical imaging and ranked <span class="underline">1st place</span> in several major challenges such as CrossMoDA, PANORAMA, and VLM3D.</p>
                     </div>
@@ -131,7 +144,7 @@
                 <h2>Experience</h2>
                 
                 <div class="compact-list">
-                    <!-- Siemens Current -->
+                    <!-- Siemens Healthineers (merged roles) -->
                     <div class="compact-item">
                         <div class="compact-icon">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Siemens_Healthineers_logo.svg/250px-Siemens_Healthineers_logo.svg.png" alt="Siemens">
@@ -139,30 +152,25 @@
                         <div class="compact-content">
                             <div class="compact-header">
                                 <h4>Siemens Healthineers</h4>
-                                <span class="compact-date">June 2024 - PRESENT</span>
                             </div>
-                            <p class="position"><span class="underline">AI/ML Scientist</span>. Team: Whole-body Oncology (WBO)</p>
-                            <ul class="experience-list">
-                                <li>Scalable foundation model and smart adapter framework</li>
-                            </ul>
-                            <p class="pub-links"><a href="https://raw.githubusercontent.com/han-liu/han-liu.github.io/master/certificates/iea_2025.png" target="_blank" class="icon-link"><img src="https://cdn-icons-png.flaticon.com/512/1322/1322266.png" width="14" height="14" alt="award" class="link-icon"><span class="link-text">Innovation Excellence Award</span></a></p>
-                        </div>
-                    </div>
-
-                    <!-- Siemens Intern -->
-                    <div class="compact-item">
-                        <div class="compact-icon">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Siemens_Healthineers_logo.svg/250px-Siemens_Healthineers_logo.svg.png" alt="Siemens">
-                        </div>
-                        <div class="compact-content">
-                            <div class="compact-header">
-                                <h4>Siemens Healthineers</h4>
-                                <span class="compact-date">May 2022 - Dec. 2022</span>
+                            <div class="role-block">
+                                <div class="role-header">
+                                    <p class="position"><span class="underline">Research Scientist</span>. Team: Whole-body Oncology (WBO)</p>
+                                    <span class="compact-date">June 2024 - PRESENT</span>
+                                </div>
+                                <ul class="experience-list">
+                                    <li>Scalable foundation model and smart adapter framework <a href="https://raw.githubusercontent.com/han-liu/han-liu.github.io/master/certificates/iea_2025.png" target="_blank" class="cert-link" title="Innovation Excellence Award" aria-label="Innovation Excellence Award certificate"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M9.68 13.69L12 11.93l2.31 1.76-.88-2.85L15.75 9h-2.84L12 6.19 11.09 9H8.25l1.31 1.84-.88 2.85zM20 10c0-4.42-3.58-8-8-8s-8 3.58-8 8c0 2.03.76 3.87 2 5.28V23l6-2 6 2v-7.72c1.24-1.41 2-3.25 2-5.28zm-8-6c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6 2.69-6 6-6zm0 14l-4 1.02v-3.1c1.18.68 2.54 1.08 4 1.08s2.82-.4 4-1.08v3.1L12 18z"/></svg></a></li>
+                                </ul>
                             </div>
-                            <p class="position"><span class="underline">Research Intern</span>. Mentor: <a href="https://scholar.google.com/citations?hl=en&user=fLQ3qzAAAAAJ&view_op=list_works&sortby=pubdate" class="mentor-link">Dr. Zhoubing Xu</a></p>
-                            <ul class="experience-list">
-                                <li>Universal 3D segmentation model with partially labeled datasets <a href="https://ieeexplore.ieee.org/document/10400525" target="_blank" class="icon-link"><img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"></a></li>
-                            </ul>
+                            <div class="role-block">
+                                <div class="role-header">
+                                    <p class="position"><span class="underline">Research Intern</span>. Mentor: <a href="https://scholar.google.com/citations?hl=en&user=fLQ3qzAAAAAJ&view_op=list_works&sortby=pubdate" class="mentor-link">Dr. Zhoubing Xu</a></p>
+                                    <span class="compact-date">May 2022 - Dec. 2022</span>
+                                </div>
+                                <ul class="experience-list">
+                                    <li><a href="https://ieeexplore.ieee.org/document/10400525" target="_blank">Universal 3D segmentation model via partial label learning</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -178,9 +186,9 @@
                             </div>
                             <p class="position"><span class="underline">Research Associate</span>. Advisor: <a href="https://hillmanresearch.upmc.edu/researchers/jiantao-pu-4cfbc306-a47f-1fa3-d4b6-6724cb0d" target="_blank" class="mentor-link">Prof. Jiantao Pu</a></p>
                             <ul class="experience-list">
-                                <li>Thoracic disease classification on chest X-ray <a href="https://www.sciencedirect.com/science/article/abs/pii/S0895611118306177" target="_blank" class="icon-link"><img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"></a></li>
-                                <li>Optic disc/cup segmentation on fundus images <a href="https://pubmed.ncbi.nlm.nih.gov/33850515/" target="_blank" class="icon-link"><img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"></a></li>
-                                <li>Vasculature identification surrounding pulmonary nodules <a href="https://pubmed.ncbi.nlm.nih.gov/30903961/" target="_blank" class="icon-link"><img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"></a></li>
+                                <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0895611118306177" target="_blank">Thoracic disease classification on chest X-ray</a></li>
+                                <li><a href="https://pubmed.ncbi.nlm.nih.gov/33850515/" target="_blank">Optic disc/cup segmentation on fundus images</a></li>
+                                <li><a href="https://pubmed.ncbi.nlm.nih.gov/30903961/" target="_blank">Vasculature identification surrounding pulmonary nodules</a></li>
                             </ul>
                         </div>
                     </div>
@@ -202,16 +210,16 @@
                             <p class="pub-venue">Topic: Multi-abnormality Classification on Chest CT</p>
                             <p class="pub-links">
                                 <a href="https://arxiv.org/pdf/2512.12887" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
-                                <a href="TBA" target="_blank" class="icon-link">
+                                <a href="https://github.com/AaronC-BME/anymc3d-repro" target="_blank" class="icon-link">
                                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
                                 </a>
                                 <a href="https://raw.githubusercontent.com/han-liu/han-liu.github.io/master/certificates/vlm3d2025.png" target="_blank" class="icon-link">
                                     <img src="https://cdn-icons-png.flaticon.com/512/1322/1322266.png" width="14" height="14" alt="award" class="link-icon"><span class="link-text">Award</span>
                                 </a>
                                 <a href="https://www.linkedin.com/posts/dorincomaniciu_vlm3d-siemenshealthineers-dti-activity-7376954041777487872-1jPj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6sPOoBRYCK85O7jtxvf7qMdsWFgS-NODY" target="_blank" class="icon-link">
-                                    <img src="https://toppng.com//public/uploads/preview/linkedin-square-logo-comments-linkedin-icon-black-11563087424lpctodfamj.png" width="14" height="14" alt="post" class="link-icon"><span class="link-text">Post</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg><span class="link-text">Post</span>
                                 </a>
                             </p>
                         </div>
@@ -224,10 +232,10 @@
                         <div class="pub-content">
                             <p class="pub-title">PANORAMA Challenge - 1st Place</p>
                             <p class="pub-authors">Team: <span class="author-bold">Han Liu</span>, Riqiang Gao, Sasa Grbic</p>
-                            <p class="pub-venue">Topic: Early Detection of Pancreatic Ductal Adenocarcinoma (PDAC) on Abdominal Contrast-enhanced CT</p>
+                            <p class="pub-venue">Topic: Early Detection of PDAC on Abdominal Contrast-enhanced CT</p>
                             <p class="pub-links">
                                 <a href="https://arxiv.org/pdf/2503.10068" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
                                 <a href="https://github.com/han-liu/PanDx" target="_blank" class="icon-link">
                                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
@@ -236,7 +244,7 @@
                                     <img src="https://cdn-icons-png.flaticon.com/512/1322/1322266.png" width="14" height="14" alt="award" class="link-icon"><span class="link-text">Award</span>
                                 </a>
                                 <a href="https://www.linkedin.com/posts/dorincomaniciu_pancreatic-cancer-ct-activity-7398720836053934080-LHcp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6sPOoBRYCK85O7jtxvf7qMdsWFgS-NODY" target="_blank" class="icon-link">
-                                    <img src="https://toppng.com//public/uploads/preview/linkedin-square-logo-comments-linkedin-icon-black-11563087424lpctodfamj.png" width="14" height="14" alt="post" class="link-icon"><span class="link-text">Post</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg><span class="link-text">Post</span>
                                 </a>
                             </p>
                         </div>
@@ -252,7 +260,7 @@
                             <p class="pub-venue">Topic: MRI Cross-modality Synthesis and Tumor Segmentation</p>
                             <p class="pub-links">
                                 <a href="https://arxiv.org/pdf/2311.12437.pdf" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
                                 <a href="https://github.com/MedICL-VU/crossmoda2023" target="_blank" class="icon-link">
                                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
@@ -261,7 +269,7 @@
                                     <img src="https://cdn-icons-png.flaticon.com/512/1322/1322266.png" width="14" height="14" alt="award" class="link-icon"><span class="link-text">Award</span>
                                 </a>
                                 <a href="https://www.linkedin.com/posts/navodiniwije_crossmoda-miccai-activity-7116910433080365056-no_r?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6sPOoBRYCK85O7jtxvf7qMdsWFgS-NODY" target="_blank" class="icon-link">
-                                    <img src="https://toppng.com//public/uploads/preview/linkedin-square-logo-comments-linkedin-icon-black-11563087424lpctodfamj.png" width="14" height="14" alt="post" class="link-icon"><span class="link-text">Post</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg><span class="link-text">Post</span>
                                 </a>
                             </p>
                         </div>
@@ -277,7 +285,7 @@
                             <p class="pub-venue">Topic: Multiple Sclerosis Spinal Cord Lesion Detection with Missing Modalities</p>
                             <p class="pub-links">
                                 <a href="https://inserm.hal.science/inserm-05317094/file/proceddingsMSMultiSpine%20%284%29.pdf#page=29" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
                                 <a href="https://github.com/MedICL-VU/Modular-Cross-Attention-Fusion" target="_blank" class="icon-link">
                                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
@@ -286,7 +294,7 @@
                                     <img src="https://cdn-icons-png.flaticon.com/512/1322/1322266.png" width="14" height="14" alt="award" class="link-icon"><span class="link-text">Award</span>
                                 </a>
                                 <a href="https://www.linkedin.com/posts/visevanderbilt_vise-vanderbilt-daejeon-ugcPost-7394082728125599744-aHkz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6sPOoBRYCK85O7jtxvf7qMdsWFgS-NODY" target="_blank" class="icon-link">
-                                    <img src="https://toppng.com//public/uploads/preview/linkedin-square-logo-comments-linkedin-icon-black-11563087424lpctodfamj.png" width="14" height="14" alt="post" class="link-icon"><span class="link-text">Post</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg><span class="link-text">Post</span>
                                 </a>
                             </p>
                         </div>
@@ -300,6 +308,29 @@
                 <h2>Selected Publications</h2>
                 <p class="note">Please check <a href="https://scholar.google.com/citations?user=38YPqAkAAAAJ&hl=en" target="_blank">Google Scholar</a> for the full list of my publications.</p>
 
+                <div class="publications-list">
+                <div class="pub-item">
+                        <div class="pub-image">
+                            <img src="https://raw.githubusercontent.com/han-liu/han-liu.github.io/master/assets/intrastyler.png" alt="intrastyler">
+                        </div>
+                        <div class="pub-content">
+                            <p class="pub-title">IntraStyler: Intra-Domain Style Synthesis for Cross-Modality MRI Domain Adaptation</p>
+                            <p class="pub-authors"><span class="author-bold">Han Liu</span>, Yubo Fan, Hao Li, Dewei Hu, Daniel Moyer, Zhoubing Xu, Benoit M. Dawant, Ipek Oguz</p>
+                            <p class="pub-venue">MICCAI 2026 (Early Accept)</p>
+                            <p class="pub-links">
+                                <a href="https://arxiv.org/pdf/2601.00212v2" target="_blank" class="icon-link">
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
+                                </a>
+                                <a href="https://github.com/MedICL-VU/IntraStyler" target="_blank" class="icon-link">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
+                                </a>
+                                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7472623386737930241/" target="_blank" class="icon-link">
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg><span class="link-text">Post</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                
                 <div class="pub-item">
                         <div class="pub-image">
                             <img src="https://raw.githubusercontent.com/han-liu/han-liu.github.io/master/assets/anymc3d.png" alt="revisting">
@@ -307,13 +338,20 @@
                         <div class="pub-content">
                             <p class="pub-title">Revisiting 2D Foundation Models for Scalable 3D Medical Image Classification</p>
                             <p class="pub-authors"><span class="author-bold">Han Liu</span>, Bogdan Georgescu, Yanbo Zhang, Youngjin Yoo, Michael Baumgartner, Riqiang Gao, Jianing Wang, Gengyan Zhao, Eli Gibson, Dorin Comaniciu, Sasa Grbic</p>
-                            <p class="pub-venue">CVPR 2026 (<span class="challenge-highlight">🏆1st place in VLM3D Challenge</span>)</p>
+                            <p class="pub-venue">CVPR 2026</p>
+                            <p class="pub-award"><span class="challenge-highlight">🏆 1st place in VLM3D Challenge</span></p>
                             <p class="pub-links">
                                 <a href="https://arxiv.org/pdf/2512.12887" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
-                                <a href="TBA" target="_blank" class="icon-link">
+                                <a href="https://github.com/AaronC-BME/anymc3d-repro" target="_blank" class="icon-link">
                                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
+                                </a>
+                                <a href="https://raw.githubusercontent.com/han-liu/han-liu.github.io/master/assets/anymc3d_poster.png" target="_blank" class="icon-link">
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><span class="link-text">Poster</span>
+                                </a>
+                                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7467924849756229632/" target="_blank" class="icon-link">
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg><span class="link-text">Post</span>
                                 </a>
                             </p>
                         </div>
@@ -326,22 +364,20 @@
                         <div class="pub-content">
                             <p class="pub-title">PanDx: AI-assisted Early Detection of Pancreatic Ductal Adenocarcinoma on Contrast-enhanced CT</p>
                             <p class="pub-authors"><span class="author-bold">Han Liu</span>, Riqiang Gao, Eileen Krieg, Sasa Grbic</p>
-                            <p class="pub-venue">MICCAI AMAI 2025 (<span class="challenge-highlight">🏆1st place in PANORAMA Challenge</span>)</p>
+                            <p class="pub-venue">MICCAI AMAI 2025</p>
+                            <p class="pub-award"><span class="challenge-highlight">🏆 1st place in PANORAMA Challenge</span></p>
                             <p class="pub-links">
                                 <a href="https://arxiv.org/pdf/2503.10068" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
                                 <a href="https://github.com/han-liu/PanDx" target="_blank" class="icon-link">
                                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
                                 </a>
-                                <a href="#" target="_blank" class="icon-link">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/732/732074.png" width="14" height="14" alt="slides" class="link-icon"><span class="link-text">Slides</span>
-                                </a>
+                            </p>
                             </p>
                         </div>
                     </div>
-                
-                <div class="publications-list">
+
                     <div class="pub-item">
                         <div class="pub-image">
                             <img src="https://raw.githubusercontent.com/han-liu/han-liu.github.io/master/assets/cosst.png" alt="cosst">
@@ -352,33 +388,7 @@
                             <p class="pub-venue">IEEE Transactions on Medical Imaging, 2024</p>
                             <p class="pub-links">
                                 <a href="https://arxiv.org/pdf/2304.14030" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                <div class="publications-list">
-                    <div class="pub-item">
-                        <div class="pub-image">
-                            <img src="https://raw.githubusercontent.com/han-liu/han-liu.github.io/master/assets/intrastyler.png" alt="intrastyler">
-                        </div>
-                        <div class="pub-content">
-                            <p class="pub-title">IntraStyler: Exemplar-based Style Synthesis for Cross-modality Domain Adaptation</p>
-                            <p class="pub-authors"><span class="author-bold">Han Liu</span>, Yubo Fan, Hao Li, Dewei Hu, Daniel Moyer, Zhoubing Xu, Benoit Dawant, Ipek Oguz</p>
-                            <p class="pub-venue">Technical Report (<span class="challenge-highlight">Extension of 🏆1st place solution of CrossMoDA 2023 Challenge)</p>
-                            <p class="pub-links">
-                                <a href="https://arxiv.org/pdf/2601.00212" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
-                                </a>
-                                <a href="https://github.com/han-liu/IntraStyler" target="_blank" class="icon-link">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
-                                </a>
-                                <a href="#" target="_blank" class="icon-link">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/732/732074.png" width="14" height="14" alt="slides" class="link-icon"><span class="link-text">Slides</span>
-                                </a>
-                                <a href="#" target="_blank" class="icon-link">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/902/902760.png" width="14" height="14" alt="poster" class="link-icon"><span class="link-text">Poster</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
                             </p>
                         </div>
@@ -394,17 +404,12 @@
                             <p class="pub-venue">MICCAI 2023</p>
                             <p class="pub-links">
                                 <a href="https://arxiv.org/pdf/2307.12004" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
                                 <a href="https://github.com/MedICL-VU/COLosSAL" target="_blank" class="icon-link">
                                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
                                 </a>
-                                <a href="#" target="_blank" class="icon-link">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/732/732074.png" width="14" height="14" alt="slides" class="link-icon"><span class="link-text">Slides</span>
-                                </a>
-                                <a href="#" target="_blank" class="icon-link">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/902/902760.png" width="14" height="14" alt="poster" class="link-icon"><span class="link-text">Poster</span>
-                                </a>
+                            </p>
                             </p>
                         </div>
                     </div>
@@ -416,20 +421,16 @@
                         <div class="pub-content">
                             <p class="pub-title">Learning Site-specific Styles for Multi-institutional Unsupervised Cross-modality Domain Adaptation</p>
                             <p class="pub-authors"><span class="author-bold">Han Liu</span>, Yubo Fan, Zhoubing Xu, Benoit Dawant, and Ipek Oguz</p>
-                            <p class="pub-venue">MICCAI BrainLes 2023 (<span class="challenge-highlight">🏆1st place in CrossMoDA 2023 Challenge</span>)</p>
+                            <p class="pub-venue">MICCAI BrainLes 2023</p>
+                            <p class="pub-award"><span class="challenge-highlight">🏆 1st place in CrossMoDA 2023 Challenge</span></p>
                             <p class="pub-links">
                                 <a href="https://arxiv.org/pdf/2311.12437" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
                                 <a href="https://github.com/MedICL-VU/crossmoda2023" target="_blank" class="icon-link">
                                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
                                 </a>
-                                <a href="#" target="_blank" class="icon-link">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/732/732074.png" width="14" height="14" alt="slides" class="link-icon"><span class="link-text">Slides</span>
-                                </a>
-                                <a href="#" target="_blank" class="icon-link">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/902/902760.png" width="14" height="14" alt="poster" class="link-icon"><span class="link-text">Poster</span>
-                                </a>
+                            </p>
                             </p>
                         </div>
                     </div>
@@ -444,7 +445,7 @@
                             <p class="pub-venue">Journal of Medical Imaging, 2023</p>
                             <p class="pub-links">
                                 <a href="https://arxiv.org/pdf/2210.14775" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
                                 <a href="https://github.com/han-liu/SynCT_TcMRgFUS" target="_blank" class="icon-link">
                                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
@@ -463,17 +464,12 @@
                             <p class="pub-venue">MICCAI 2022 (Early Accept)</p>
                             <p class="pub-links">
                                 <a href="https://arxiv.org/pdf/2203.04959" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
                                 <a href="https://github.com/han-liu/ModDropPlusPlus" target="_blank" class="icon-link">
                                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="14" height="14" alt="code" class="link-icon"><span class="link-text">Code</span>
                                 </a>
-                                <a href="#" target="_blank" class="icon-link">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/732/732074.png" width="14" height="14" alt="slides" class="link-icon"><span class="link-text">Slides</span>
-                                </a>
-                                <a href="#" target="_blank" class="icon-link">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/902/902760.png" width="14" height="14" alt="poster" class="link-icon"><span class="link-text">Poster</span>
-                                </a>
+                            </p>
                             </p>
                         </div>
                     </div>
@@ -488,7 +484,7 @@
                             <p class="pub-venue">Computerized Medical Imaging and Graphics, 2019</p>
                             <p class="pub-links">
                                 <a href="https://arxiv.org/pdf/1810.12959" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Paper</span>
                                 </a>
                             </p>
                         </div>
@@ -501,41 +497,20 @@
                 <h2>Mentorship</h2>
                 <div class="mentorship-list">
                     <div class="mentee-item">
-                        <div class="mentee-header">
+                        <div class="mentee-top">
                             <span class="mentee-name"><a href="https://haoyudong-97.github.io/" target="_blank">Haoyu Dong</a></span>
-                            <span class="mentee-separator">·</span>
-                            <span class="mentee-position">Research Intern</span>
-                            <span class="mentee-separator">·</span>
-                            <span class="mentee-time">June 2025 - Aug. 2025</span>
+                            <span class="mentee-meta">Research Intern · June 2025 – Aug. 2025</span>
                         </div>
-                        <div class="mentee-details">
-                            <span class="project-label">Project:</span>
-                            <span class="mentee-project">In-context Learning for 3D Organ Segmentation in Whole-Body CT</span>
-                            <a href="#" target="_blank" class="icon-link mentee-paper-link">
-                                <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
-                            </a>
-                        </div>
+                        <p class="mentee-project">In-context Learning for 3D Organ Segmentation in Whole-Body CT</p>
                     </div>
-                    
+
                     <div class="mentee-item">
-                        <div class="mentee-header">
+                        <div class="mentee-top">
                             <span class="mentee-name"><a href="https://scholar.google.com/citations?user=i2oLdaYAAAAJ&hl=en" target="_blank">Zhangxing Bian</a></span>
-                            <span class="mentee-separator">·</span>
-                            <span class="mentee-position">Research Intern</span>
-                            <span class="mentee-separator">·</span>
-                            <span class="mentee-time">June 2025 - Dec. 2025</span>
+                            <span class="mentee-meta">Research Intern · June 2025 – Dec. 2025</span>
                         </div>
-                        <div class="mentee-details">
-                            <span class="project-label">Project:</span>
-                            <span class="mentee-project">Scaling Novel Findings in Chest X-ray with Active Learning</span>
-                            <a href="#" target="_blank" class="icon-link mentee-paper-link">
-                                <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="paper" class="link-icon"><span class="link-text">Paper</span>
-                            </a>
-                            <span class="mentee-separator">·</span>
-                            <a href="#" target="_blank" class="icon-link">
-                                <img src="https://cdn-icons-png.flaticon.com/512/1322/1322266.png" width="14" height="14" alt="award" class="link-icon"><span class="link-text">Best Intern Poster Award</span>
-                            </a>
-                        </div>
+                        <p class="mentee-project">Scaling Novel Findings in Chest X-ray with Active Learning</p>
+                        <span class="mentee-award"><img src="https://cdn-icons-png.flaticon.com/512/1322/1322266.png" width="14" height="14" alt="award" class="link-icon">Best Intern Poster Award</span>
                     </div>
                 </div>
             </section>
@@ -554,7 +529,7 @@
                             <p class="pub-venue">Machine Learning for Brain Disorders, Springer US, 2023</p>
                             <p class="pub-links">
                                 <a href="https://link.springer.com/protocol/10.1007/978-1-0716-3195-9_13" target="_blank" class="icon-link">
-                                    <img src="https://www.freeiconspng.com/uploads/document-icon-19.png" width="14" height="14" alt="chapter" class="link-icon"><span class="link-text">Chapter</span>
+                                    <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span class="link-text">Chapter</span>
                                 </a>
                             </p>
                         </div>
@@ -568,7 +543,7 @@
                 
                 <div class="activities-grid">
                     <div class="activity-column">
-                        <h4>Journal Reviewer</h4>
+                        <h4>📝 Journal Reviewer</h4>
                         <ul class="activity-list">
                             <li>Medical Image Analysis (MedIA)</li>
                             <li>IEEE Transactions on Image Processing (TIP)</li>
@@ -580,7 +555,7 @@
                         </ul>
                     </div>
                     <div class="activity-column">
-                        <h4>Conference Reviewer</h4>
+                        <h4>🎓 Conference Reviewer</h4>
                         <ul class="activity-list">
                             <li>Medical Image Computing and Computer Assisted Interventions (MICCAI)</li>
                             <li>Medical Imaging with Deep Learning (MIDL)</li>
@@ -591,7 +566,7 @@
                         </ul>
                     </div>
                     <div class="activity-column">
-                        <h4>Guest Lectures</h4>
+                        <h4>🎤 Guest Lectures</h4>
                         <ul class="activity-list">
                             <li>CS-8395 (2022 Fall): Open Source Programming for Medical Image Processing</li>
                             <li>CS-6357 (2023 Fall): Open Source Programming for Medical Image Analysis</li>
@@ -601,16 +576,28 @@
             </section>
 
             <!-- Footer -->
-            <!-- Footer -->
 <footer>
     <div class="visitor-section">
-        <h3>🌍 VISITOR ANALYTICS</h3>
         <div class="visitor-map">
-            <a href="https://clustrmaps.com/site/1c5dv" title="Visit tracker">
-                <img src="//www.clustrmaps.com/map_v2.png?d=cSR3wlVGpX9c6_e5RrNSC-s7QPU_ilbCNUQYtUnPWRg&cl=ffffff&w=300" />
-            </a>
+            <!-- Live world map: plots the current visitor's location.
+                 Click it to reveal your own visit details. Aggregate analytics
+                 (all visitors) are tracked privately via Google Analytics (GA4) in the <head>. -->
+            <div class="world-map" id="worldMap" role="button" tabindex="0"
+                 title="Click to see your visit details">
+                <span class="world-map-dot" id="worldMapDot" hidden></span>
+                <span class="world-map-hint" id="worldMapHint">Click the map for your visit details</span>
+            </div>
+
+            <!-- Detail panel populated on click with the current viewer's own info. -->
+            <div class="visitor-details" id="visitorDetails" hidden></div>
+
+            <!-- Shared, accumulating count of everyone who visits the site. -->
+            <div class="visitor-count" id="visitorCount">
+                <span class="visitor-count-icon">👥</span>
+                <span class="visitor-count-text">Loading visitors…</span>
+            </div>
         </div>
-        <p class="footer-note">Last updated: December 2025</p>
+        <p class="footer-note">Last updated: June 2026</p>
     </div>
 </footer>
 </main>
