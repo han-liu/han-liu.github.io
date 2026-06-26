@@ -938,12 +938,17 @@ h2 {
 }
 
 .pub-venue {
+    display: inline-block;
     font-size: 0.84rem;
-    color: var(--text-black);
+    color: var(--text-dark);
     font-weight: 600;
     margin: 0 0 4px 0;
     font-style: normal;
     letter-spacing: 0.2px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+    padding: 2px 9px;
 }
 
 .pub-award {
