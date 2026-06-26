@@ -1359,16 +1359,7 @@ footer {
     max-width: min(620px, 92vw);
     max-height: 84vh;
     border-radius: 5px;
-}
-
-.award-popover-img.zoomable {
     cursor: zoom-in;
-}
-
-.award-popover.zoomed .award-popover-img {
-    max-width: none;
-    max-height: none;
-    cursor: zoom-out;
 }
 
 .award-popover-close {

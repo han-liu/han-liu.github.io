@@ -140,13 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Image preview popover: clicking an award certificate link or a publication
-// picture opens a floating window showing the image. Certificate previews can
-// be clicked again to zoom in for fine details.
+// Award certificate preview popover: clicking a certificate link opens a
+// floating window showing the award image. Scroll the mouse wheel over the
+// image to zoom in and out for fine details.
 document.addEventListener('DOMContentLoaded', () => {
     const certLinks = document.querySelectorAll('a[href*="certificates/"]');
-    const pubImages = document.querySelectorAll('.pub-image img');
-    if (!certLinks.length && !pubImages.length) return;
+    if (!certLinks.length) return;
 
     // One reusable popover for the whole page.
     const popover = document.createElement('div');
@@ -154,18 +153,24 @@ document.addEventListener('DOMContentLoaded', () => {
     popover.hidden = true;
     popover.innerHTML =
         '<button type="button" class="award-popover-close" aria-label="Close">&times;</button>' +
-        '<div class="award-popover-body"><img class="award-popover-img" alt="Preview"></div>';
+        '<div class="award-popover-body"><img class="award-popover-img" alt="Award certificate" title="Scroll to zoom in/out"></div>';
     document.body.appendChild(popover);
 
     const body = popover.querySelector('.award-popover-body');
     const popImg = popover.querySelector('.award-popover-img');
     const closeBtn = popover.querySelector('.award-popover-close');
     let anchorEl = null;
+    let baseWidth = 0;
+    let scale = 1;
 
     const closePopover = () => {
         popover.hidden = true;
-        popover.classList.remove('zoomed');
         popImg.removeAttribute('src');
+        popImg.style.width = '';
+        popImg.style.maxWidth = '';
+        popImg.style.maxHeight = '';
+        baseWidth = 0;
+        scale = 1;
         anchorEl = null;
     };
 
@@ -191,19 +196,40 @@ document.addEventListener('DOMContentLoaded', () => {
         popover.style.top = top + 'px';
     };
 
-    const openPopover = (src, trigger, allowZoom) => {
-        anchorEl = trigger;
-        popover.classList.remove('zoomed');
-        popImg.classList.toggle('zoomable', !!allowZoom);
-        popImg.onload = positionPopover;
-        popImg.src = src;
+    const applyZoom = () => {
+        if (baseWidth <= 0) return;
+        popImg.style.maxWidth = 'none';
+        popImg.style.maxHeight = 'none';
+        popImg.style.width = (baseWidth * scale) + 'px';
+    };
+
+    const openPopover = (link) => {
+        anchorEl = link;
+        scale = 1;
+        baseWidth = 0;
+        // Reset to the CSS-fitted size so the initial view matches the layout.
+        popImg.style.width = '';
+        popImg.style.maxWidth = '';
+        popImg.style.maxHeight = '';
+        popImg.onload = () => {
+            // Compute the fitted base width from the natural size (robust to
+            // layout timing), matching the CSS max box (620px wide / 84vh tall).
+            const maxW = Math.min(620, window.innerWidth * 0.92);
+            const maxH = window.innerHeight * 0.84;
+            const nw = popImg.naturalWidth || 1;
+            const nh = popImg.naturalHeight || 1;
+            const fit = Math.min(maxW / nw, maxH / nh, 1);
+            baseWidth = nw * fit;
+            positionPopover();
+        };
+        popImg.src = link.getAttribute('href');
         popover.hidden = false;
         body.scrollTop = 0;
         body.scrollLeft = 0;
         positionPopover();
     };
 
-    // Award/certificate links -> zoomable preview.
+    // Award/certificate links -> preview window.
     certLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -211,33 +237,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!popover.hidden && anchorEl === link) {
                 closePopover();
             } else {
-                openPopover(link.getAttribute('href'), link, true);
+                openPopover(link);
             }
         });
     });
 
-    // Publication pictures -> simple preview (no zoom).
-    pubImages.forEach(img => {
-        img.style.cursor = 'pointer';
-        img.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (!popover.hidden && anchorEl === img) {
-                closePopover();
-            } else {
-                openPopover(img.getAttribute('src'), img, false);
-            }
-        });
-    });
-
-    // Click a zoomable image to toggle full-detail zoom.
-    popImg.addEventListener('click', (e) => {
-        if (!popImg.classList.contains('zoomable')) return;
-        e.stopPropagation();
-        popover.classList.toggle('zoomed');
-        body.scrollTop = 0;
-        body.scrollLeft = 0;
+    // Mouse wheel over the image controls the zoom level.
+    popImg.addEventListener('wheel', (e) => {
+        if (baseWidth <= 0) return;
+        e.preventDefault();
+        const factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+        scale = Math.min(4, Math.max(1, scale * factor));
+        applyZoom();
         positionPopover();
-    });
+    }, { passive: false });
 
     closeBtn.addEventListener('click', closePopover);
 
