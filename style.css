@@ -1132,6 +1132,7 @@ footer {
     max-width: 100%;
 }
 
+/* Unused since switching to the MapMyVisitors widget — kept commented for reference.
 .world-map {
     position: relative;
     width: 100%;
@@ -1223,6 +1224,7 @@ footer {
     font-size: 0.85rem;
     color: var(--text-gray);
 }
+*/
 
 .visitor-count {
     display: inline-flex;
