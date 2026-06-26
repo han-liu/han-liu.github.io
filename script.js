@@ -140,11 +140,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Award/certificate preview: clicking a certificate link opens a small popover
-// next to the link showing the award image, instead of opening a new tab.
+// Image preview popover: clicking an award certificate link or a publication
+// picture opens a floating window showing the image. Certificate previews can
+// be clicked again to zoom in for fine details.
 document.addEventListener('DOMContentLoaded', () => {
-    const awardLinks = document.querySelectorAll('a[href*="certificates/"]');
-    if (!awardLinks.length) return;
+    const certLinks = document.querySelectorAll('a[href*="certificates/"]');
+    const pubImages = document.querySelectorAll('.pub-image img');
+    if (!certLinks.length && !pubImages.length) return;
 
     // One reusable popover for the whole page.
     const popover = document.createElement('div');
@@ -152,15 +154,17 @@ document.addEventListener('DOMContentLoaded', () => {
     popover.hidden = true;
     popover.innerHTML =
         '<button type="button" class="award-popover-close" aria-label="Close">&times;</button>' +
-        '<img class="award-popover-img" alt="Award certificate">';
+        '<div class="award-popover-body"><img class="award-popover-img" alt="Preview"></div>';
     document.body.appendChild(popover);
 
+    const body = popover.querySelector('.award-popover-body');
     const popImg = popover.querySelector('.award-popover-img');
     const closeBtn = popover.querySelector('.award-popover-close');
     let anchorEl = null;
 
     const closePopover = () => {
         popover.hidden = true;
+        popover.classList.remove('zoomed');
         popImg.removeAttribute('src');
         anchorEl = null;
     };
@@ -170,8 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const rect = anchorEl.getBoundingClientRect();
         const pw = popover.offsetWidth;
         const ph = popover.offsetHeight;
-        const margin = 10;
-        // Prefer placing to the right of the link; fall back to the left.
+        const margin = 12;
+        // Prefer placing to the right of the trigger; fall back to the left, then center.
         let left = rect.right + margin;
         if (left + pw > window.innerWidth - margin) {
             left = rect.left - margin - pw;
@@ -179,39 +183,68 @@ document.addEventListener('DOMContentLoaded', () => {
         if (left < margin) {
             left = Math.max(margin, (window.innerWidth - pw) / 2);
         }
-        // Vertically center on the link, then clamp to the viewport.
+        // Vertically center on the trigger, then clamp to the viewport.
         let top = rect.top + rect.height / 2 - ph / 2;
         top = Math.min(Math.max(margin, top), window.innerHeight - ph - margin);
+        if (top < margin) top = margin;
         popover.style.left = left + 'px';
         popover.style.top = top + 'px';
     };
 
-    const openPopover = (link) => {
-        anchorEl = link;
+    const openPopover = (src, trigger, allowZoom) => {
+        anchorEl = trigger;
+        popover.classList.remove('zoomed');
+        popImg.classList.toggle('zoomable', !!allowZoom);
         popImg.onload = positionPopover;
-        popImg.src = link.getAttribute('href');
+        popImg.src = src;
         popover.hidden = false;
+        body.scrollTop = 0;
+        body.scrollLeft = 0;
         positionPopover();
     };
 
-    awardLinks.forEach(link => {
+    // Award/certificate links -> zoomable preview.
+    certLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
+            e.stopPropagation();
             if (!popover.hidden && anchorEl === link) {
                 closePopover();
             } else {
-                openPopover(link);
+                openPopover(link.getAttribute('href'), link, true);
             }
         });
     });
 
+    // Publication pictures -> simple preview (no zoom).
+    pubImages.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (!popover.hidden && anchorEl === img) {
+                closePopover();
+            } else {
+                openPopover(img.getAttribute('src'), img, false);
+            }
+        });
+    });
+
+    // Click a zoomable image to toggle full-detail zoom.
+    popImg.addEventListener('click', (e) => {
+        if (!popImg.classList.contains('zoomable')) return;
+        e.stopPropagation();
+        popover.classList.toggle('zoomed');
+        body.scrollTop = 0;
+        body.scrollLeft = 0;
+        positionPopover();
+    });
+
     closeBtn.addEventListener('click', closePopover);
 
-    // Close when clicking outside the popover (and not on a trigger link).
+    // Close when clicking outside the popover.
     document.addEventListener('click', (e) => {
         if (popover.hidden) return;
         if (popover.contains(e.target)) return;
-        if (e.target.closest('a[href*="certificates/"]')) return;
         closePopover();
     });
 

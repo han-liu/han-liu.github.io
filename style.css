@@ -1329,7 +1329,7 @@ footer {
     color: var(--primary-dark);
 }
 
-/* Award certificate preview popover */
+/* Award certificate / publication image preview popover */
 .award-popover {
     position: fixed;
     z-index: 1000;
@@ -1338,7 +1338,6 @@ footer {
     border-radius: 10px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
     padding: 8px;
-    max-width: min(380px, 92vw);
     animation: award-popover-in 0.12s ease-out;
 }
 
@@ -1346,13 +1345,30 @@ footer {
     display: none;
 }
 
+.award-popover-body {
+    overflow: auto;
+    max-width: min(620px, 92vw);
+    max-height: 84vh;
+    border-radius: 5px;
+}
+
 .award-popover-img {
     display: block;
     width: auto;
     height: auto;
-    max-width: min(360px, 88vw);
-    max-height: 72vh;
+    max-width: min(620px, 92vw);
+    max-height: 84vh;
     border-radius: 5px;
+}
+
+.award-popover-img.zoomable {
+    cursor: zoom-in;
+}
+
+.award-popover.zoomed .award-popover-img {
+    max-width: none;
+    max-height: none;
+    cursor: zoom-out;
 }
 
 .award-popover-close {
@@ -1370,6 +1386,7 @@ footer {
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     transition: color 0.15s ease, background-color 0.15s ease;
+    z-index: 1;
 }
 
 .award-popover-close:hover {
