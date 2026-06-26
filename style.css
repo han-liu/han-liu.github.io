@@ -1346,10 +1346,8 @@ footer {
 }
 
 .award-popover-body {
-    overflow: auto;
-    max-width: min(620px, 92vw);
-    max-height: 84vh;
     border-radius: 5px;
+    line-height: 0;
 }
 
 .award-popover-img {

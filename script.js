@@ -161,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = popover.querySelector('.award-popover-close');
     let anchorEl = null;
     let baseWidth = 0;
+    let maxScale = 1;
     let scale = 1;
 
     const closePopover = () => {
@@ -170,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popImg.style.maxWidth = '';
         popImg.style.maxHeight = '';
         baseWidth = 0;
+        maxScale = 1;
         scale = 1;
         anchorEl = null;
     };
@@ -212,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popImg.style.maxWidth = '';
         popImg.style.maxHeight = '';
         popImg.onload = () => {
-            // Compute the fitted base width from the natural size (robust to
+            // Compute the fitted base size from the natural size (robust to
             // layout timing), matching the CSS max box (620px wide / 84vh tall).
             const maxW = Math.min(620, window.innerWidth * 0.92);
             const maxH = window.innerHeight * 0.84;
@@ -220,6 +222,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const nh = popImg.naturalHeight || 1;
             const fit = Math.min(maxW / nw, maxH / nh, 1);
             baseWidth = nw * fit;
+            const baseHeight = nh * fit;
+            // Allow zooming until the window nearly fills the screen, so the
+            // whole award always stays visible (the window grows, not scrolls).
+            const bigW = window.innerWidth * 0.96;
+            const bigH = window.innerHeight * 0.92;
+            maxScale = Math.max(1, Math.min(bigW / baseWidth, bigH / baseHeight));
             positionPopover();
         };
         popImg.src = link.getAttribute('href');
@@ -247,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (baseWidth <= 0) return;
         e.preventDefault();
         const factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
-        scale = Math.min(4, Math.max(1, scale * factor));
+        scale = Math.min(maxScale, Math.max(1, scale * factor));
         applyZoom();
         positionPopover();
     }, { passive: false });
