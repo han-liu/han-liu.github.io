@@ -579,17 +579,10 @@
 <footer>
     <div class="visitor-section">
         <div class="visitor-map">
-            <!-- Live world map: plots the current visitor's location.
-                 Click it to reveal your own visit details. Aggregate analytics
-                 (all visitors) are tracked privately via Google Analytics (GA4) in the <head>. -->
-            <div class="world-map" id="worldMap" role="button" tabindex="0"
-                 title="Click to see your visit details">
-                <span class="world-map-dot" id="worldMapDot" hidden></span>
-                <span class="world-map-hint" id="worldMapHint">Click the map for your visit details</span>
-            </div>
-
-            <!-- Detail panel populated on click with the current viewer's own info. -->
-            <div class="visitor-details" id="visitorDetails" hidden></div>
+            <!-- MapMyVisitors (formerly ClustrMaps): accumulating world map of all
+                 visitors. Restored from the original ClustrMaps widget so the
+                 historical record under this data token continues. -->
+            <script type="text/javascript" id="clustrmaps" src="https://cdn.clustrmaps.com/map_v2.js?cl=008a9c&w=300&t=tt&d=cSR3wlVGpX9c6_e5RrNSC-s7QPU_ilbCNUQYtUnPWRg&co=ffffff&cmo=ff7a00&cmn=008a9c&ct=008a9c&cth=6"></script>
 
             <!-- Shared, accumulating count of everyone who visits the site. -->
             <div class="visitor-count" id="visitorCount">
