@@ -938,17 +938,23 @@ h2 {
 }
 
 .pub-venue {
-    display: inline-block;
     font-size: 0.84rem;
-    color: var(--text-dark);
+    color: var(--text-black);
     font-weight: 600;
     margin: 0 0 4px 0;
     font-style: normal;
     letter-spacing: 0.2px;
+}
+
+/* Publications only: gray highlight behind the venue, hugging the text width. */
+#publications .pub-venue {
+    display: inline-block;
+    align-self: flex-start;
+    width: fit-content;
+    max-width: 100%;
     background: var(--bg-light);
-    border: 1px solid var(--border-light);
-    border-radius: 5px;
-    padding: 2px 9px;
+    border-radius: 4px;
+    padding: 2px 8px;
 }
 
 .pub-award {
