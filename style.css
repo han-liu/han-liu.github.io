@@ -1226,6 +1226,7 @@ footer {
 }
 */
 
+/* Unused since the standalone visitor count was removed (the MapMyVisitors map shows visitors).
 .visitor-count {
     display: inline-flex;
     align-items: center;
@@ -1240,6 +1241,7 @@ footer {
     font-size: 1.1rem;
     line-height: 1;
 }
+*/
 
 .footer-note {
     margin-top: 15px;

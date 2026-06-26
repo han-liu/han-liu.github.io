@@ -53,25 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Count how many people visit the site (shared, accumulating total; no signup).
-document.addEventListener('DOMContentLoaded', () => {
-    const countEl = document.getElementById('visitorCount');
-    if (countEl) {
-        const text = countEl.querySelector('.visitor-count-text');
-        fetch('https://abacus.jasoncameron.dev/hit/han-liu-github-io/visits')
-            .then(response => response.json())
-            .then(data => {
-                const n = data && typeof data.value === 'number' ? data.value : null;
-                text.textContent = n !== null
-                    ? `${n.toLocaleString()} visitors`
-                    : 'Visitor count unavailable';
-            })
-            .catch(() => {
-                text.textContent = 'Visitor count unavailable';
-            });
-    }
-});
-
 // Award certificate preview popover: clicking a certificate link opens a
 // floating window showing the award image. Scroll the mouse wheel over the
 // image to zoom in and out for fine details.
