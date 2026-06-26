@@ -139,3 +139,86 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 });
+
+// Award/certificate preview: clicking a certificate link opens a small popover
+// next to the link showing the award image, instead of opening a new tab.
+document.addEventListener('DOMContentLoaded', () => {
+    const awardLinks = document.querySelectorAll('a[href*="certificates/"]');
+    if (!awardLinks.length) return;
+
+    // One reusable popover for the whole page.
+    const popover = document.createElement('div');
+    popover.className = 'award-popover';
+    popover.hidden = true;
+    popover.innerHTML =
+        '<button type="button" class="award-popover-close" aria-label="Close">&times;</button>' +
+        '<img class="award-popover-img" alt="Award certificate">';
+    document.body.appendChild(popover);
+
+    const popImg = popover.querySelector('.award-popover-img');
+    const closeBtn = popover.querySelector('.award-popover-close');
+    let anchorEl = null;
+
+    const closePopover = () => {
+        popover.hidden = true;
+        popImg.removeAttribute('src');
+        anchorEl = null;
+    };
+
+    const positionPopover = () => {
+        if (!anchorEl) return;
+        const rect = anchorEl.getBoundingClientRect();
+        const pw = popover.offsetWidth;
+        const ph = popover.offsetHeight;
+        const margin = 10;
+        // Prefer placing to the right of the link; fall back to the left.
+        let left = rect.right + margin;
+        if (left + pw > window.innerWidth - margin) {
+            left = rect.left - margin - pw;
+        }
+        if (left < margin) {
+            left = Math.max(margin, (window.innerWidth - pw) / 2);
+        }
+        // Vertically center on the link, then clamp to the viewport.
+        let top = rect.top + rect.height / 2 - ph / 2;
+        top = Math.min(Math.max(margin, top), window.innerHeight - ph - margin);
+        popover.style.left = left + 'px';
+        popover.style.top = top + 'px';
+    };
+
+    const openPopover = (link) => {
+        anchorEl = link;
+        popImg.onload = positionPopover;
+        popImg.src = link.getAttribute('href');
+        popover.hidden = false;
+        positionPopover();
+    };
+
+    awardLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!popover.hidden && anchorEl === link) {
+                closePopover();
+            } else {
+                openPopover(link);
+            }
+        });
+    });
+
+    closeBtn.addEventListener('click', closePopover);
+
+    // Close when clicking outside the popover (and not on a trigger link).
+    document.addEventListener('click', (e) => {
+        if (popover.hidden) return;
+        if (popover.contains(e.target)) return;
+        if (e.target.closest('a[href*="certificates/"]')) return;
+        closePopover();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closePopover();
+    });
+
+    window.addEventListener('resize', () => { if (!popover.hidden) positionPopover(); });
+    window.addEventListener('scroll', () => { if (!popover.hidden) positionPopover(); }, true);
+});
