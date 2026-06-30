@@ -1288,6 +1288,15 @@ footer {
         padding: 28px 22px 20px;
     }
 
+    /* Experience: stack the role/company line and its date on phones so both
+       the Siemens and UPMC entries render identically. */
+    .compact-header,
+    .role-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
     .bio-content-wrapper {
         flex-direction: column;
     }
